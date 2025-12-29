@@ -48,7 +48,7 @@ public class GameDataLoader {
                     .path(Path.valueOf(
                             pathRaw.replace("The ", "").toUpperCase()
                     ))
-                    .icon(getText(node, "icon"))
+                    .icon(buildIconPath(name))
                     .build();
 
             characters.put(character.getId(), character);
@@ -66,5 +66,9 @@ public class GameDataLoader {
     private String getText(JsonNode node, String field) {
         JsonNode value = node.get(field);
         return value != null ? value.asText() : null;
+    }
+
+    private String buildIconPath(String characterName) {
+        return "icons/mini/" + characterName + ".png";
     }
 }
