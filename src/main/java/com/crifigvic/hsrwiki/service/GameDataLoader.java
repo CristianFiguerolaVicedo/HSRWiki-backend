@@ -69,6 +69,7 @@ public class GameDataLoader {
     }
 
     private String buildIconPath(String characterName) {
-        return "icons/mini/" + characterName + ".png";
+        String safe = characterName.replaceAll("[^a-zA-Z0-9^]", "");
+        return "icons/mini/" + safe + ".png";
     }
 }
