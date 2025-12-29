@@ -5,14 +5,11 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @Builder
-public class Skill {
-
-    private BasicSkill basic;
-    private ActiveSkill skill;
-    private UltimateSkill ult;
-    private TalentSkill talent;
+public class StatValue {
+    private Double base;
+    private Double step;
 }

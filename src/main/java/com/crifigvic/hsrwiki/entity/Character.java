@@ -7,6 +7,9 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.lang.reflect.Array;
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -14,16 +17,13 @@ import lombok.NoArgsConstructor;
 public class Character {
 
     private Integer id;
-
     private String name;
-
     private int rarity;
-
     private Element element;
-
     private Path path;
-
     private String icon;
-    private String role;
-    private String tier;
+    private List<Ascension> ascension;
+    private List<Eidolon> eidolons;
+    private Skill skills;
+    private Trace traces;
 }

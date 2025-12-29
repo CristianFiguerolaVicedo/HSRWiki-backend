@@ -16,7 +16,11 @@ public class CharacterService {
                 character.getRarity(),
                 character.getElement().name(),
                 character.getPath().name(),
-                character.getIcon()
+                character.getIcon(),
+                character.getAscension(),
+                character.getEidolons(),
+                character.getSkills(),
+                character.getTraces()
         );
     }
 }

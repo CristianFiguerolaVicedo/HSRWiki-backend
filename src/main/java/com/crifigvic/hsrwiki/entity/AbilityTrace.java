@@ -1,22 +1,15 @@
 package com.crifigvic.hsrwiki.entity;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.Map;
-
+@Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Data
 @Builder
-public class Eidolon {
-
+public class AbilityTrace {
     private String name;
     private String desc;
-
-    @JsonProperty("level_up_skills")
-    private Map<String, Integer> levelUpSkills;
 }
