@@ -17,6 +17,8 @@ public class CharacterService {
                 character.getElement().name(),
                 character.getPath().name(),
                 character.getIcon(),
+                character.getSplash(),
+                character.getMiniIcon(),
                 character.getAscension(),
                 character.getEidolons(),
                 character.getSkills(),

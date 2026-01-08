@@ -22,6 +22,8 @@ public class Character {
     private Element element;
     private Path path;
     private String icon;
+    private String splash;
+    private String miniIcon;
     private List<Ascension> ascension;
     private List<Eidolon> eidolons;
     private Skill skills;

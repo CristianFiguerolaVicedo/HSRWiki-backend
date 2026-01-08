@@ -33,13 +33,11 @@ public class GameDataLoader {
 
     @PostConstruct
     public void load() throws IOException {
-        java.nio.file.Path path = Paths.get("hsr-data/output/game_data_verbose.json");
+        java.nio.file.Path path = Paths.get("hsr-data/output/game_data_verbose_with_icons.json");
         JsonNode root = mapper.readTree(path.toFile());
-
         JsonNode charsNode = root.get("characters");
 
         for (Iterator<String> it = charsNode.propertyNames().iterator(); it.hasNext(); ) {
-
             String name = it.next();
             JsonNode node = charsNode.get(name);
 
@@ -55,6 +53,11 @@ public class GameDataLoader {
             Skill skills = parseSkills(node.get("skills"));
             Trace traces = parseTraces(node.get("traces"));
 
+            // Extract icon URLs from JSON
+            String iconUrl = getText(node, "icon");
+            String splashUrl = getText(node, "splash");
+            String miniIconUrl = getText(node, "mini_icon");
+
             CharBuild build = characterBuildService.getBuildForCharacter(name);
 
             Character character = Character.builder()
@@ -65,7 +68,9 @@ public class GameDataLoader {
                     .path(Path.valueOf(
                             pathRaw.replace("The ", "").toUpperCase()
                     ))
-                    .icon(buildIconPath(name))
+                    .icon(iconUrl)
+                    .splash(splashUrl)
+                    .miniIcon(miniIconUrl)
                     .ascension(ascensions)
                     .eidolons(eidolons)
                     .skills(skills)
@@ -90,10 +95,10 @@ public class GameDataLoader {
         return value != null ? value.asString() : null;
     }
 
-    private String buildIconPath(String characterName) {
+    /*private String buildIconPath(String characterName) {
         String safe = characterName.replaceAll("[^a-zA-Z0-9^]", "");
         return "icons/mini/" + safe + ".png";
-    }
+    }*/
 
     private List<Ascension> parseAscensions(JsonNode ascensionsNode) {
         List<Ascension> ascensions = new ArrayList<>();

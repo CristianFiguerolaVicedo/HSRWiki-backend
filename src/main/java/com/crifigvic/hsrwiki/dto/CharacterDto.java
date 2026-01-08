@@ -12,6 +12,8 @@ public record CharacterDto(
         String element,
         String path,
         String icon,
+        String splash,
+        String miniIcon,
         List<Ascension> ascension,
         List<Eidolon> eidolons,
         Skill skills,
