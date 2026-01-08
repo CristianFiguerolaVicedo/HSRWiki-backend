@@ -11,6 +11,8 @@ import com.crifigvic.hsrwiki.entity.UltimateSkill;
 import com.crifigvic.hsrwiki.entity.Character;
 import com.crifigvic.hsrwiki.util.Element;
 import jakarta.annotation.PostConstruct;
+import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import tools.jackson.databind.JsonNode;
 import tools.jackson.databind.ObjectMapper;
@@ -21,10 +23,13 @@ import java.nio.file.Paths;
 import java.util.*;
 
 @Service
+@RequiredArgsConstructor
+@Slf4j
 public class GameDataLoader {
 
     private final ObjectMapper mapper = new ObjectMapper();
     private Map<Integer, Character> characters = new HashMap<>();
+    private final CharacterBuildService characterBuildService;
 
     @PostConstruct
     public void load() throws IOException {
@@ -50,6 +55,8 @@ public class GameDataLoader {
             Skill skills = parseSkills(node.get("skills"));
             Trace traces = parseTraces(node.get("traces"));
 
+            CharBuild build = characterBuildService.getBuildForCharacter(name);
+
             Character character = Character.builder()
                     .id(name.hashCode())
                     .name(name)
@@ -63,6 +70,7 @@ public class GameDataLoader {
                     .eidolons(eidolons)
                     .skills(skills)
                     .traces(traces)
+                    .build(build)
                     .build();
 
             characters.put(character.getId(), character);

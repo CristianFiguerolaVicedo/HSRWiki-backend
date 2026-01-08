@@ -1,5 +1,6 @@
 package com.crifigvic.hsrwiki.entity;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -13,11 +14,22 @@ import java.util.List;
 @Builder
 public class CharBuild {
     private String charName;
+    @JsonProperty("lightCones")
     private List<LightCone> lightCones;
+
+    @JsonProperty("relicSets")
     private List<RelicSet> relicSets;
+
+    @JsonProperty("planarSets")
     private List<PlanarSet> planarSets;
+
+    @JsonProperty("mainStats")
     private MainStats mainStats;
+
+    @JsonProperty("subStats")
     private SubStats subStats;
+
+    @JsonProperty("teams")
     private List<TeamCompositions> teams;
 
     @Data

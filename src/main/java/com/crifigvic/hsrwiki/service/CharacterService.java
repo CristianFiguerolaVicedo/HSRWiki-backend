@@ -20,7 +20,8 @@ public class CharacterService {
                 character.getAscension(),
                 character.getEidolons(),
                 character.getSkills(),
-                character.getTraces()
+                character.getTraces(),
+                character.getBuild()
         );
     }
 }
