@@ -2,7 +2,6 @@ package com.crifigvic.hsrwiki.dto;
 
 import com.crifigvic.hsrwiki.entity.*;
 
-import java.lang.reflect.Array;
 import java.util.List;
 
 public record CharacterDto(

@@ -29,13 +29,20 @@ public class GameDataLoader {
 
     private final ObjectMapper mapper = new ObjectMapper();
     private Map<Integer, Character> characters = new HashMap<>();
+    private Map<Integer, Lightcone> lightcones = new HashMap<>();
     private final CharacterBuildService characterBuildService;
 
     @PostConstruct
     public void load() throws IOException {
         java.nio.file.Path path = Paths.get("hsr-data/output/game_data_verbose_with_icons.json");
         JsonNode root = mapper.readTree(path.toFile());
-        JsonNode charsNode = root.get("characters");
+
+        loadCharacters(root.get("characters"));
+        loadLightcones(root.get("light_cones"));
+    }
+
+    private void loadCharacters(JsonNode charsNode) throws IOException {
+        if (charsNode == null) return;
 
         for (Iterator<String> it = charsNode.propertyNames().iterator(); it.hasNext(); ) {
             String name = it.next();
@@ -53,7 +60,6 @@ public class GameDataLoader {
             Skill skills = parseSkills(node.get("skills"));
             Trace traces = parseTraces(node.get("traces"));
 
-            // Extract icon URLs from JSON
             String iconUrl = getText(node, "icon");
             String splashUrl = getText(node, "splash");
             String miniIconUrl = getText(node, "mini_icon");
@@ -80,6 +86,93 @@ public class GameDataLoader {
 
             characters.put(character.getId(), character);
         }
+    }
+
+    private void loadLightcones(JsonNode lightconesNode) throws IOException {
+        if (lightconesNode == null) return;
+
+        for (Iterator<String> it = lightconesNode.propertyNames().iterator(); it.hasNext(); ) {
+            String name = it.next();
+            JsonNode node = lightconesNode.get(name);
+
+            if (!node.has("rarity")) continue;
+
+            String pathRaw = getText(node, "path");
+
+            if (pathRaw == null) continue;
+
+            List<LightconeAscension> ascensions = parseLightconeAscensions(node.get("ascension"));
+            LightconeAbility ability = parseLightconeAbility(node.get("ability"));
+
+            Lightcone lightcone = Lightcone.builder()
+                    .id(name.hashCode())
+                    .name(name)
+                    .rarity(node.get("rarity").asInt())
+                    .path(Path.valueOf(
+                            pathRaw.replace("The ", "").toUpperCase()
+                    ))
+                    .desc(getText(node, "desc"))
+                    .icon(getText(node, "icon"))
+                    .image(getText(node, "image"))
+                    .miniIcon(getText(node, "mini_icon"))
+                    .ascensions(ascensions)
+                    .ability(ability)
+                    .build();
+
+            lightcones.put(lightcone.getId(), lightcone);
+        }
+    }
+
+    private List<LightconeAscension> parseLightconeAscensions(JsonNode ascensionsNode) {
+        List<LightconeAscension> ascensions = new ArrayList<>();
+        if (ascensionsNode == null || !ascensionsNode.isArray()) {
+            return ascensions;
+        }
+
+        for (JsonNode ascNode : ascensionsNode) {
+            LightconeAscension asc = LightconeAscension.builder()
+                    .hp(parseStatValue(ascNode.get("hp")))
+                    .atk(parseStatValue(ascNode.get("atk")))
+                    .def(parseStatValue(ascNode.get("def")))
+                    .build();
+            ascensions.add(asc);
+        }
+        return ascensions;
+    }
+
+    private LightconeAbility parseLightconeAbility(JsonNode abilityNode) {
+        if (abilityNode == null) return null;
+
+        List<List<String>> params = new ArrayList<>();
+        JsonNode paramsNode = abilityNode.get("params");
+        if (paramsNode != null && paramsNode.isArray()) {
+            for (JsonNode paramArray : paramsNode) {
+                List<String> paramList = new ArrayList<>();
+                if (paramArray.isArray()) {
+                    for (JsonNode param : paramArray) {
+                        paramList.add(param.asText());
+                    }
+                }
+                params.add(paramList);
+            }
+        }
+        return LightconeAbility.builder()
+                .name(getText(abilityNode, "name"))
+                .desc(getText(abilityNode, "desc"))
+                .params(params)
+                .build();
+    }
+
+    public Collection<Lightcone> getAllLightcones() {
+        return lightcones.values();
+    }
+
+    public Lightcone getLightconeById(int id) {
+        return lightcones.get(id);
+    }
+
+    public Lightcone getLightconeByName(String name) {
+        return lightcones.get(name.hashCode());
     }
 
     public Collection<Character> getAllCharacters() {

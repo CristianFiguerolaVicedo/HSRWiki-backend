@@ -22,9 +22,8 @@ public class CharacterBuildService {
 
     @PostConstruct
     public void loadBuildData() {
-        // Try multiple possible locations
         String[] possiblePaths = {
-                "src/main/java/com/crifigvic/hsrwiki/util/character_builds.json",  // Your actual path
+                "src/main/java/com/crifigvic/hsrwiki/util/character_builds.json",
                 "hsr-data/output/character_builds.json",
                 "character_builds.json",
                 "src/main/resources/character_builds.json"

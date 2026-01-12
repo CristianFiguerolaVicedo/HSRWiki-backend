@@ -758,7 +758,7 @@
         "priority": 1
       },
       {
-        "name": "Dance At Sunset",
+        "name": "Dance at Sunset",
         "rarity": 5,
         "description": "Greatly increases the odds that the wearer will be attacked and increases the wearer's CRIT DMG by 36%/42%/48%/54%/60%. After the wearer uses their Ultimate, they receive 1 stack of Firedance, lasting for 2 turns and up to 2 stacks. Each stack of Firedance increases the DMG dealt by the wearer's follow-up attack by 36%/42%/48%/54%/60%.",
         "priority": 2
@@ -941,7 +941,7 @@
     "charName": "Clara",
     "lightCones": [
       {
-        "name": "Dance At Sunset",
+        "name": "Dance at Sunset",
         "rarity": 5,
         "description": "Greatly increases the odds that the wearer will be attacked and increases the wearer's CRIT DMG by 36%/42%/48%/54%/60%. After the wearer uses their Ultimate, they receive 1 stack of Firedance, lasting for 2 turns and up to 2 stacks. Each stack of Firedance increases the DMG dealt by the wearer's follow-up attack by 36%/42%/48%/54%/60%.",
         "priority": 1
@@ -3907,7 +3907,7 @@
     "charName": "Yunli",
     "lightCones": [
       {
-        "name": "Dance At Sunset",
+        "name": "Dance at Sunset",
         "rarity": 5,
         "description": "Greatly increases the odds that the wearer will be attacked and increases the wearer's CRIT DMG by 36%/42%/48%/54%/60%. After the wearer uses their Ultimate, they receive 1 stack of Firedance, lasting for 2 turns and up to 2 stacks. Each stack of Firedance increases the DMG dealt by the wearer's follow-up attack by 36%/42%/48%/54%/60%.",
         "priority": 1
@@ -3963,6 +3963,195 @@
         "name": "Yunli Dual DPS Team",
         "description": "Yunli can also work well with another DPS on the team, especially if they do Follow-up attacks. Yunli can use the Duran, Dynasty of Running Wolves relic set to increase her CRIT DMG for every Follow-up attack unleashed by the party.",
         "teamMembers": ["Yunli", "Topaz", "Robin", "Huohuo"]
+      }
+    ]
+  },
+  "TrailblazerRemembrance#F": {
+    "charName": "Trailblazer (Remembrance)",
+    "lightCones": [
+      {
+        "name": "Long May Rainbows Adorn the Sky",
+        "rarity": 5,
+        "description": "Increases the wearer’s SPD by 18%. When the wearer uses Basic ATK, Skill, or Ultimate, consumes all allies’ HP equal to 1% of their current HP. After the next attack of its memosprite, additionally deal 1 instance of Additional DMG equal to 250% of the total consumed HP to the attacked target. Then, the total consumed HP is reset. When the wearer’s memosprite uses its Skill, increases the DMG taken by all enemies by 18% for 2 turn(s). Effects of the same type cannot stack.",
+        "priority": 1
+      },
+      {
+        "name": "This Love, Forever",
+        "rarity": 5,
+        "description": "Increases the wearer's SPD by 18%. When the wearer's memosprite uses a Memosprite Skill on an ally, gains \"Blank,\" which increases DMG taken by all enemies by 10%. When the wearer's memosprite uses a Memosprite Skill on an enemy, gains \"Verse,\" which increases CRIT DMG of all allies by 16%. When the wearer's memosprite has both \"Blank\" and \"Verse,\" increases the effects of \"Blank\" and \"Verse\" by 60%.",
+        "priority": 2
+      },
+      {
+        "name": "Fly Into a Pink Tomorrow",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT DMG by 12%. When equipped by Trailblazer (Remembrance), increases all ally targets' DMG dealt by 8% and DMG dealt by Enhanced Basic ATK \"Together, We Script Tomorrow!\" by 60%.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "World-Remaking Deliverer",
+        "description": "2-pc: Increases CRIT Rate by 8%. 4-pc: After the wearer uses Basic ATK or Skill, if the wearer's memosprite is on the field, increases Max HP of the wearer and their memosprite by 24%, and increases all allies' DMG by 15% until the wearer's next Basic ATK or Skill.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Sprightly Vonwacq",
+        "description": "Increases the wearer's Energy Regeneration Rate by 5%. When the wearer's SPD reaches 120 or higher, the wearer's action is Advanced Forward by 40% immediately upon entering battle.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Crit DMG",
+      "feet": "SPD",
+      "sphere": "HP% / DEF%",
+      "rope": "Energy Regen"
+    },
+    "subStats": {
+      "priority": ["Crit DMG", "SPD", "HP%", "Effect RED%"]
+    },
+    "teams": [
+      {
+        "name": "F2P TB (Remembrance) Team",
+        "description": "The Trailblazer's role in this free-to-play team is to provide supplemental True DMG and turn advances to the DPS. Characters like Herta can benefit from the extra DMG especially if they attack frequently.",
+        "teamMembers": ["Trailblazer (Remembrance)", "Herta", "Asta", "Lynx"]
+      },
+      {
+        "name": "Trailblazer (Remembrance) Generalist Team",
+        "description": "The Remembrance Trailblazer works best with characters that require a lot of energy to use their Ultimate. This is because if the character supported by Mem has an Ultimate cost of 100 or above, they deal more True DMG.\n\nSo characters like Argenti and The Herta are great characters to pair up with the Trailblazer since they have a high Ultimate cost. Characters that can restore energy like Sunday and Huohuo can help activate the Memosprite Talent as soon as possible.",
+        "teamMembers": ["Trailblazer (Remembrance)", "The Herta / Argenti", "Anaxa / Sunday", "Lingsha / HuoHuo"]
+      },
+      {
+        "name": "Trailblazer (Remembrance) Remembrance Team",
+        "description": "The Remembrance Trailblazer with their 2nd Eidolon unlocked can work well with other Remembrance characters.\n\nThe Remembrance Trailblazer at E2 can apply the True DMG buff to the characters' memosprites and gain energy if an ally memosprite takes action.",
+        "teamMembers": ["Trailblazer (Remembrance)", "Castorice", "Cyrene", "Hyacine"]
+      }
+    ]
+  },
+  "TrailblazerRemembrance#M": {
+    "charName": "Trailblazer (Remembrance)",
+    "lightCones": [
+      {
+        "name": "Long May Rainbows Adorn the Sky",
+        "rarity": 5,
+        "description": "Increases the wearer’s SPD by 18%. When the wearer uses Basic ATK, Skill, or Ultimate, consumes all allies’ HP equal to 1% of their current HP. After the next attack of its memosprite, additionally deal 1 instance of Additional DMG equal to 250% of the total consumed HP to the attacked target. Then, the total consumed HP is reset. When the wearer’s memosprite uses its Skill, increases the DMG taken by all enemies by 18% for 2 turn(s). Effects of the same type cannot stack.",
+        "priority": 1
+      },
+      {
+        "name": "This Love, Forever",
+        "rarity": 5,
+        "description": "Increases the wearer's SPD by 18%. When the wearer's memosprite uses a Memosprite Skill on an ally, gains \"Blank,\" which increases DMG taken by all enemies by 10%. When the wearer's memosprite uses a Memosprite Skill on an enemy, gains \"Verse,\" which increases CRIT DMG of all allies by 16%. When the wearer's memosprite has both \"Blank\" and \"Verse,\" increases the effects of \"Blank\" and \"Verse\" by 60%.",
+        "priority": 2
+      },
+      {
+        "name": "Fly Into a Pink Tomorrow",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT DMG by 12%. When equipped by Trailblazer (Remembrance), increases all ally targets' DMG dealt by 8% and DMG dealt by Enhanced Basic ATK \"Together, We Script Tomorrow!\" by 60%.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "World-Remaking Deliverer",
+        "description": "2-pc: Increases CRIT Rate by 8%. 4-pc: After the wearer uses Basic ATK or Skill, if the wearer's memosprite is on the field, increases Max HP of the wearer and their memosprite by 24%, and increases all allies' DMG by 15% until the wearer's next Basic ATK or Skill.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Sprightly Vonwacq",
+        "description": "Increases the wearer's Energy Regeneration Rate by 5%. When the wearer's SPD reaches 120 or higher, the wearer's action is Advanced Forward by 40% immediately upon entering battle.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Crit DMG",
+      "feet": "SPD",
+      "sphere": "HP% / DEF%",
+      "rope": "Energy Regen"
+    },
+    "subStats": {
+      "priority": ["Crit DMG", "SPD", "HP%", "Effect RED%"]
+    },
+    "teams": [
+      {
+        "name": "F2P TB (Remembrance) Team",
+        "description": "The Trailblazer's role in this free-to-play team is to provide supplemental True DMG and turn advances to the DPS. Characters like Herta can benefit from the extra DMG especially if they attack frequently.",
+        "teamMembers": ["Trailblazer (Remembrance)", "Herta", "Asta", "Lynx"]
+      },
+      {
+        "name": "Trailblazer (Remembrance) Generalist Team",
+        "description": "The Remembrance Trailblazer works best with characters that require a lot of energy to use their Ultimate. This is because if the character supported by Mem has an Ultimate cost of 100 or above, they deal more True DMG.\n\nSo characters like Argenti and The Herta are great characters to pair up with the Trailblazer since they have a high Ultimate cost. Characters that can restore energy like Sunday and Huohuo can help activate the Memosprite Talent as soon as possible.",
+        "teamMembers": ["Trailblazer (Remembrance)", "The Herta / Argenti", "Anaxa / Sunday", "Lingsha / HuoHuo"]
+      },
+      {
+        "name": "Trailblazer (Remembrance) Remembrance Team",
+        "description": "The Remembrance Trailblazer with their 2nd Eidolon unlocked can work well with other Remembrance characters.\n\nThe Remembrance Trailblazer at E2 can apply the True DMG buff to the characters' memosprites and gain energy if an ally memosprite takes action.",
+        "teamMembers": ["Trailblazer (Remembrance)", "Castorice", "Cyrene", "Hyacine"]
+      }
+    ]
+  },
+  "Aglaea": {
+    "charName": "Aglaea",
+    "lightCones": [
+      {
+        "name": "Long May Rainbows Adorn the Sky",
+        "rarity": 5,
+        "description": "Increases the wearer’s SPD by 18%. When the wearer uses Basic ATK, Skill, or Ultimate, consumes all allies’ HP equal to 1% of their current HP. After the next attack of its memosprite, additionally deal 1 instance of Additional DMG equal to 250% of the total consumed HP to the attacked target. Then, the total consumed HP is reset. When the wearer’s memosprite uses its Skill, increases the DMG taken by all enemies by 18% for 2 turn(s). Effects of the same type cannot stack.",
+        "priority": 1
+      },
+      {
+        "name": "This Love, Forever",
+        "rarity": 5,
+        "description": "Increases the wearer's SPD by 18%. When the wearer's memosprite uses a Memosprite Skill on an ally, gains \"Blank,\" which increases DMG taken by all enemies by 10%. When the wearer's memosprite uses a Memosprite Skill on an enemy, gains \"Verse,\" which increases CRIT DMG of all allies by 16%. When the wearer's memosprite has both \"Blank\" and \"Verse,\" increases the effects of \"Blank\" and \"Verse\" by 60%.",
+        "priority": 2
+      },
+      {
+        "name": "Fly Into a Pink Tomorrow",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT DMG by 12%. When equipped by Trailblazer (Remembrance), increases all ally targets' DMG dealt by 8% and DMG dealt by Enhanced Basic ATK \"Together, We Script Tomorrow!\" by 60%.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "World-Remaking Deliverer",
+        "description": "2-pc: Increases CRIT Rate by 8%. 4-pc: After the wearer uses Basic ATK or Skill, if the wearer's memosprite is on the field, increases Max HP of the wearer and their memosprite by 24%, and increases all allies' DMG by 15% until the wearer's next Basic ATK or Skill.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Sprightly Vonwacq",
+        "description": "Increases the wearer's Energy Regeneration Rate by 5%. When the wearer's SPD reaches 120 or higher, the wearer's action is Advanced Forward by 40% immediately upon entering battle.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Crit DMG",
+      "feet": "SPD",
+      "sphere": "HP% / DEF%",
+      "rope": "Energy Regen"
+    },
+    "subStats": {
+      "priority": ["Crit DMG", "SPD", "HP%", "Effect RED%"]
+    },
+    "teams": [
+      {
+        "name": "F2P TB (Remembrance) Team",
+        "description": "The Trailblazer's role in this free-to-play team is to provide supplemental True DMG and turn advances to the DPS. Characters like Herta can benefit from the extra DMG especially if they attack frequently.",
+        "teamMembers": ["Trailblazer (Remembrance)", "Herta", "Asta", "Lynx"]
+      },
+      {
+        "name": "Trailblazer (Remembrance) Generalist Team",
+        "description": "The Remembrance Trailblazer works best with characters that require a lot of energy to use their Ultimate. This is because if the character supported by Mem has an Ultimate cost of 100 or above, they deal more True DMG.\n\nSo characters like Argenti and The Herta are great characters to pair up with the Trailblazer since they have a high Ultimate cost. Characters that can restore energy like Sunday and Huohuo can help activate the Memosprite Talent as soon as possible.",
+        "teamMembers": ["Trailblazer (Remembrance)", "The Herta / Argenti", "Anaxa / Sunday", "Lingsha / HuoHuo"]
+      },
+      {
+        "name": "Trailblazer (Remembrance) Remembrance Team",
+        "description": "The Remembrance Trailblazer with their 2nd Eidolon unlocked can work well with other Remembrance characters.\n\nThe Remembrance Trailblazer at E2 can apply the True DMG buff to the characters' memosprites and gain energy if an ally memosprite takes action.",
+        "teamMembers": ["Trailblazer (Remembrance)", "Castorice", "Cyrene", "Hyacine"]
       }
     ]
   }
