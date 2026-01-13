@@ -410,7 +410,7 @@
         "priority": 1
       },
       {
-        "name": "Into the Unreachable Void",
+        "name": "Into the Unreachable Veil",
         "rarity": 5,
         "description": "Increases the wearer's CRIT Rate by 12%. When the wearer uses Ultimate, increases the Skill and Ultimate DMG dealt by the wearer by 60%, lasting for 3 turn(s). After the wearer. uses Ultimate, if this instance of Ultimate consumed 140 or more Energy, recovers 1 Skill Point.",
         "priority": 2
@@ -898,7 +898,7 @@
     ],
     "relicSets": [
       {
-        "name": "Sacerdo's Relieved Ordeal",
+        "name": "Sacerdos' Relieved Ordeal",
         "description": "2-pc: Increases SPD by 6%. 4-pc: When using Skill or Ultimate on one ally target, increases the ability-using target's CRIT DMG by 18%, lasting for 2 turn(s). This effect can stack up to 2 time(s).",
         "priority": 1
       }
@@ -4096,21 +4096,515 @@
     "charName": "Aglaea",
     "lightCones": [
       {
-        "name": "Long May Rainbows Adorn the Sky",
+        "name": "Time Woven Into Gold",
         "rarity": 5,
-        "description": "Increases the wearer’s SPD by 18%. When the wearer uses Basic ATK, Skill, or Ultimate, consumes all allies’ HP equal to 1% of their current HP. After the next attack of its memosprite, additionally deal 1 instance of Additional DMG equal to 250% of the total consumed HP to the attacked target. Then, the total consumed HP is reset. When the wearer’s memosprite uses its Skill, increases the DMG taken by all enemies by 18% for 2 turn(s). Effects of the same type cannot stack.",
+        "description": "Increases the wearer's base SPD by 12. After the wearer and the wearer's memosprite attacks, the wearer gains 1 stack of \"Brocade.\" Each stack of \"Brocade\" increases the wearer's and their memosprite's CRIT DMG by 9%, stacking up to 6 time(s). When reaching maximum stacks, each \"Brocade\" stack additionally increases Basic ATK DMG dealt by 9%.",
         "priority": 1
       },
+      {
+        "name": "Sweat Now, Cry Less",
+        "rarity": 4,
+        "description": "Increases the wearer's CRIT Rate by 12%. When the wearer's memosprite is on the field, increases the wearer and their memosprite's DMG dealt by 24%.",
+        "priority": 2
+      },
+      {
+        "name": "Geniuses' Greetings",
+        "rarity": 4,
+        "description": "Increases the wearer's ATK by 16%. After the wearer uses their Ultimate, additionally increases the wearer and their memosprite's Basic ATK DMG dealt by 20% for 3 turns.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Hero of Triumphant Song",
+        "description": "2-pc: Increases ATK by 12%. 4-pc: While the wearer's memosprite is on the field, increases the wearer's SPD by 6%. When the wearer's memosprite attacks, increases the wearer and memosprite's CRIT DMG by 30% for 2 turns.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "The Wondrous BananAmusement Park",
+        "description": "Increases the wearer's CRIT DMG by 16%. When a target summoned by the wearer is on the field, CRIT DMG additionally increases by 32%.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate / Crit DMG",
+      "feet": "SPD / ATK%",
+      "sphere": "Lightning DMG Boost",
+      "rope": "Energy Regen"
+    },
+    "subStats": {
+      "priority": ["Crit Rate", "Crit DMG", "SPD", "ATK%"]
+    },
+    "teams": [
+      {
+        "name": "Aglaea F2P Team",
+        "description": "Aglaea's best free-to-play teammate is the Remembrance Trailblazer at E2. The Remembrance Trailblazer can provide CRIT DMG buffs, True DMG, and turn advance to Aglaea, increasing her damage output.\n\nAsta can provide ATK and SPD buffs with her kit while Lynx can heal and cleanse all party members.",
+        "teamMembers": ["Aglaea", "Trailblazer (Remembrance)", "Asta", "Lynx"]
+      },
+      {
+        "name": "Aglaea Hypercarry Team",
+        "description": "Aglaea's best team consists of Support units that provide buffs to her and her Garmentmaker summon. Sunday and Cyrene will be Aglaea's best supports since their turn advance and damage buffs respectively can also affect the summon.\n\nPermansor Terrae is the best sustain unit for this team since he is a Chrysos Heir and can buff Aglaea's ATK.",
+        "teamMembers": ["Aglaea", "Sunday", "Cyrene", "Permansor Terrae"]
+      }
+    ]
+  },
+  "Anaxa": {
+    "charName": "Anaxa",
+    "lightCones": [
+      {
+        "name": "Life Should Be Cast To Flames",
+        "rarity": 5,
+        "description": "When the wearer's turn starts, regenerates 10 Energy. If the enemy target has a Weakness implanted by the wearer, increases the wearer's DMG dealt to it by 60%. When an enemy target gets attacked by the wearer, the wearer decreases the target's DEF by 12%, lasting for 2 turns. The same types of effects cannot stack.",
+        "priority": 1
+      },
+      {
+        "name": "Into the Unreachable Veil",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT Rate by 12%. When the wearer uses Ultimate, increases the Skill and Ultimate DMG dealt by the wearer by 60%, lasting for 3 turn(s). After the wearer. uses Ultimate, if this instance of Ultimate consumed 140 or more Energy, recovers 1 Skill Point.",
+        "priority": 2
+      },
+      {
+        "name": "The Great Cosmic Enterprise",
+        "rarity": 4,
+        "description": "Increases the wearer's ATK by 8%. For every 1 different Weakness Type an enemy target has, increases the DMG dealt to it by the wearer by 4%. Up to a max of 7 Weakness Types can be taken into account for this effect.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Genius of Brilliant Stars",
+        "description": "2-pc: Increases Quantum DMG by 10%. 4-pc: When the wearer deals DMG to the target enemy, ignores 10% DEF. If the target enemy has Quantum Weakness, the wearer additionally ignores 10% DEF.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Rutilant Arena",
+        "description": "Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 70% or higher, the wearer's Basic ATK and Skill DMG increase by 20%.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate",
+      "feet": "SPD",
+      "sphere": "Wind DMG Boost",
+      "rope": "ATK%"
+    },
+    "subStats": {
+      "priority": ["Crit Rate", "SPD", "Crit DMG", "ATK%"]
+    },
+    "teams": [
+      {
+        "name": "Anaxa F2P Team",
+        "description": "For this free-to-play team, Anaxa will have both the Remembrance Trailblazer and Asta as supports. Since Anaxa can implant more weakness types onto an enemy, Asta can use her Skill to help inflict massive Toughness Bar damage.",
+        "teamMembers": ["Anaxa", "Trailblazer (Remembrance)", "Asta", "Lynx"]
+      },
+      {
+        "name": "Anaxa Hypercarry Team",
+        "description": "Anaxa can be played in a hypercarry team comp with two supports and one sustain. Cyrene and Cerydra provide True DMG and Skill-related buffs respectively to Anaxa.",
+        "teamMembers": ["Anaxa", "Cyrene", "Cerydra", "Permansor Terrae"]
+      },
+      {
+        "name": "Anaxa and The Herta Team",
+        "description": "Anaxa can also work well as a second DPS to The Herta's team. Both Anaxa and The Herta have Bonus Abilities that can increase the entire party's DMG.\n\nTribbie is the best buffer for this team since her buffs apply to both DPS units. Permansor is the best Sustain unit for this team due to his summon's high base SPD and AoE attacks.",
+        "teamMembers": ["Anaxa", "The Herta", "Tribbie", "Permansor Terrae"]
+      }
+    ]
+  },
+  "Archer": {
+    "charName": "Archer",
+    "lightCones": [
+      {
+        "name": "The Hell Where Ideals Burn",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT Rate by 16%. When entering battle and if the allies' Skill Points max limit is 6 or higher, increases the wearer's ATK by 40%. After the wearer uses a Skill, increases their ATK by 10%, stacking up to 4 time(s).",
+        "priority": 1
+      },
+      {
+        "name": "Baptism of Pure Thought",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT DMG by 20%/23%/26%/29%/32%. For every debuff on the enemy target, the wearer's CRIT DMG dealt against this target increases by 8%/9%/10%/11%/12%, stacking up to 3 times. When using Ultimate to attack the enemy target, the wearer receives the Disputation effect, which increases DMG dealt by 60% and enables their follow-up attacks to ignore 24%/28%/32%/36%/40% of the target's DEF. This effect lasts for 2 turns",
+        "priority": 2
+      },
+      {
+        "name": "Worrisome, Blissful",
+        "rarity": 5,
+        "description": "Increase the wearer's CRIT Rate by 18%/21%/24%/27%/30% and their follow-up attacks' DMG by 30%/35%/40%/45%/50%. After the wearer uses a follow-up attack, apply the Tame state to the target, stacking up to 2 stacks. When allies hit enemy targets under the Tame state, every Tame stack increases the CRIT DMG dealt by 12%/14%/16%/18%/20%.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Genius of Brilliant Stars",
+        "description": "2-pc: Increases Quantum DMG by 10%. 4-pc: When the wearer deals DMG to the target enemy, ignores 10% DEF. If the target enemy has Quantum Weakness, the wearer additionally ignores 10% DEF.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Tengoku Livestream",
+        "description": "Increases the wearer's CRIT DMG by 16%. If 3 or more Skill Points are consumed in the same turn, additionally increases CRIT DMG by 32% for 3 turns.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate",
+      "feet": "ATK%",
+      "sphere": "Quantum DMG Boost",
+      "rope": "ATK%"
+    },
+    "subStats": {
+      "priority": ["Crit Rate", "Crit DMG", "ATK%", "ATK"]
+    },
+    "teams": [
+      {
+        "name": "Archer F2P Team",
+        "description": "For a free-to-play team, you can use any two Supports with Archer. Remembrance Trailblazer and Hanya his best free-to-play options for Archer since they provide turn-advance and SP-generation respectively.",
+        "teamMembers": ["Archer", "Trailblazer (Remembrance)", "Hanya", "Lynx"]
+      },
+      {
+        "name": "Archer Generalist Team",
+        "description": "Archer's best teams consist of allies that provide Skill Points and are generally SP-friendly. It should be noted that turn-advance Supports should have at least 160 SPD to bring the slow Archer in front of the turn order.\n\nSparkle is undoubtedly Archer's best Support since she provides both Skill Points and turn-advance. Since Archer will consume a lot of Skill Points, using SP-Positive Sustains like Permansor Terrae or Gallagher will make your gameplay comfortable.\n\nCipher is usually the best option for debuffs and addtional damage. If the enemy isn't weak to Quantum then Silver Wolf is the better option between the two.",
+        "teamMembers": ["Archer", "Sparkle", "Cipher", "Permansor Terrae"]
+      }
+    ]
+  },
+  "Castorice": {
+    "charName": "Castorice",
+    "lightCones": [
+      {
+        "name": "Make Farewells More Beautiful",
+        "rarity": 5,
+        "description": "Increases the wearer's Max HP by 30%. When the wearer or their memosprite loses HP during their own turn, the wearer gains \"Death Flower,\" which allows the wearer and their memosprite to ignore 30% of the target's DEF when dealing DMG, lasting for 2 turns. When the wearer's memosprite disappears, advances the wearer's action by 12%. This effect can only trigger up to 1 time, and the trigger count resets every time the wearer uses Ultimate.",
+        "priority": 1
+      },
+      {
+        "name": "To Evernight's Stars",
+        "rarity": 5,
+        "description": "Increases the wearer's Max HP by 30%. When the wearer's memosprite uses an ability, the wearer gains \"Noctis.\" While the wearer has \"Noctis,\" all allies' memosprites ignore 20% of the target's DEF when dealing DMG. Increases the DMG dealt by the wearer and their memosprite by 30%. When the wearer's memosprite disappears, the wearer recovers 8 Energy. Effects of the same type cannot stack.",
+        "priority": 2
+      },
+      {
+        "name": "The Flower Remembers",
+        "rarity": 4,
+        "description": "Increases the wearer's CRIT DMG by 24%. The CRIT DMG dealt by the wearer's memosprite increases by 24%.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Poet of Mourning Collapse",
+        "description": "2-pc: Increases Quantum DMG by 10%. 4-pc: Decreases the wearer's SPD by 8%. Before entering battle, if the wearer's SPD is less than 110/95, increases the wearer's CRIT Rate by 20%/32%. This effect also applies to the wearer's memosprite.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Bone Collection's Serene Demesne",
+        "description": "Increases the wearer's Max HP by 12%. When the wearer's Max HP is 5000 or higher, increases the wearer's and their memosprite's CRIT DMG by 28%.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Crit DMG",
+      "feet": "HP%",
+      "sphere": "HP% / Quantum DMG Boost",
+      "rope": "HP%"
+    },
+    "subStats": {
+      "priority": ["HP%", "Crit Rate", "Crit DMG", "HP"]
+    },
+    "teams": [
+      {
+        "name": "Castorice F2P Team",
+        "description": "Castorice's best free-to-play teammate is the Remembrance Trailblazer with at least E1 unlocked. The Remembrance Trailblazer can provide CRIT DMG buffs, True DMG, and turn advance to Castorice, increasing her damage output.\n\nPela can decrease the DEF of all enemies while Lynx can increase Castorice's HP with her Skill.",
+        "teamMembers": ["Castorice", "Trailblazer (Remembrance)", "Pela", "Lynx"]
+      },
+      {
+        "name": "Castorice Premium Team",
+        "description": "Castorice's best team features Evernight and Cyrene since their buffs help out the most for her damage.\n\nHyacine is the best healer for this team since she can heal all allies and increase the Max HP of the team. Hyacine can also consume more HP through Little Ica and buildup Newbud faster than any other sustain.",
+        "teamMembers": ["Castorice", "Evernight", "Cyrene", "Hyacine"]
+      },
+      {
+        "name": "Castorice Dual-DPS Team",
+        "description": "Castorice can also be used with another DPS that can consume their own HP. Characters like Mydei and Blade can help accumulate energy for Castorice's Ultimate.",
+        "teamMembers": ["Castorice", "Mydei", "Tribbie", "Gallagher"]
+      }
+    ]
+  },
+  "Cerydra": {
+    "charName": "Cerydra",
+    "lightCones": [
+      {
+        "name": "Epoch Etched in Golden Blood",
+        "rarity": 5,
+        "description": "Increase the wearer's ATK by 64%. After using Ultimate to attack, recovers 1 Skill Point. When the wearer uses their skill on one ally character, increases the Skill DMG dealt by the target by 54% for 3 turns.",
+        "priority": 1
+      },
+      {
+        "name": "Flowing Nightglow",
+        "rarity": 5,
+        "description": "Every time an ally attacks, the wearer gains 1 stack of Cantillation. Each stack of Cantillation increases the wearer's Energy Regeneration Rate by 3.0%/3.5%/4.0%/4.5%/5.0%, stacking up to 5 time(s). When the wearer uses their Ultimate, removes Cantillation and gains Cadenza. Cadenza increases the Wearer's ATK by 48%/60%/72%/84%/96% and increases all allies' DMG dealt by 24%/28%/32%/36%/40%, lasting for 1 turn(s).",
+        "priority": 2
+      },
+      {
+        "name": "A Grounded Ascent",
+        "rarity": 5,
+        "description": "After the wearer uses Skill or Ultimate on one ally character, the wearer regenerates 6 Energy and the ability's target receives 1 stack of \"Hymn\" for 3 turn(s), stacking up to 3 time(s). Each stack of \"Hymn\" increases its holder's DMG dealt by 15%. After every 2 instance(s) of Skill or Ultimate the wearer uses on one ally character, recovers 1 Skill Point.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Sacerdos' Relieved Ordeal",
+        "description": "2-pc: Increases SPD by 6%. 4-pc: When using Skill or Ultimate on one ally target, increases the ability-using target's CRIT DMG by 18%, lasting for 2 turn(s). This effect can stack up to 2 time(s).",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Lushaka, the Sunken Seas",
+        "description": "Increases the wearer's Energy Regeneration Rate by 5%. If the wearer is not the first character in the team lineup, then increase the ATK of the first character in the team lineup by 12%.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "ATK%",
+      "feet": "SPD",
+      "sphere": "ATK%",
+      "rope": "ATK% / Energy Regen"
+    },
+    "subStats": {
+      "priority": ["ATK%", "SPD", "Crit DMG", "ATK"]
+    },
+    "teams": [
+      {
+        "name": "Cerydra F2P Team",
+        "description": "Cerydra can be used to buff Dan Heng and make him use his Skill twice. The Remembrance Trailblazer and Lynx can also help via True DMG buffs and healing respectively.",
+        "teamMembers": ["Cerydra", "Trailblazer (Remembrance)", "Dan Heng", "Lynx"]
+      },
+      {
+        "name": "Cerydra Generalist Team",
+        "description": "Cerydra is best used with a DPS that mainly uses Skill DMG and scale with ATK. Phainon is the best DPS to be paired up with Cerydra since a lot of his DMG during his Enhanced State is Skill DMG.\n\nTeams with Cerydra will also need turn-advance units like Sunday or Bronya for faster Charge buildup. Huohuo is the best Sustain here since she can also buff ATK, and restore the energy of her allies.",
+        "teamMembers": ["Cerydra", "Phainon", "Sunday", "Huohuo"]
+      }
+    ]
+  },
+  "Cipher": {
+    "charName": "Cipher",
+    "lightCones": [
+      {
+        "name": "Lies Dance on the Breeze",
+        "rarity": 5,
+        "description": "Increases the wearer's SPD by 18%. After the wearer uses an attack, there's a 120% base chance to inflict \"Bamboozle\" on every enemy. While under \"Bamboozle\", enemies have their DEF decreased by 16% for 2 turns. If the wearer's SPD is higher or equal to 170, there's a 120% base chance to inflict \"Theft\" on every enemy. While under \"Theft\", enemies have their DEF decreased by 8% for 2 turns. When \"Bamboozle\" or \"Theft\" is repeatedly inflicted, only the recently inflicted instance takes effect.",
+        "priority": 1
+      },
+      {
+        "name": "Resolution Shines as Pearls of Sweat",
+        "rarity": 4,
+        "description": "When the wearer hits an enemy and if the hit enemy is not already Ensnared, then there is a 60%/70%/80%/90%/100% base chance to Ensnare the hit enemy. Ensnared enemies' DEF decreases by 12%/13%/14%/15%/16% for 1 turn(s).",
+        "priority": 2
+      },
+      {
+        "name": "Holiday Thermae Escapade",
+        "rarity": 4,
+        "description": "Increases the wearer's DMG dealt by 16%. After the wearer attacks, there is a 100% base chance that the attacked target is inflicted with Vulnerability, increasing the DMG they receive by 10% for 2 turn(s). The same effect type cannot be stacked.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Pioneer Diver of Dead Waters",
+        "description": "2-pc: Increases DMG dealt to enemies with debuff by 12%. 4-pc: Increases CRIT Rate by 4%. The wearer deals 8%/12% increased CRIT DMG to enemies with at least 2/3 debuffs. After the wearer inflicts a debuff on enemy targets, the aforementioned effects increase by 100%, lasting for 1 turn(s).",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Firmament Frontline Glamoth",
+        "description": "Increases the wearer's ATK by 12%. When the wearer's SPD is equal to or higher than 135/160, the wearer deals 12%/18% more DMG.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Crit DMG",
+      "feet": "SPD",
+      "sphere": "Quantum DMG Boost / ATK%",
+      "rope": "ATK%"
+    },
+    "subStats": {
+      "priority": ["SPD", "Crit DMG", "Effect Hit%", "Crit Rate"]
+    },
+    "teams": [
+      {
+        "name": "Cipher F2P Team",
+        "description": "For a free-to-play team, you can use any DPS with Cipher provided that they benefit from her debuffs. As for other units, Asta is a great F2P Support for Cipher since she can buff her SPD, which Cipher needs.",
+        "teamMembers": ["Cipher", "Any DPS", "Asta", "Lynx"]
+      },
+      {
+        "name": "Cipher Acheron Team",
+        "description": "Cipher can do great in an Acheron team as both a Sub-DPS and a speedy debuffer that can help buildup Slashed Dream. With E0 Acheron, you will need another Nihility character to unlock the full damage buff.\n\nIf Acheron is at E2, you can use a Harmony unit since she only needs one Nihility unit to activate the damage buff fully.",
+        "teamMembers": ["Cipher", "Acheron", "Jiaoqiu", "Aventurine"]
+      },
+      {
+        "name": "Cipher Follow-Up Attack Team",
+        "description": "As a Follow-Up attacker, Cipher can be an excellent Sub-DPS to Feixiao or Dr. Ratio thanks to her frequent attacks and debuffs. Ideally, you'd want units that can provide debuffs to have the Pioneer Diver of Dead Waters at full uptime.",
+        "teamMembers":  ["Cipher", "Feixiao", "Robin", "Aventurine"]
+      },
+      {
+        "name": "Cipher Quantum Team",
+        "description": "Cipher can also work as a Sub-DPS to Archer. Cipher can simply use her Basic Attacks to generate Skill Points that Archer can use.\n\nSparkle provides Skill Point generation to the party and Permansor Terrae can increase Archer's ATK with his shield.",
+        "teamMembers": ["Cipher", "Archer", "Sparkle", "Permansor Terrae"]
+      }
+    ]
+  },
+  "Cyrene": {
+    "charName": "Cyrene",
+    "lightCones": [
       {
         "name": "This Love, Forever",
         "rarity": 5,
         "description": "Increases the wearer's SPD by 18%. When the wearer's memosprite uses a Memosprite Skill on an ally, gains \"Blank,\" which increases DMG taken by all enemies by 10%. When the wearer's memosprite uses a Memosprite Skill on an enemy, gains \"Verse,\" which increases CRIT DMG of all allies by 16%. When the wearer's memosprite has both \"Blank\" and \"Verse,\" increases the effects of \"Blank\" and \"Verse\" by 60%.",
+        "priority": 1
+      },
+      {
+        "name": "Memory's Curtain Never Falls",
+        "rarity": 5,
+        "description": "Increases the wearer's SPD by 6%/7.5%/9%/10.5%/12%. After the wearer uses Skill, increases the DMG dealt by all allies by 8%/10%/12%/14%/16%, lasting for 3 turn(s).",
         "priority": 2
       },
       {
-        "name": "Fly Into a Pink Tomorrow",
+        "name": "Long May Rainbows Adorn the Sky",
         "rarity": 5,
-        "description": "Increases the wearer's CRIT DMG by 12%. When equipped by Trailblazer (Remembrance), increases all ally targets' DMG dealt by 8% and DMG dealt by Enhanced Basic ATK \"Together, We Script Tomorrow!\" by 60%.",
+        "description": "Increases the wearer’s SPD by 18%. When the wearer uses Basic ATK, Skill, or Ultimate, consumes all allies’ HP equal to 1% of their current HP. After the next attack of its memosprite, additionally deal 1 instance of Additional DMG equal to 250% of the total consumed HP to the attacked target. Then, the total consumed HP is reset. When the wearer’s memosprite uses its Skill, increases the DMG taken by all enemies by 18% for 2 turn(s). Effects of the same type cannot stack.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Sacerdos' Relieved Ordeal",
+        "description": "2-pc: Increases SPD by 6%.",
+        "priority": 1
+      },
+      {
+        "name": "Messenger Traversing Hackerspace",
+        "description": "2-pc: Increases SPD by 6%.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Sprightly Vonwacq",
+        "description": "Increases the wearer's Energy Regeneration Rate by 5%. When the wearer's SPD reaches 120 or higher, the wearer's action is Advanced Forward by 40% immediately upon entering battle.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "HP% / Crit DMG",
+      "feet": "SPD",
+      "sphere": "HP% / Ice DMG Boost",
+      "rope": "HP%"
+    },
+    "subStats": {
+      "priority": ["SPD", "HP%", "Crit DMG", "Crit Rate"]
+    },
+    "teams": [
+      {
+        "name": "Cyrene F2P Team",
+        "description": "Cyrene can be paired with the Remembrance Trailblazer and Permansor Terrae for the free-to-play team. You can use any DPS for this team, provided that you have two Chrysos Heirs in the team to battery Cyrene's first Ultimate.",
+        "teamMembers": ["Cyrene", "Any DPS", "Trailblazer (Remembrance)", "Permansor Terrae"]
+      },
+      {
+        "name": "Cyrene Chrysos Heir Teams",
+        "description": "Cyrene is best used on a team that consists at least two Chrysos Heir characters. Having Chrysos Heirs in the team increases the amount of Recollection she gains at the start of the battle, and also the Recollection she gets during battle.\n\nThis allows Cyrene to have an easier time charging her Ultimate. On top of the Recollection stacks, Cyrene also grants unique buffs to each Chrysos Heir which makes them a lot stronger.",
+        "teamMembers": ["Cyrene", "Castorice / Aglaea / Anaxa / Mydei", "Evernight / Sunday / Cerydra / Cerydra", "Hyacine / Permansor Terrae / Permansor Terrae / Hyacine"]
+      }
+    ]
+  },
+  "Permansor Terrae": {
+    "charName": "Permansor Terrae",
+    "lightCones": [
+      {
+        "name": "Though Worlds Apart",
+        "rarity": 5,
+        "description": "Increases the wearer's ATK by 64%. When the wearer uses Ultimate, restores HP equal to 10% of the wearer's ATK for all allies, and additionally restores HP equal to 10% of the wearer's ATK for the character with the lowest current HP, and grants \"Redoubt\" to all allies for 3 turns. Targets with \"Redoubt\" deal 24% more DMG, which further increases by 12% if the targets have summons.",
+        "priority": 1
+      },
+      {
+        "name": "Journey, Forever Peaceful",
+        "rarity": 4,
+        "description": "Increases the wearer's provided Shield Effect by 12%. When an ally target has a Shield, the DMG dealt increases by 12%.",
+        "priority": 2
+      },
+      {
+        "name": "She Already Shut Her Eyes",
+        "rarity": 5,
+        "description": "Increases the wearer's Max HP by 24%/28%/32%/36%/40% and Energy Regeneration Rate by 12%/14%/16%/18%/20%. When the wearer's HP is reduced, all allies' DMG dealt increases by 9%/10.5%/12%/13.5%/15%, for 2 turn(s). At the start of every wave, restores HP to all allies by an amount equal to 80%/85%/90%/95%/100% of their respective lost HP.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Self-Enshrouded Recluse",
+        "description": "2-pc: Increases Shield Effect by 10%. 4-pc: Increases Shield Effect provided by the wearer by 12%. When an ally target has a Shield provided by the wearer, their CRIT DMG increases by 15%.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Lushaka, the Sunken Seas",
+        "description": "Increases the wearer's Energy Regeneration Rate by 5%. If the wearer is not the first character in the team lineup, then increase the ATK of the first character in the team lineup by 12%.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "ATK%",
+      "feet": "SPD",
+      "sphere": "ATK%",
+      "rope": "Energy Regen / ATK%"
+    },
+    "subStats": {
+      "priority": ["SPD", "ATK%", "ATK"]
+    },
+    "teams": [
+      {
+        "name": "Permansor Terrae F2P Team",
+        "description": "Permansor Terrae's best free-to-play team has Dan Heng as his DPS unit. Permansor Terrae can comfortably provide team-wide shields while also providing Dan Heng ATK buffs along with Asta and Yukong's buffs.",
+        "teamMembers": ["Permansor Terrae", "Yukong", "Asta", "Dan Heng"]
+      },
+      {
+        "name": "Permansor Terrae Single DPS Team",
+        "description": "Permansor Terrae is best used in a team that focuses on a single DPS, due to him only having one Bondmate at a time. That Bondmate should ideally be able to take multiple turns within a cycle for Permansor Terrae's energy generation.\n\nThe supports must also have ways to make the team take multiple turns within a cycle to fully utilize this team.",
+        "teamMembers": ["Permansor Terrae", "Anaxa", "Sunday", "Cerydra"]
+      },
+      {
+        "name": "Permansor Terrae DoT Team",
+        "description": "Permansor Terrae can work well with characters that deal DoT damage due to their ATK scaling. The only downside would be the fact that only one character can be his Bondmate when a DoT team usually consists of 2 or more DoT characters.",
+        "teamMembers": ["Permansor Terrae", "Kafka", "Tribbie", "Hysilens"]
+      }
+    ]
+  },
+  "Evernight": {
+    "charName": "Evernight",
+    "lightCones": [
+      {
+        "name": "To Evernight's Stars",
+        "rarity": 5,
+        "description": "Increases the wearer's Max HP by 30%. When the wearer's memosprite uses an ability, the wearer gains \"Noctis.\" While the wearer has \"Noctis,\" all allies' memosprites ignore 20% of the target's DEF when dealing DMG. Increases the DMG dealt by the wearer and their memosprite by 30%. When the wearer's memosprite disappears, the wearer recovers 8 Energy. Effects of the same type cannot stack.",
+        "priority": 1
+      },
+      {
+        "name": "Make Farewells More Beautiful",
+        "rarity": 5,
+        "description": "Increases the wearer's Max HP by 30%. When the wearer or their memosprite loses HP during their own turn, the wearer gains \"Death Flower,\" which allows the wearer and their memosprite to ignore 30% of the target's DEF when dealing DMG, lasting for 2 turns. When the wearer's memosprite disappears, advances the wearer's action by 12%. This effect can only trigger up to 1 time, and the trigger count resets every time the wearer uses Ultimate.",
+        "priority": 2
+      },
+      {
+        "name": "Sweat Now, Cry Less",
+        "rarity": 4,
+        "description": "Increases the wearer's CRIT Rate by 12%. When the wearer's memosprite is on the field, increases the wearer and their memosprite's DMG dealt by 24%.",
         "priority": 3
       }
     ],
@@ -4123,35 +4617,519 @@
     ],
     "planarSets": [
       {
-        "name": "Sprightly Vonwacq",
-        "description": "Increases the wearer's Energy Regeneration Rate by 5%. When the wearer's SPD reaches 120 or higher, the wearer's action is Advanced Forward by 40% immediately upon entering battle.",
+        "name": "Bone Collection's Serene Demesne",
+        "description": "Increases the wearer's Max HP by 12%. When the wearer's Max HP is 5000 or higher, increases the wearer's and their memosprite's CRIT DMG by 28%.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Crit DMG",
+      "feet": "HP%",
+      "sphere": "Ice DMG Boost",
+      "rope": "HP% / Energy Regen"
+    },
+    "subStats": {
+      "priority": ["Crit Rate", "Crit DMG", "HP%", "HP"]
+    },
+    "teams": [
+      {
+        "name": "Evernight F2P Team",
+        "description": "Evernight can be paired with the Remembrance Trailblazer for a free-to-play Memosprite team. You can use any CRIT DPS for this free-to-play team.",
+        "teamMembers": ["Evernight", "Any DPS", "Trailblazer (Remembrance)", "Lynx"]
+      },
+      {
+        "name": "Evernight Remembrance Team",
+        "description": "Evernight is best used on a team that consists of all or mostly Remembrance characters. She works best when paired with Castorice since the HP-Drain will help her gain more Memoria stacks.",
+        "teamMembers": ["Evernight", "Castorice", "Cyrene", "Hyacine"]
+      },
+      {
+        "name": "Evernight Main DPS Team",
+        "description": "Evernight can also work amazingly as a standalone DPS. You would still want at least two Remembrance Support units in this team to access the CRIT DMG buff.",
+        "teamMembers": ["Evernight", "Trailblazer (Remembrance)", "Cyrene", "Hyacine"]
+      }
+    ]
+  },
+  "Hyacine": {
+    "charName": "Hyacine",
+    "lightCones": [
+      {
+        "name": "Long May Rainbows Adorn the Sky",
+        "rarity": 5,
+        "description": "Increases the wearer’s SPD by 18%. When the wearer uses Basic ATK, Skill, or Ultimate, consumes all allies’ HP equal to 1% of their current HP. After the next attack of its memosprite, additionally deal 1 instance of Additional DMG equal to 250% of the total consumed HP to the attacked target. Then, the total consumed HP is reset. When the wearer’s memosprite uses its Skill, increases the DMG taken by all enemies by 18% for 2 turn(s). Effects of the same type cannot stack.",
+        "priority": 1
+      },
+      {
+        "name": "Memory's Curtain Never Falls",
+        "rarity": 5,
+        "description": "Increases the wearer's SPD by 6%/7.5%/9%/10.5%/12%. After the wearer uses Skill, increases the DMG dealt by all allies by 8%/10%/12%/14%/16%, lasting for 3 turn(s).",
+        "priority": 2
+      },
+      {
+        "name": "This Love, Forever",
+        "rarity": 5,
+        "description": "Increases the wearer's SPD by 18%. When the wearer's memosprite uses a Memosprite Skill on an ally, gains \"Blank,\" which increases DMG taken by all enemies by 10%. When the wearer's memosprite uses a Memosprite Skill on an enemy, gains \"Verse,\" which increases CRIT DMG of all allies by 16%. When the wearer's memosprite has both \"Blank\" and \"Verse,\" increases the effects of \"Blank\" and \"Verse\" by 60%.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Warrior Goddess of Sun and Thunder",
+        "description": "2-pc: SPD increases by 6%. 4-pc: When the wearer and their memosprite provide healing to ally targets aside from themselves, the wearer gains \"Gentle Rain,\" which can be triggered up to 1 time per turn, lasting for 2 turns. When the wearer has \"Gentle Rain,\" increases SPD by 6%, and increases all allies' CRIT DMG by 15%. This effect cannot be stacked.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Giant Tree of Rapt Brooding",
+        "description": "Increases the wearer's SPD by 6%. When the wearer's Speed is 135/180 or higher, increases the wearer and their memosprite's Outgoing Healing by 12%/20%.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Outgoing Healing",
+      "feet": "SPD",
+      "sphere": "HP%",
+      "rope": "Energy Regen"
+    },
+    "subStats": {
+      "priority": ["SPD", "HP%", "Crit DMG", "HP"]
+    },
+    "teams": [
+      {
+        "name": "Hyacine F2P Team",
+        "description": "Hyacine can be paired with the Remembrance Trailblazer for a free-to-play Memosprite team. Pela is here to help decrease the enemy's DEF with her Ultimate.\n\nYou can use any CRIT DPS for this free-to-play team, but HP-scaling units will benefit more from Hyacine.",
+        "teamMembers": ["Hyacine", "Any DPS", "Trailblazer (Remembrance)", "Pela"]
+      },
+      {
+        "name": "Hyacine HP-Scaling Team",
+        "description": "Hyacine is the best sustain unit for teams centered on the HP stat. Characters like Castorice, Tribbie, and Blade will have their damage increased from Hyacine's Ultimate.\n\nHyacine works best with units that drain the party's HP since she can provide healing when HP gets reduced. This is especially useful for Castorice since Hyacine's healing can help generate more Newbud than any other Sustain.",
+        "teamMembers": ["Hyacine", "Castorice", "Evernight", "Cyrene"]
+      }
+    ]
+  },
+  "Hysilens": {
+    "charName": "Hysilens",
+    "lightCones": [
+      {
+        "name": "Why Does the Ocean Sing",
+        "rarity": 5,
+        "description": "Increases the wearer's Effect Hit Rate by 40%. When the wearer inflicts a debuff, there is an 80% base chance to apply \"Enthrallment\", lasting for 3 turns. Effects of the same type can't stack. While affected by \"Enthrallment,\" each debuff inflicted by the wearer on the target increases the target's DoT taken by 5%, up to 6 times. When attacked by an ally, increases the attacker's SPD by 10% for 3 turns. When the wearer is knocked down, removes all \"Enthrallment.\"",
+        "priority": 1
+      },
+      {
+        "name": "Reforge Remembrance",
+        "rarity": 5,
+        "description": "Increases wearer's Effect Hit Rate by 40%/45%/50%/55%/60%. When the wearer deals DMG to an enemy inflicted with Wind Shear, Burn, Shock, or Bleed, each respectively grants 1 stack of Prophet, stacking up to 4 time(s). In a single battle, only 1 stack of Prophet can be granted for each type of DoT. Every stack of Prophet increases wearer's ATK by 5%/6%/7%/8%/9% and enables the DoT dealt to ignore 7.2%/7.9%/8.6%/9.3%/10% of the target's DEF.",
+        "priority": 2
+      },
+      {
+        "name": "Those Many Springs",
+        "rarity": 5,
+        "description": "Increases Effect Hit Rate by 60%/70%/80%/90%/100%. After the wearer uses Basic ATK, Skill, or Ultimate to attack, there is a 60% base chance to inflict \"Unarmored\". While in the Unarmored state, target receives 10%/12%/14%/16%/18% increased DMG for 2 turns. If the target is under a DoT inflicted by the wearer, there's a 60% chance to upgrade \"Unarmored\" to the \"Cornered\" state, which increases the DMG the target receives by 14%/16%/18%/20%/22%, lasting for 2 turns. During this, the wearer can't inflict \"Unarmored\" on the target.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Prisoner In Deep Confinement",
+        "description": "2-pc: Increases ATK by 12%. 4-pc: For every DoT the target enemy is afflicted with, the wearer will ignore 6% of target's DEF when dealing DMG to them. This effect is valid for a max of 3 DoTs.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Revelry by the Sea",
+        "description": "Increases the wearer's ATK by 12%. When the wearer's ATK is higher than or equal to 2,400/3,600, increases the DoT DMG dealt by 12%/24%.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Effect Hit%",
+      "feet": "SPD / ATK%",
+      "sphere": "Physical DMG Boost",
+      "rope": "ATK%"
+    },
+    "subStats": {
+      "priority": ["Effect Hit%", "SPD", "ATK%", "ATK"]
+    },
+    "teams": [
+      {
+        "name": "Hysilens F2P Team",
+        "description": "For a free-to-play team, you can pair Hysilens with Serval since the latter can apply the Shock DoT. Asta is a great free-to-play Support for her ATK and SPD buffs.",
+        "teamMembers": ["Hysilens", "Serval", "Asta", "Lynx"]
+      },
+      {
+        "name": "Hysilens DoT + Buffer Team",
+        "description": "This Hysilens team has her paired with Kafka. Both of them can help deal damage by applying DoTs and triggering them respectively.\n\nRuan Mei is the best Support here since she can delay the enemy's Weakness Break recovery, allowing them to receive more DoTs. Huohuo is the best Sustain for this team since she can buff the party's ATK and restore their energy.\n\nYou can also slot in Robin instead of Ruan Mei. The ATK buffs Robin provides may be diluted in this kind of team, but her team-wide turn advance is very useful for cycle-based game modes.",
+        "teamMembers": ["Hysilens", "Kafka", "Ruan Mei", "Huohuo"]
+      },
+      {
+        "name": "Hysilens Triple DoT Team",
+        "description": "You can also use Hysilens on a team with two other DoT units. A third DoT unit can provide extra damage and help Kafka trigger more DoTs with her kit.\n\nBlack Swan works best here for her Arcana mechanics and the DEF reduction she applies on enemies.",
+        "teamMembers": ["Hysilens", "Kafka", "Black Swan", "Huohuo"]
+      }
+    ]
+  },
+  "Mydei": {
+    "charName": "Mydei",
+    "lightCones": [
+      {
+        "name": "Flame of Blood, Blaze My Path",
+        "rarity": 5,
+        "description": "Increases the wearer's Max HP by 18% and Incoming Healing by 20%. When using Skill or Ultimate, consumes HP equal to 6% of the wearer's Max HP and increases the DMG dealt by this attack by 30%. If this effect's consumed HP is greater than 500, the DMG additionally increases by 30%. If the current HP is not sufficient, this effect reduces the wearer's current HP down to 1.",
+        "priority": 1
+      },
+      {
+        "name": "The Unreachable Side",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT Rate by 18%/21%/24%/27%/30% and their Max HP by 18%/21%/24%/27%/30%. When the wearer is attacked or consumes their own HP, their DMG increases by 24%/28%/32%/36%/40%. This effect is removed after the wearer uses an attack.",
+        "priority": 2
+      },
+      {
+        "name": "Ninja Record - Sound Hunt",
+        "rarity": 4,
+        "description": "Increases the wearer's Max HP by 12%/15%/18%/21%/24%. When losing HP or restoring HP, increases CRIT DMG by 18%/22%/27%/31%/36%, lasting for 2 turn(s). This effect can only trigger 1 time per turn.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Scholar Lost in Erudition",
+        "description": "2-pc: Increases CRIT Rate by 8%. 4-pc: Increases DMG dealt by Ultimate and Skill by 20%. After using Ultimate, additionally increases the DMG dealt by the next Skill by 25%.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Bone Collection's Serene Demesne",
+        "description": "Increases the wearer's Max HP by 12%. When the wearer's Max HP is 5000 or higher, increases the wearer's and their memosprite's CRIT DMG by 28%.",
         "priority": 1
       }
     ],
     "mainStats": {
       "body": "Crit DMG",
       "feet": "SPD",
-      "sphere": "HP% / DEF%",
-      "rope": "Energy Regen"
+      "sphere": "Imaginary DMG Boost / HP%",
+      "rope": "HP%"
     },
     "subStats": {
-      "priority": ["Crit DMG", "SPD", "HP%", "Effect RED%"]
+      "priority": ["HP%", "Crit Rate", "SPD", "Crit DMG"]
     },
     "teams": [
       {
-        "name": "F2P TB (Remembrance) Team",
-        "description": "The Trailblazer's role in this free-to-play team is to provide supplemental True DMG and turn advances to the DPS. Characters like Herta can benefit from the extra DMG especially if they attack frequently.",
-        "teamMembers": ["Trailblazer (Remembrance)", "Herta", "Asta", "Lynx"]
+        "name": "Mydei F2P Team",
+        "description": "In this free-to-play team, Mydei can use the Remembrance Trailblazer for the CRIT DMG buff and Pela for DEF shred. Lynx is a great free-to-play sustain for Mydei as she can increase his Max HP and his chances of getting hit by the enemy.",
+        "teamMembers": ["Mydei", "Pela", "Trailblazer (Remembrance)", "Lynx"]
       },
       {
-        "name": "Trailblazer (Remembrance) Generalist Team",
-        "description": "The Remembrance Trailblazer works best with characters that require a lot of energy to use their Ultimate. This is because if the character supported by Mem has an Ultimate cost of 100 or above, they deal more True DMG.\n\nSo characters like Argenti and The Herta are great characters to pair up with the Trailblazer since they have a high Ultimate cost. Characters that can restore energy like Sunday and Huohuo can help activate the Memosprite Talent as soon as possible.",
-        "teamMembers": ["Trailblazer (Remembrance)", "The Herta / Argenti", "Anaxa / Sunday", "Lingsha / HuoHuo"]
+        "name": "Mydei Hypercarry Team",
+        "description": "Mydei's best team features Cyrene for her DMG buffs, and Cerydra's Skill DMG buffs. With Cyrene on the team, Hyacine should be your sustain unit since she is a Chrysos Heir and can increase Mydei's HP.\n\nIf you don't have Cyrene on the team, we recommend using other Abundance units like Luocha and Gallagher since they provide more healing.",
+        "teamMembers": ["Mydei", "Cyrene", "Cerydra", "Hyacine"]
       },
       {
-        "name": "Trailblazer (Remembrance) Remembrance Team",
-        "description": "The Remembrance Trailblazer with their 2nd Eidolon unlocked can work well with other Remembrance characters.\n\nThe Remembrance Trailblazer at E2 can apply the True DMG buff to the characters' memosprites and gain energy if an ally memosprite takes action.",
-        "teamMembers": ["Trailblazer (Remembrance)", "Castorice", "Cyrene", "Hyacine"]
+        "name": "Mydei Dual-DPS Team",
+        "description": "Mydei can also be used as a Sub-DPS for Castorice. Mydei's HP consumption can buildup Newbud for Castorice's Ultimate.\n\nTribbie will buff both Mydei and Castorice with her buffs, while Gallagher can use the Besotted debuff to provide constant healing.",
+        "teamMembers": ["Mydei", "Castorice", "Tribbie", "Gallagher"]
+      }
+    ]
+  },
+  "Phainon": {
+    "charName": "Phainon",
+    "lightCones": [
+      {
+        "name": "Thus Burns the Dawn",
+        "rarity": 5,
+        "description": "The wearer's base SPD increases by 12. When the wearer deals DMG, ignores 18% of the target's DEF. After the wearer uses Ultimate, obtains \"Blazing Sun,\" which is removed at the start of their turn. While \"Blazing Sun\" is in possession, increases the wearer's DMG dealt by 60%.",
+        "priority": 1
+      },
+      {
+        "name": "On the Fall of an Aeon",
+        "rarity": 5,
+        "description": "Whenever the wearer attacks, increase their ATK by 8%/10%/12%/14%/16% in this battle, up to 4 time(s). When the wearer inflicts Weakness Break on enemies, the wearer's DMG increases by 12%/15%/18%/21%/24% for 2 turns",
+        "priority": 2
+      },
+      {
+        "name": "A Trail of Bygone Blood",
+        "rarity": 4,
+        "description": "Increases the wearer's CRIT Rate by 12%. The Skill DMG and Ultimate DMG dealt by the wearer increase by 24%.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Wavestrider Captain",
+        "description": "2-pc: CRIT DMG increases by 16%. 4-pc: When the wearer is the target of another ally target's ability, gains 1 stack of \"Help,\" stacking up to 2 times. When using Ultimate, if the unit possesses 2 stacks of \"Help,\" consumes all \"Help\" and increases the wearer's ATK by 48%, lasting 1 turn.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Arcadia of Woven Dreams",
+        "description": "When there are currently more or less than 4 ally targets in battle, each additional/missing ally target increases the wearer and their memosprite's DMG by 9%/12%, up to a maximum of 4/3 stacks.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate",
+      "feet": "ATK% / SPD",
+      "sphere": "Physical DMG Boost",
+      "rope": "ATK%"
+    },
+    "subStats": {
+      "priority": ["Crit Rate", "Crit DMG", "ATK%", "SPD"]
+    },
+    "teams": [
+      {
+        "name": "Phainon F2P Team",
+        "description": "For a free-to-play team, you can use any two Supports with Phainon as long as they have buffs that only target him.\n\nRemembrance Trailblazer in particular is useful on Phainon teams since Mem's charge can accumulate even if Phainon is in his enhanced state.",
+        "teamMembers": ["Phainon", "Trailblazer (Remembrance)", "Tingyun", "Lynx"]
+      },
+      {
+        "name": "Phainon Generalist Team",
+        "description": "Phainon's best general team consists of Supports that provide turn advance and energy restoration. Do note that Phainon's CRIT DMG buff from his Talent can only be activated if the buff provided by the Support only targets him.\n\nSunday and Cerydra are the best Supports since they provide Phainon turn advance and Skill DMG buffs respectively. Huohuo can provide Energy restoration and ATK buffs, which Phainon can benefit from.",
+        "teamMembers": ["Phainon", "Sunday", "Cerydra", "Huohuo"]
+      },
+      {
+        "name": "Phainon Sustainless Team",
+        "description": "Phainon can also be used on a team without any Sustain units. This is because most of the time, Phainon will be in his Enhanced State. This temporarily removes other allies from active combat and prevents them from taking DMG.",
+        "teamMembers": ["Phainon", "Sunday", "Cerydra", "Tingyun"]
+      }
+    ]
+  },
+  "Saber": {
+    "charName": "Saber",
+    "lightCones": [
+      {
+        "name": "A Thankless Coronation",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT DMG by 36%. When using their Ultimate, increases the wearer's ATK by 40%, and if the wearer's Max Energy is greater than or equal to 300, regenerates a fixed amount of Energy equal to 10% of the wearer's Max Energy and increases their ATK by 40% for 2 turns.",
+        "priority": 1
+      },
+      {
+        "name": "Thus Burns the Dawn",
+        "rarity": 5,
+        "description": "The wearer's base SPD increases by 12. When the wearer deals DMG, ignores 18% of the target's DEF. After the wearer uses Ultimate, obtains \"Blazing Sun,\" which is removed at the start of their turn. While \"Blazing Sun\" is in possession, increases the wearer's DMG dealt by 60%.",
+        "priority": 2
+      },
+      {
+        "name": "On the Fall of an Aeon",
+        "rarity": 5,
+        "description": "Whenever the wearer attacks, increase their ATK by 8%/10%/12%/14%/16% in this battle, up to 4 time(s). When the wearer inflicts Weakness Break on enemies, the wearer's DMG increases by 12%/15%/18%/21%/24% for 2 turns",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Wavestrider Captain",
+        "description": "2-pc: CRIT DMG increases by 16%. 4-pc: When the wearer is the target of another ally target's ability, gains 1 stack of \"Help,\" stacking up to 2 times. When using Ultimate, if the unit possesses 2 stacks of \"Help,\" consumes all \"Help\" and increases the wearer's ATK by 48%, lasting 1 turn.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Firmament Frontline Glamoth",
+        "description": "Increases the wearer's ATK by 12%. When the wearer's SPD is equal to or higher than 135/160, the wearer deals 12%/18% more DMG.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Crit DMG / Crit Rate",
+      "feet": "SPD",
+      "sphere": "Wind DMG Boost",
+      "rope": "ATK%"
+    },
+    "subStats": {
+      "priority": ["Crit Rate", "Crit DMG", "ATK%", "SPD"]
+    },
+    "teams": [
+      {
+        "name": "Saber F2P Team",
+        "description": "For a free-to-play team, you can use any two Supports with Saber as long as they have buffs that only target her.\n\nThe Remembrance Trailblazer and Tingyun are great for Saber thanks to their True DMG buffs and Energy Restoration respectively.",
+        "teamMembers": ["Saber", "Trailblazer (Remembrance)", "Tingyun", "Lynx"]
+      },
+      {
+        "name": "Saber Generalist Team",
+        "description": "Saber's best teams consist of Supports that provide energy restoration and turn-advance. Sunday and Robin both fit into this role while also providing strong buffs to Saber.\n\nHuohuo is the best Support here since she can provide Energy and ATK buffs to the party.",
+        "teamMembers": ["Saber", "Sunday", "Robin", "Huohuo"]
+      }
+    ]
+  },
+  "The Dahlia": {
+    "charName": "The Dahlia",
+    "lightCones": [
+      {
+        "name": "Never Forget Her Flame",
+        "rarity": 5,
+        "description": "Increases the wearer's Break Effect by 60%. When entering combat, increases Break DMG dealt by the wearer and another teammate who triggered combat by 32%. If there is no teammate who triggered combat, applies this effect to the wearer and the teammate with the highest Break Effect. Effects of the same type cannot be stacked. When the wearer applies Weakness to an enemy target, recovers 1 Skill Point. This effect can only trigger once, and trigger count resets when using Ultimate.",
+        "priority": 1
+      },
+      {
+        "name": "Long Road Leads Home",
+        "rarity": 5,
+        "description": "Increases the wearer's Break Effect by 60%. When an enemy target's Weakness gets broken, there is a 100% base chance to inflict the \"Charring\" state on it, which increases its Break DMG taken by 18%, lasting for 2 turn(s). This effect can stack 2 time(s).",
+        "priority": 2
+      },
+      {
+        "name": "Resolution Shines as Pearls of Sweat",
+        "rarity": 4,
+        "description": "When the wearer hits an enemy and if the hit enemy is not already Ensnared, then there is a 60%/70%/80%/90%/100% base chance to Ensnare the hit enemy. Ensnared enemies' DEF decreases by 12%/13%/14%/15%/16% for 1 turn(s).",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Iron Cavalry Against the Scourge",
+        "description": "2-pc: Increases Break Effect by 16%. 4-pc: If the wearer's Break Effect is 150% or higher, ignores 10% of the enemy target's DEF when dealing Break DMG to them. When the wearer's Break Effect is 250% or higher, the Super Break DMG they deal to enemy targets additionally ignores 15% of the targets' DEF.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Forge of the Kalpagni Lantern",
+        "description": "Increases the wearer's SPD by 6%. When the wearer hits an enemy target that has Fire Weakness, the wearer's Break Effect increases by 40%, lasting for 1 turn(s).",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "HP% / DEF% / Effect Hit%",
+      "feet": "SPD",
+      "sphere": "HP% / DEF%",
+      "rope": "Break Effect / Energy Regen"
+    },
+    "subStats": {
+      "priority": ["Break Effect", "SPD", "HP% / DEF%", "Effect Hit%"]
+    },
+    "teams": [
+      {
+        "name": "The Dahlia F2P Team",
+        "description": "The Dahlia's role in this free-to-play team is to provide DEF shred and Super Break to the team. Xueyi can benefit the most from this, since her Follow-up attacks require the enemies' Toughness to be reduced.",
+        "teamMembers": ["The Dahlia", "Xueyi", "Asta", "Gallagher"]
+      },
+      {
+        "name": "The Dahlia Super Break Team",
+        "description": "The Dahlia is best used in a Break Effect team as the Super Break enabler. The Dahlia can use her Skill to allow her allied units to deal Super Break DMG even if the enemies are not Weakness Broken, as well as increase their Weakness Break efficiency.",
+        "teamMembers": ["The Dahlia", "Firefly", "Fugue", "Lingsha"]
+      }
+    ]
+  },
+  "The Herta": {
+    "charName": "The Herta",
+    "lightCones": [
+      {
+        "name": "Into the Unreachable Veil",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT Rate by 12%. When the wearer uses Ultimate, increases the Skill and Ultimate DMG dealt by the wearer by 60%, lasting for 3 turn(s). After the wearer. uses Ultimate, if this instance of Ultimate consumed 140 or more Energy, recovers 1 Skill Point.",
+        "priority": 1
+      },
+      {
+        "name": "Today is Another Peaceful Day",
+        "rarity": 4,
+        "description": "After entering battle, increases the wearer's DMG based on their Max Energy. DMG increases by 0.2%/0.25%/0.3%/0.35%/0.4% per point of Energy, up to 160 Energy.",
+        "priority": 2
+      },
+      {
+        "name": "Geniuses' Repose",
+        "rarity": 4,
+        "description": "Increases the wearer's ATK by 16%/20%/24%/28%/32%. When the wearer defeats an enemy, the wearer's CRIT DMG increases by 24%/30%/36%/42%/48% for 3 turn(s).",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Scholar Lost in Erudition",
+        "description": "2-pc: Increases CRIT Rate by 8%. 4-pc: Increases DMG dealt by Ultimate and Skill by 20%. After using Ultimate, additionally increases the DMG dealt by the next Skill by 25%.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Izumo Gensei and Takama Divine Realm",
+        "description": "Increases the wearer's ATK by 12%. When entering battle, if at least one other ally follows the same Path as the wearer, then the wearer's CRIT Rate increases by 12%.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate / Crit DMG",
+      "feet": "SPD / ATK%",
+      "sphere": "Ice DMG Boost",
+      "rope": "ATK%"
+    },
+    "subStats": {
+      "priority": ["Crit DMG", "Crit Rate", "ATK%", "SPD"]
+    },
+    "teams": [
+      {
+        "name": "The Herta F2P Team",
+        "description": "Fortunately for The Herta, she has access to two free-to-play Erudition units in the form of her Herta puppet and Serval.\n\nWe recommend using an Energy Regen rope and the Passkey Light Cone for your other Erudition DPS. This is so they can use their Ultimates to attack and build up Interpretation consistently.\n\nAs for your Support unit, you can use the Remembrance Trailblazer do a turn advance with Memosprite Skill and have The Herta deal additional True DMG.",
+        "teamMembers": ["The Herta", "Serval", "Trailblazer (Remembrance)", "Lynx"]
+      },
+      {
+        "name": "The Herta Erudition Team",
+        "description": "The Herta's best team should always consist of another Erudition DPS to maximize her kit. Anaxa will be The Herta's best party member since he can use two Skills in one turn and is helpful in single-target scenarios.\n\nTribbie is great for buffing all party members and unleashing Follow-up attacks to restore The Herta's energy. Permansor Terrae proves The Herta with shields, an ATK buff, and the Souldragon which can easily build up Interpretation.",
+        "teamMembers": ["The Herta", "Anaxa", "Tribbie", "Permansor Terrae"]
+      }
+    ]
+  },
+  "Tribbie": {
+    "charName": "Tribbie",
+    "lightCones": [
+      {
+        "name": "If Time Were a Flower",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT DMG by 36%. After the wearer launches a Follow-up ATK, additionally regenerates 12 Energy and gains \"Presage,\" lasting for 2 turn(s). While the wearer has \"Presage,\" all ally targets' CRIT DMG increases by 48%. When entering battle, the wearer regenerates 21 Energy and gains \"Presage,\" lasting for 2 turn(s).",
+        "priority": 1
+      },
+      {
+        "name": "Dance! Dance! Dance!",
+        "rarity": 4,
+        "description": "When the wearer uses their Ultimate, all allies' actions are Advanced Forward by 16%/18%/20%/22%/24%.",
+        "priority": 2
+      },
+      {
+        "name": "Memories of the Past",
+        "rarity": 4,
+        "description": "Increases the wearer's Break Effect by 28%/35%/42%/49%/56%. When the wearer attacks, additionally regenerates 4/5/6/7/8 Energy. This effect can only be triggered 1 time per turn.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Poet of Mourning Collapse",
+        "description": "2-pc: Increases Quantum DMG by 10%. 4-pc: Decreases the wearer's SPD by 8%. Before entering battle, if the wearer's SPD is less than 110/95, increases the wearer's CRIT Rate by 20%/32%. This effect also applies to the wearer's memosprite.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Bone Collection's Serene Demesne",
+        "description": "Increases the wearer's Max HP by 12%. When the wearer's Max HP is 5000 or higher, increases the wearer's and their memosprite's CRIT DMG by 28%.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate / Crit DMG",
+      "feet": "HP%",
+      "sphere": "HP%",
+      "rope": "Energy Regen"
+    },
+    "subStats": {
+      "priority": ["Crit Rate", "HP%", "Crit DMG", "HP"]
+    },
+    "teams": [
+      {
+        "name": "Tribbie F2P Team",
+        "description": "Tribbie's best free-to-play team has Serval and Herta as her DPS units. This team is best used in content where with more than three enemies.\n\nUse Tribbie's kit to buff both Serval and Herta and help them deal more damage.",
+        "teamMembers": ["Tribbie", "Serval", "Herta", "Lynx"]
+      },
+      {
+        "name": "Tribbie Dual-DPS Team",
+        "description": "Tribbie is best used in Dual DPS teams that focus on AoE DMG. The Herta has the best synergy with Tribbie since their kits can help restore each other's energy and damage.\n\nCharacters who can easily access their Ultimate' like Argenti and Serval (with S5 Passkey), can help Tribbie unleash her Follow-up attacks more frequently.\n\nCharacters who attack frequently like, Anaxa, Jade and Lingsha can help restore Tribbie's energy simply by hitting the enemy.",
+        "teamMembers": ["Tribbie", "The Herta", "Anaxa", "Lingsha"]
+      },
+      {
+        "name": "Tribbie HP Team",
+        "description": "Tribbie can work well with other characters that scale on the HP stat since her Glass Ball with Wings! Bonus Ability can increase her Max HP depending on all allies' Max HP.\n\nThe more HP Tribbie has, the stronger her attacks get. Tribbie can also benefit HP-scaling DPS units especially if they deal AoE DMG.",
+        "teamMembers": ["Tribbie", "Castorice", "Evernight", "Hyacine"]
       }
     ]
   }
