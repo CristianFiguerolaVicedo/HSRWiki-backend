@@ -17,6 +17,7 @@ import org.springframework.stereotype.Service;
 import tools.jackson.databind.JsonNode;
 import tools.jackson.databind.ObjectMapper;
 import com.crifigvic.hsrwiki.util.Path;
+import tools.jackson.databind.node.ObjectNode;
 
 import java.io.IOException;
 import java.nio.file.Paths;
@@ -30,6 +31,7 @@ public class GameDataLoader {
     private final ObjectMapper mapper = new ObjectMapper();
     private Map<Integer, Character> characters = new HashMap<>();
     private Map<Integer, Lightcone> lightcones = new HashMap<>();
+    private Map<String, RelicSet> relicSets = new HashMap<>();
     private final CharacterBuildService characterBuildService;
 
     @PostConstruct
@@ -39,6 +41,21 @@ public class GameDataLoader {
 
         loadCharacters(root.get("characters"));
         loadLightcones(root.get("light_cones"));
+        loadRelicSets(root.get("relic_sets"));
+    }
+
+    private void loadRelicSets(JsonNode relicNode) throws IOException {
+        if (relicNode == null) return;
+
+        for (Iterator<String> it = relicNode.propertyNames().iterator(); it.hasNext(); ) {
+            String name = it.next();
+            JsonNode node = relicNode.get(name);
+
+            RelicSet relicSet = parseRelicSet(name, node);
+            if (relicSet != null) {
+                relicSets.put(name, relicSet);
+            }
+        }
     }
 
     private void loadCharacters(JsonNode charsNode) throws IOException {
@@ -123,6 +140,84 @@ public class GameDataLoader {
         }
     }
 
+    private RelicSet parseRelicSet(String name, JsonNode node) {
+        try {
+            Map<String, Piece> pieces = parsePieces(node.get("pieces"));
+            List<String> desc = parseDescription(node.get("desc"));
+            List<List<Modifier>> modifiers = parseSetModifiers(node.get("modifiers"));
+
+            return RelicSet.builder()
+                    .name(name)
+                    .pieces(pieces)
+                    .desc(desc)
+                    .modifiers(modifiers)
+                    .build();
+        } catch (Exception e) {
+            log.error("Error parsing relic set: {}", name, e);
+            return null;
+        }
+    }
+
+    private Map<String, Piece> parsePieces(JsonNode piecesNode) {
+        Map<String, Piece> pieces = new HashMap<>();
+        if (piecesNode == null || !piecesNode.isObject()) {
+            return pieces;
+        }
+
+        Map<String, Object> piecesMap = mapper.convertValue(piecesNode, Map.class);
+
+        for (Map.Entry<String, Object> entry : piecesMap.entrySet()) {
+            String pieceType = entry.getKey();
+
+            JsonNode pieceNode = mapper.valueToTree(entry.getValue());
+
+            Piece piece = Piece.builder()
+                    .name(getText(pieceNode, "name"))
+                    .icon(getText(pieceNode, "icon"))
+                    .build();
+
+            pieces.put(pieceType, piece);
+        }
+
+        return pieces;
+    }
+
+    private List<String> parseDescription(JsonNode descNode) {
+        List<String> desc = new ArrayList<>();
+        if (descNode == null || !descNode.isArray()) {
+            return desc;
+        }
+
+        for (JsonNode descItem : descNode) {
+            desc.add(descItem.asText());
+        }
+
+        return desc;
+    }
+
+    private List<List<Modifier>> parseSetModifiers(JsonNode modifiersNode) {
+        List<List<Modifier>> allModifiers = new ArrayList<>();
+        if (modifiersNode == null || !modifiersNode.isArray()) {
+            return allModifiers;
+        }
+
+        for (JsonNode modifierArray : modifiersNode) {
+            List<Modifier> modifiers = new ArrayList<>();
+            if (modifierArray.isArray()) {
+                for (JsonNode modifierNode : modifierArray) {
+                    Modifier modifier = Modifier.builder()
+                            .type(modifierNode.get("type").asText())
+                            .value(modifierNode.get("value").asDouble())
+                            .build();
+                    modifiers.add(modifier);
+                }
+            }
+            allModifiers.add(modifiers);
+        }
+
+        return allModifiers;
+    }
+
     private List<LightconeAscension> parseLightconeAscensions(JsonNode ascensionsNode) {
         List<LightconeAscension> ascensions = new ArrayList<>();
         if (ascensionsNode == null || !ascensionsNode.isArray()) {
@@ -186,6 +281,14 @@ public class GameDataLoader {
     private String getText(JsonNode node, String field) {
         JsonNode value = node.get(field);
         return value != null ? value.asString() : null;
+    }
+
+    public Collection<RelicSet> getAllRelicSets() {
+        return relicSets.values();
+    }
+
+    public RelicSet getRelicSetByName(String name) {
+        return relicSets.get(name);
     }
 
     /*private String buildIconPath(String characterName) {
