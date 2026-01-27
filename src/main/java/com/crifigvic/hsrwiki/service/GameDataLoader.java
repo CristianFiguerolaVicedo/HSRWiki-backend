@@ -32,6 +32,7 @@ public class GameDataLoader {
     private Map<Integer, Character> characters = new HashMap<>();
     private Map<Integer, Lightcone> lightcones = new HashMap<>();
     private Map<String, RelicSet> relicSets = new HashMap<>();
+    private Map<String, Item> items = new HashMap<>();
     private final CharacterBuildService characterBuildService;
 
     @PostConstruct
@@ -42,6 +43,8 @@ public class GameDataLoader {
         loadCharacters(root.get("characters"));
         loadLightcones(root.get("light_cones"));
         loadRelicSets(root.get("relic_sets"));
+        loadItems(root.get("items"));
+
     }
 
     private void loadRelicSets(JsonNode relicNode) throws IOException {
@@ -103,6 +106,29 @@ public class GameDataLoader {
 
             characters.put(character.getId(), character);
         }
+    }
+
+    private void loadItems(JsonNode itemsNode) throws IOException {
+        if (itemsNode == null) return;
+
+        for (Iterator<String> it = itemsNode.propertyNames().iterator(); it.hasNext(); ) {
+            String name = it.next();
+            JsonNode node = itemsNode.get(name);
+
+            Item item = Item.builder()
+                    .id(getText(node, "id"))
+                    .name(name)
+                    .rarity(node.has("rarity") ? node.get("rarity").asInt() : 1)
+                    .type(getText(node, "type"))
+                    .sub_type(getText(node, "sub_type"))
+                    .icon(getText(node, "icon"))
+                    .come_from(parseStringArray(node.get("come_from")))
+                    .build();
+
+            items.put(name, item);
+        }
+
+        log.info("Loaded {} items", items.size());
     }
 
     private void loadLightcones(JsonNode lightconesNode) throws IOException {
@@ -281,6 +307,18 @@ public class GameDataLoader {
     private String getText(JsonNode node, String field) {
         JsonNode value = node.get(field);
         return value != null ? value.asString() : null;
+    }
+
+    private List<String> parseStringArray(JsonNode arrayNode) {
+        List<String> list = new ArrayList<>();
+        if (arrayNode != null && arrayNode.isArray()) {
+            for (JsonNode item : arrayNode) {
+                if (item.isTextual()) {
+                    list.add(item.asText());
+                }
+            }
+        }
+        return list;
     }
 
     public Collection<RelicSet> getAllRelicSets() {
@@ -535,5 +573,20 @@ public class GameDataLoader {
         }
 
         return modifiers;
+    }
+
+    public Collection<Item> getAllItems() {
+        return items.values();
+    }
+
+    public Item getItemById(String id) {
+        return items.values().stream()
+                .filter(item -> item.getId().equals(id))
+                .findFirst()
+                .orElse(null);
+    }
+
+    public Item getItemByName(String name) {
+        return items.get(name);
     }
 }
