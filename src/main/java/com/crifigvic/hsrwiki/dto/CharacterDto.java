@@ -17,6 +17,7 @@ public record CharacterDto(
         List<Eidolon> eidolons,
         Skill skills,
         Trace traces,
+        EnhancedKit enhanced,
         CharBuild build
 ) {
 }

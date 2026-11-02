@@ -2,15 +2,15 @@
 
 This project is meant to be a database for players of Honkai: Star Rail to see characters, lightcones, builds, relics and much more.
 
-The info was retrieved using the repository [Kel-Z HSR-Data Repository](https://github.com/kel-z/HSR-Data).
+The game data is generated from [Mar-7th/StarRailRes](https://github.com/Mar-7th/StarRailRes) with an extractor based on [kel-z/HSR-Data](https://github.com/kel-z/HSR-Data) (that repository stopped updating at version 2.7). The data currently included is from **version 4.6**.
 
-The project is made into 2 parts divided into 2 repositories, the backend and the frontend, the frontend is in the following link: [Backend-Repository](https://github.com/CristianFiguerolaVicedo/HSRWiki-frontend).
+The project is made into 2 parts divided into 2 repositories, the backend and the frontend, the frontend is in the following link: [Frontend-Repository](https://github.com/CristianFiguerolaVicedo/HSRWiki-frontend).
 
 ## Setting up the project
 
 In order to use the project you have to first clone both repositories. To do that, open the terminal and navigate to the folder where you want to clone both repositories and execute `git clone https://github.com/CristianFiguerolaVicedo/HSRWiki-frontend.git` for the frontend repository and `git clone https://github.com/CristianFiguerolaVicedo/HSRWiki-backend.git` for the backend repository.
 
-After doing this, open both parts on your favourite code editor (Recommended: IntelliJIdea for the backend and Visual Studio Code for the frontend). On the backend part, open the project and run it. For the frontend, open the project and execute in the terminal `npm install` to install all the necessary dependencies of the project. After that, execute `npm run dev` and do `Ctrl + click` to on the link that will appear to open the project on the browser.
+After doing this, open both parts on your favourite code editor (Recommended: IntelliJIdea for the backend and Visual Studio Code for the frontend). On the backend part, open the project and run it (or run `./mvnw spring-boot:run`); it serves the API on `http://localhost:8080/api`. The game data is already included, so nothing else is needed. For the frontend, open the project and execute in the terminal `npm install` to install all the necessary dependencies of the project. After that, execute `npm run dev` and do `Ctrl + click` to on the link that will appear to open the project on the browser.
 
 ## Objective of the project
 
@@ -28,11 +28,27 @@ The colors are not to bright to be appealing to the sight and the info is dispos
 
 ## Backend parts
 
-### hsr-data
+### Game data (data-pipeline)
 
-This is a folder conteining everything needed to retrieve the data from the repository. In order to do it, after cloning the repository, go to the folder hsr-data and execute the command `python src/main.py` which creates the output folder "output".
+The data the API serves lives in `src/main/resources/data/`:
 
-Looking at the content of this folder there are several documents, each one named after the type of data which contains, but the main ones are: game_data.json, game_data_verbose.json and game_data_verbose_with_icons.json. This files contain the same information but in different depth, being just information, more extense information and extense information with icons.
+- `game_data.json`: characters, light cones, relic sets and items, generated automatically.
+- `character_builds.json`: the recommended builds, written by hand.
+
+To update the game data after a new Honkai: Star Rail version (once StarRailRes has been updated), run from the repository root:
+
+```
+python data-pipeline/update_data.py
+```
+
+It downloads only the English index files of StarRailRes (a few MB, no images), runs the extractor in `data-pipeline/hsrdata/` and rewrites `game_data.json`. The extractor understands the newer kits: Remembrance and Elation paths, Memosprite and Elation skills, and the enhanced kits added from version 3.4.
+
+The API also exposes `GET /api/version`, which returns the game version of the loaded data.
+
+Configuration (`application.properties`):
+
+- `hsrwiki.data-file` / `hsrwiki.builds-file`: where to read the data from (classpath by default; use `file:/path/...` for an external file).
+- `hsrwiki.cors.allowed-origins`: frontend origins allowed to call the API.
 
 ### Custom files
 
@@ -64,6 +80,6 @@ Also has some helper methods to parse the information, like the skills of the ch
 
 #### Util
 
-Lastly, the util folder contains the enums for the paths and elements used and the character_builds.json.
+Lastly, the util folder contains the enums for the paths and elements used. The builds file, `character_builds.json`, is in `src/main/resources/data/`.
 
 This last file is the one containing the builds for every character in the game. It is not important to know it, but it was handtyped to ensure that the builds were as accurate as possible to the best ones.

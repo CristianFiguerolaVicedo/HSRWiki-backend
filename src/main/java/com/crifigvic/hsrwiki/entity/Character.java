@@ -28,5 +28,6 @@ public class Character {
     private List<Eidolon> eidolons;
     private Skill skills;
     private Trace traces;
+    private EnhancedKit enhanced;
     private CharBuild build;
 }

@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/items")
@@ -25,16 +24,16 @@ public class ItemController {
     }
 
     @GetMapping("/{id}")
-    public ItemDto getItemId(@PathVariable String id) {
-        return mapper.toDto(loader.getItemById(id));
+    public ResponseEntity<ItemDto> getItemId(@PathVariable String id) {
+        return toResponse(loader.getItemById(id));
     }
 
     @GetMapping("/name/{name}")
     public ResponseEntity<ItemDto> getItemByName(@PathVariable String name) {
-        Item item = loader.getItemByName(name);
-        if (item == null) {
-            return ResponseEntity.notFound().build();
-        }
-        return ResponseEntity.ok(mapper.toDto(item));
+        return toResponse(loader.getItemByName(name));
+    }
+
+    private ResponseEntity<ItemDto> toResponse(Item item) {
+        return item == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(mapper.toDto(item));
     }
 }

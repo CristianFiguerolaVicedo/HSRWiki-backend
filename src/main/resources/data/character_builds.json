@@ -48,12 +48,12 @@
       {
         "name": "F2P TB (Destruction) Team",
         "description": "This F2P team involves Asta increasing the Trailblazers ATK, making them deal more DMG to enemies. March and Natasha can provide shields and healing to keep the entire party alive.",
-        "teamMembers": ["Trailblazer (Destruction)", "Asta", "March7th", "Natasha"]
+        "teamMembers": ["Trailblazer (Destruction)", "Asta", "March 7th", "Natasha"]
       },
       {
         "name": "AOE Physical Hypercarry Team",
         "description": "Funnel all SP and offensive buffs into Trailblazer for consecutive extra turns of massive damage before the full turn cycle completes. Utilize Weakness Break to raise Trailblazer's attack. Be warned that this team is better in AoE situations than it is for single target",
-        "teamMembers": ["Trailblazer (Destruction)", "Bronya", "Tingyun", "HuoHuo"]
+        "teamMembers": ["Trailblazer (Destruction)", "Bronya", "Tingyun", "Huohuo"]
       }
     ]
   },
@@ -106,12 +106,12 @@
       {
         "name": "F2P TB (Destruction) Team",
         "description": "This F2P team involves Asta increasing the Trailblazers ATK, making them deal more DMG to enemies. March and Natasha can provide shields and healing to keep the entire party alive.",
-        "teamMembers": ["Trailblazer (Destruction)", "Asta", "March7th", "Natasha"]
+        "teamMembers": ["Trailblazer (Destruction)", "Asta", "March 7th", "Natasha"]
       },
       {
         "name": "AOE Physical Hypercarry Team",
         "description": "Funnel all SP and offensive buffs into Trailblazer for consecutive extra turns of massive damage before the full turn cycle completes. Utilize Weakness Break to raise Trailblazer's attack. Be warned that this team is better in AoE situations than it is for single target",
-        "teamMembers": ["Trailblazer (Destruction)", "Bronya", "Tingyun", "HuoHuo"]
+        "teamMembers": ["Trailblazer (Destruction)", "Bronya", "Tingyun", "Huohuo"]
       }
     ]
   },
@@ -164,7 +164,7 @@
       {
         "name": "F2P TB (Harmony) Team",
         "description": "The Trailblazer's role in this free-to-play team is to provide supplemental DMG on a Weakness Broken enemy. March 7th can use her Skill on Gallagher to deal more Toughness DMG on an enemy and have her Super Break DMG increased.",
-        "teamMembers": ["Trailblazer (Harmony)", "March7th (Imaginary)", "Asta", "Gallagher"]
+        "teamMembers": ["Trailblazer (Harmony)", "March 7th (Imaginary)", "Asta", "Gallagher"]
       },
       {
         "name": "Trailblazer (Harmony) Break Team",
@@ -222,7 +222,7 @@
       {
         "name": "F2P TB (Harmony) Team",
         "description": "The Trailblazer's role in this free-to-play team is to provide supplemental DMG on a Weakness Broken enemy. March 7th can use her Skill on Gallagher to deal more Toughness DMG on an enemy and have her Super Break DMG increased.",
-        "teamMembers": ["Trailblazer (Harmony)", "March7th (Imaginary)", "Asta", "Gallagher"]
+        "teamMembers": ["Trailblazer (Harmony)", "March 7th (Imaginary)", "Asta", "Gallagher"]
       },
       {
         "name": "Trailblazer (Harmony) Break Team",
@@ -494,7 +494,7 @@
     ],
     "planarSets": [
       {
-        "name": "Firmament Frontline Glamoth",
+        "name": "Firmament Frontline: Glamoth",
         "description": "Increases the wearer's ATK by 12%. When the wearer's SPD is equal to or higher than 135/160, the wearer deals 12%/18% more DMG.",
         "priority": 1
       }
@@ -633,7 +633,7 @@
       {
         "name": "Aventurine Follow-Up ATK Team (2)",
         "description": "Aventurine works best in a Follow-up attack team since they can help him unleash his own Follow-up attack. Aventurine works well with Dr. Ratio and Feixiao since his Follow-up attacks and debuff can help them deal the most amount of damage possible.\n\nTopaz can increase both Follow-up attack DMG taken by the enemy and Robin can increase everyone's CRIT DMG and Follow-up attack DMG. Cipher is also a great option for providing debuffs and frequent Follow-up attacks.",
-        "teamMembers": ["Aventurine", "Dr.Ratio", "Topaz", "Robin"]
+        "teamMembers": ["Aventurine", "Dr. Ratio", "Topaz", "Robin"]
       }
     ]
   },
@@ -714,7 +714,7 @@
     ],
     "relicSets": [
       {
-        "name": "Prisoner In Deep Confinement",
+        "name": "Prisoner in Deep Confinement",
         "description": "2-pc: Increases ATK by 12%. 4-pc: For every DoT the target enemy is afflicted with, the wearer will ignore 6% of target's DEF when dealing DMG to them. This effect is valid for a max of 3 DoTs.",
         "priority": 1
       }
@@ -739,12 +739,12 @@
       {
         "name": "Black Swan F2P Team",
         "description": "Black Swan will go in tandem with Serval as the two DPS characters in the party. Serval can also provide Shock DoTs with her kit.\n\nAsta is the best free-to-play Support for Black Swan thanks to her SPD and ATK buffs for the entire party.",
-        "teamMembers": ["BlackSwan", "Serval", "Asta", "Natasha"]
+        "teamMembers": ["Black Swan", "Serval", "Asta", "Natasha"]
       },
       {
         "name": "Black Swan DoT Team",
         "description": "Black Swan shines in DoT-centric teams with Kafka as the Main DPS who can trigger her DoTs.\n\nRuan Mei can increase the party's Break Efficiency and delay the enemies' recovery from Break, which results in them taking in more DoTs before they manage to attack.",
-        "teamMembers": ["BlackSwan", "Kafka", "RuanMei", "Huohuo"]
+        "teamMembers": ["Black Swan", "Kafka", "Ruan Mei", "Huohuo"]
       }
     ]
   },
@@ -865,7 +865,7 @@
       {
         "name": "Blade Break Team",
         "description": "Boothill's ideal team comp is in a Break team since it provides him with more Break Effect, which means even more damage. Sunday is a great since he can give him bonus actions and Energy Restoration.\n\nIf being paired with Boothill, Sunday should have -1 or -2 SPD behind Boothill.\n\nSunday allows Boothill to do back-to-back Enhanced Basic ATKs which allows him to ramp up even faster. Ruan Mei gives a ton of Break Effect and other buffs like RES PEN, while Lingsha is a healer that also scales with Break Effect.",
-        "teamMembers": ["Boothill", "Sunday", "RuanMei", "Lingsha"]
+        "teamMembers": ["Boothill", "Sunday", "Ruan Mei", "Lingsha"]
       },
       {
         "name": "Boothill Super Break Team",
@@ -898,7 +898,7 @@
     ],
     "relicSets": [
       {
-        "name": "Sacerdos' Relieved Ordeal",
+        "name": "Sacerdos' Relived Ordeal",
         "description": "2-pc: Increases SPD by 6%. 4-pc: When using Skill or Ultimate on one ally target, increases the ability-using target's CRIT DMG by 18%, lasting for 2 turn(s). This effect can stack up to 2 time(s).",
         "priority": 1
       }
@@ -928,7 +928,7 @@
       {
         "name": "Bronya Generalist Team",
         "description": "Bronya shines as long as you have a hard-hitting CRIT DPS in the team. She can fill up almost any team that needs a DMG buffer, and her advance forward mechanic can help defeat enemies faster.",
-        "teamMembers": ["Bronya", "Jingliu", "RuanMei", "Luocha"]
+        "teamMembers": ["Bronya", "Jingliu", "Ruan Mei", "Luocha"]
       },
       {
         "name": "Bronya Break Team",
@@ -991,7 +991,7 @@
       {
         "name": "Clara Follow-up Attack Team",
         "description": "Funnel all buffs into Clara to increase her Follow-up attack damage. It's required to either have a healer or a shielder to keep Clara and the party alive.",
-        "teamMembers": ["Clara", "Topaz", "Tribbie", "PermansorTerrae"]
+        "teamMembers": ["Clara", "Topaz", "Tribbie", "Permansor Terrae"]
       }
     ]
   },
@@ -1026,7 +1026,7 @@
     ],
     "planarSets": [
       {
-        "name": "Firmament Frontline Glamoth",
+        "name": "Firmament Frontline: Glamoth",
         "description": "Increases the wearer's ATK by 12%. When the wearer's SPD is equal to or higher than 135/160, the wearer deals 12%/18% more DMG.",
         "priority": 1
       }
@@ -1044,17 +1044,17 @@
       {
         "name": "Dan Heng F2P Team",
         "description": "This Dan Heng F2P team comp can deal with most single-target situations. Yukong can increase Dan Heng's CRIT Rate and DMG while both the Trailblazer and Natasha can keep the party alive through Shields and Healing.",
-        "teamMembers": ["DanHeng", "Yukong", "Trailblazer (Preservation)", "Natasha"]
+        "teamMembers": ["Dan Heng", "Yukong", "Trailblazer (Preservation)", "Natasha"]
       },
       {
         "name": "Dan Heng Hypercarry Team",
         "description": "Dan Heng can deal a lot of DMG with characters who can Slow enemies down. Welt is one of the best party members here as he can slow down enemies to increase the DMG dealt by Dan Heng.\n\nSunday and Huohuo can provide energy and buffs to Dan Heng, which will activate his Talent's Wind RES PEN.",
-        "teamMembers": ["DanHeng", "Welt", "Sunday", "Huohuo"]
+        "teamMembers": ["Dan Heng", "Welt", "Sunday", "Huohuo"]
       },
       {
         "name": "Dan Heng Wind-Quantum Team",
         "description": "This Dan Heng team comp is viable in certain content where the enemy is weak to Quantum but not to Wind. Silver Wolf is a must-have for this team so she can implant a Wind Weakness on an enemy.",
-        "teamMembers": ["DanHeng", "Bronya", "Silver Wolf", "Huohuo"]
+        "teamMembers": ["Dan Heng", "Bronya", "Silver Wolf", "Huohuo"]
       }
     ]
   },
@@ -1089,7 +1089,7 @@
     ],
     "planarSets": [
       {
-        "name": "Tengoku Livestream",
+        "name": "Tengoku@Livestream",
         "description": "Increases the wearer's CRIT DMG by 16%. If 3 or more Skill Points are consumed in the same turn, additionally increases CRIT DMG by 32% for 3 turns.",
         "priority": 1
       }
@@ -1354,7 +1354,7 @@
       {
         "name": "Fu Xuan F2P Team",
         "description": "This Fu Xuan F2P team involves Dan Heng as your DPS. Fu Xuan can decrease the DMG taken and provide CRIT Rate buffs to increase Dan Heng's chances of slowing down enemies.\n\nAsta and Yukong can also enhance the party through SPD and even more CRIT buffs respectively.",
-        "teamMembers": ["Fu Xuan", "Dan Heng", "Asta", "Yunkong"]
+        "teamMembers": ["Fu Xuan", "Dan Heng", "Asta", "Yukong"]
       },
       {
         "name": "Fu Xuan Generalist Team",
@@ -1364,7 +1364,7 @@
       {
         "name": "Fu Xuan Mono-Quantum Team",
         "description": "This team requires Silver Wolf for her ability to ignore elemental weakness of enemies. With a team consisting of just Quantum characters, Silver Wolf will have no problem implanting a Quantum weakness on any enemy.",
-        "temaMembers": ["Fu Xuan", "Seele", "Silver Wolf", "Sparkle"]
+        "teamMembers": ["Fu Xuan", "Seele", "Silver Wolf", "Sparkle"]
       }
     ]
   },
@@ -1581,7 +1581,7 @@
     ],
     "relicSets": [
       {
-        "name": "Prisoner In Deep Confinement",
+        "name": "Prisoner in Deep Confinement",
         "description": "2-pc: Increases ATK by 12%. 4-pc: For every DoT the target enemy is afflicted with, the wearer will ignore 6% of target's DEF when dealing DMG to them. This effect is valid for a max of 3 DoTs.",
         "priority": 1
       }
@@ -1767,7 +1767,7 @@
     ],
     "planarSets": [
       {
-        "name": "Firmament Frontline Glamoth",
+        "name": "Firmament Frontline: Glamoth",
         "description": "Increases the wearer's ATK by 12%. When the wearer's SPD is equal to or higher than 135/160, the wearer deals 12%/18% more DMG.",
         "priority": 1
       }
@@ -1979,7 +1979,7 @@
       {
         "name": "Jade F2P Team",
         "description": "Since Jade wants to be paired with a DPS that attacks frequently and does AoE damage, a great F2P DPS partner will be Herta since she does AoE damage and follow-up attacks.\n\nXueyi is also a decent F2P Replacement for Herta if you're fighting against Quantum-Weak enemies.",
-        "teamMembers": ["Jade", "Herta", "Trailblazer (Remebrance)", "Lynx"]
+        "teamMembers": ["Jade", "Herta", "Trailblazer (Remembrance)", "Lynx"]
       },
       {
         "name": "Jade Erudition Team",
@@ -2337,7 +2337,7 @@
     ],
     "relicSets": [
       {
-        "name": "Prisoner In Deep Confinement",
+        "name": "Prisoner in Deep Confinement",
         "description": "2-pc: Increases ATK by 12%. 4-pc: For every DoT the target enemy is afflicted with, the wearer will ignore 6% of target's DEF when dealing DMG to them. This effect is valid for a max of 3 DoTs.",
         "priority": 1
       }
@@ -2488,7 +2488,7 @@
       {
         "name": "Lynx F2P Team",
         "description": "Lynx can be the solo healer for any F2P team. Here, Dan Heng will be your Main DPS with Lynx as the healer. Fire Trailblazer will provide the taunt and shields while Asta can provide more SPD and ATK buffs for the party.",
-        "teamMembers": ["Lynx", "Dan Heng", "Traiblazer (Preservation)", "Asta"]
+        "teamMembers": ["Lynx", "Dan Heng", "Trailblazer (Preservation)", "Asta"]
       },
       {
         "name": "Lynx Counterattack Team",
@@ -2507,7 +2507,7 @@
       }
     ]
   },
-  "March 7th": {
+  "March 7th (Imaginary)": {
     "charName": "March 7th (Imaginary)",
     "lightCones": [
       {
@@ -2596,7 +2596,7 @@
     ],
     "planarSets": [
       {
-        "name": "Firmament Frontline Glamoth",
+        "name": "Firmament Frontline: Glamoth",
         "description": "Increases the wearer's ATK by 12%. When the wearer's SPD is equal to or higher than 135/160, the wearer deals 12%/18% more DMG.",
         "priority": 1
       }
@@ -2838,7 +2838,7 @@
     ],
     "planarSets": [
       {
-        "name": "Tengoku Livestream",
+        "name": "Tengoku@Livestream",
         "description": "Increases the wearer's CRIT DMG by 16%. If 3 or more Skill Points are consumed in the same turn, additionally increases CRIT DMG by 32% for 3 turns.",
         "priority": 1
       }
@@ -2957,7 +2957,7 @@
         "priority": 1
       },
       {
-        "name": "Prisoner In Deep Confinement",
+        "name": "Prisoner in Deep Confinement",
         "description": "2-pc: Increases ATK by 12%.",
         "priority": 1
       }
@@ -3098,7 +3098,7 @@
     ],
     "relicSets": [
       {
-        "name": "Prisoner In Deep Confinement",
+        "name": "Prisoner in Deep Confinement",
         "description": "2-pc: Increases ATK by 12%. 4-pc: For every DoT the target enemy is afflicted with, the wearer will ignore 6% of target's DEF when dealing DMG to them. This effect is valid for a max of 3 DoTs.",
         "priority": 1
       }
@@ -3226,7 +3226,7 @@
     ],
     "planarSets": [
       {
-        "name": "Firmament Frontline Glamoth",
+        "name": "Firmament Frontline: Glamoth",
         "description": "Increases the wearer's ATK by 12%. When the wearer's SPD is equal to or higher than 135/160, the wearer deals 12%/18% more DMG.",
         "priority": 1
       }
@@ -3385,7 +3385,7 @@
       {
         "name": "Sparkle Hypercarry Team",
         "description": "This Sparkle team uses Imbibitor Lunae to deal as much DMG as possible by feeding him Skill Points. Tingyun can restore energy for Imbibitor Lunae so he can use his Ultimate more frequently.\n\nLuocha is the best sustain unit for this team since he doesn't have to consume Skill Points to provide healing.",
-        "teamMembers": ["Sparkle", "Dan Heng - Imbibitor Lunae", "Tingyun", "Luocha"]
+        "teamMembers": ["Sparkle", "Dan Heng • Imbibitor Lunae", "Tingyun", "Luocha"]
       }
     ]
   },
@@ -3488,7 +3488,7 @@
     ],
     "planarSets": [
       {
-        "name": "Firmament Frontline Glamoth",
+        "name": "Firmament Frontline: Glamoth",
         "description": "Increases the wearer's ATK by 12%. When the wearer's SPD is equal to or higher than 135/160, the wearer deals 12%/18% more DMG.",
         "priority": 1
       }
@@ -3627,7 +3627,7 @@
       {
         "name": "Topaz Follow-Up Attack Team",
         "description": "In these team comps, Topaz will act as a Sub-DPS that can use her Skill to increase the enemy's DMG from Follow-up Attacks. Feixiao and Dr. Ratio are the best DPS units to be paired up with Topaz as most of their DMG comes from Follow-up attack DMG.\n\nIf you have Aventurine in a Dr. Ratio team, you can use Robin as your second Support unit since she can increase Follow-up attack DMG. Otherwise, use Silver Wolf to implant a lot of debuffs on the enemy.",
-        "teamMembers": ["Topaz", "Feixiao / Dr.Ratio", "Robin / Silver Wolf", "Aventurine / Luocha"]
+        "teamMembers": ["Topaz", "Feixiao / Dr. Ratio", "Robin / Silver Wolf", "Aventurine / Luocha"]
       },
       {
         "name": "Topaz Fire-Quantum Team",
@@ -3695,7 +3695,7 @@
       {
         "name": "Welt Mono-Imaginary Team",
         "description": "This Welt team comp is viable in certain content where the enemy is weak to Quantum but not to Imaginary. Silver Wolf is a must-have for this team so she can implant an Imaginary Weakness on an enemy.\n\nIf the enemy is already weak to Imaginary, you can replace Silver Wolf with another unit.",
-        "teamMembers": ["Welt", "Dr.Ratio", "Silver Wolf", "Aventurine"]
+        "teamMembers": ["Welt", "Dr. Ratio", "Silver Wolf", "Aventurine"]
       }
     ]
   },
@@ -3798,7 +3798,7 @@
     ],
     "planarSets": [
       {
-        "name": "Firmament Frontline Glamoth",
+        "name": "Firmament Frontline: Glamoth",
         "description": "Increases the wearer's ATK by 12%. When the wearer's SPD is equal to or higher than 135/160, the wearer deals 12%/18% more DMG.",
         "priority": 1
       }
@@ -3899,7 +3899,7 @@
       {
         "name": "Yukong Imaginary Team",
         "description": "A Yukong Imaginary team can be effective if all of the characters in it are built with a bit of damage dealing potential. All Imaginary characters in this team will want to use Wastelander of Banditry Desert to maximize their damage.",
-        "teamMembers": ["Yukong", "Dr.Ratio", "Silver Wolf", "Luocha"]
+        "teamMembers": ["Yukong", "Dr. Ratio", "Silver Wolf", "Luocha"]
       }
     ]
   },
@@ -4020,7 +4020,7 @@
       {
         "name": "Trailblazer (Remembrance) Generalist Team",
         "description": "The Remembrance Trailblazer works best with characters that require a lot of energy to use their Ultimate. This is because if the character supported by Mem has an Ultimate cost of 100 or above, they deal more True DMG.\n\nSo characters like Argenti and The Herta are great characters to pair up with the Trailblazer since they have a high Ultimate cost. Characters that can restore energy like Sunday and Huohuo can help activate the Memosprite Talent as soon as possible.",
-        "teamMembers": ["Trailblazer (Remembrance)", "The Herta / Argenti", "Anaxa / Sunday", "Lingsha / HuoHuo"]
+        "teamMembers": ["Trailblazer (Remembrance)", "The Herta / Argenti", "Anaxa / Sunday", "Lingsha / Huohuo"]
       },
       {
         "name": "Trailblazer (Remembrance) Remembrance Team",
@@ -4083,7 +4083,7 @@
       {
         "name": "Trailblazer (Remembrance) Generalist Team",
         "description": "The Remembrance Trailblazer works best with characters that require a lot of energy to use their Ultimate. This is because if the character supported by Mem has an Ultimate cost of 100 or above, they deal more True DMG.\n\nSo characters like Argenti and The Herta are great characters to pair up with the Trailblazer since they have a high Ultimate cost. Characters that can restore energy like Sunday and Huohuo can help activate the Memosprite Talent as soon as possible.",
-        "teamMembers": ["Trailblazer (Remembrance)", "The Herta / Argenti", "Anaxa / Sunday", "Lingsha / HuoHuo"]
+        "teamMembers": ["Trailblazer (Remembrance)", "The Herta / Argenti", "Anaxa / Sunday", "Lingsha / Huohuo"]
       },
       {
         "name": "Trailblazer (Remembrance) Remembrance Team",
@@ -4244,7 +4244,7 @@
     ],
     "planarSets": [
       {
-        "name": "Tengoku Livestream",
+        "name": "Tengoku@Livestream",
         "description": "Increases the wearer's CRIT DMG by 16%. If 3 or more Skill Points are consumed in the same turn, additionally increases CRIT DMG by 32% for 3 turns.",
         "priority": 1
       }
@@ -4358,7 +4358,7 @@
     ],
     "relicSets": [
       {
-        "name": "Sacerdos' Relieved Ordeal",
+        "name": "Sacerdos' Relived Ordeal",
         "description": "2-pc: Increases SPD by 6%. 4-pc: When using Skill or Ultimate on one ally target, increases the ability-using target's CRIT DMG by 18%, lasting for 2 turn(s). This effect can stack up to 2 time(s).",
         "priority": 1
       }
@@ -4423,7 +4423,7 @@
     ],
     "planarSets": [
       {
-        "name": "Firmament Frontline Glamoth",
+        "name": "Firmament Frontline: Glamoth",
         "description": "Increases the wearer's ATK by 12%. When the wearer's SPD is equal to or higher than 135/160, the wearer deals 12%/18% more DMG.",
         "priority": 1
       }
@@ -4484,7 +4484,7 @@
     ],
     "relicSets": [
       {
-        "name": "Sacerdos' Relieved Ordeal",
+        "name": "Sacerdos' Relived Ordeal",
         "description": "2-pc: Increases SPD by 6%.",
         "priority": 1
       },
@@ -4519,7 +4519,7 @@
       {
         "name": "Cyrene Chrysos Heir Teams",
         "description": "Cyrene is best used on a team that consists at least two Chrysos Heir characters. Having Chrysos Heirs in the team increases the amount of Recollection she gains at the start of the battle, and also the Recollection she gets during battle.\n\nThis allows Cyrene to have an easier time charging her Ultimate. On top of the Recollection stacks, Cyrene also grants unique buffs to each Chrysos Heir which makes them a lot stronger.",
-        "teamMembers": ["Cyrene", "Castorice / Aglaea / Anaxa / Mydei", "Evernight / Sunday / Cerydra / Cerydra", "Hyacine / Permansor Terrae / Permansor Terrae / Hyacine"]
+        "teamMembers": ["Cyrene", "Castorice / Aglaea / Anaxa / Mydei", "Evernight / Sunday / Cerydra", "Hyacine / Permansor Terrae"]
       }
     ]
   },
@@ -4731,7 +4731,7 @@
     ],
     "relicSets": [
       {
-        "name": "Prisoner In Deep Confinement",
+        "name": "Prisoner in Deep Confinement",
         "description": "2-pc: Increases ATK by 12%. 4-pc: For every DoT the target enemy is afflicted with, the wearer will ignore 6% of target's DEF when dealing DMG to them. This effect is valid for a max of 3 DoTs.",
         "priority": 1
       }
@@ -4927,7 +4927,7 @@
     ],
     "planarSets": [
       {
-        "name": "Firmament Frontline Glamoth",
+        "name": "Firmament Frontline: Glamoth",
         "description": "Increases the wearer's ATK by 12%. When the wearer's SPD is equal to or higher than 135/160, the wearer deals 12%/18% more DMG.",
         "priority": 1
       }
@@ -5130,6 +5130,1297 @@
         "name": "Tribbie HP Team",
         "description": "Tribbie can work well with other characters that scale on the HP stat since her Glass Ball with Wings! Bonus Ability can increase her Max HP depending on all allies' Max HP.\n\nThe more HP Tribbie has, the stronger her attacks get. Tribbie can also benefit HP-scaling DPS units especially if they deal AoE DMG.",
         "teamMembers": ["Tribbie", "Castorice", "Evernight", "Hyacine"]
+      }
+    ]
+  },
+  "Sparxie": {
+    "charName": "Sparxie",
+    "lightCones": [
+      {
+        "name": "Dazzled by a Flowery World",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT DMG by 48%. While the wearer is on the field, for every 1 Elation character in the team, increases the Skill Point upper limit by 1, up to a max increase of 3. For every 1 Skill Point the wearer consumes, enables the Elation DMG dealt by this unit to ignore 5.0% of enemy targets' DEF, stacking up to 4 times. If 4 or more Skill Points are consumed in the same turn, the wearer gains \"Stream Promo,\" which increases all allies' Elation by 20%. Light Cone effects of the same type cannot stack.",
+        "priority": 1
+      },
+      {
+        "name": "Today's Good Luck",
+        "rarity": 4,
+        "description": "Increases the wearer's CRIT Rate by 12%. When the wearer uses an Elation Skill, increases Elation by 12%, stacking up to 2 times.",
+        "priority": 2
+      },
+      {
+        "name": "Mushy Shroomy's Adventures",
+        "rarity": 4,
+        "description": "Increases the wearer's Elation by 12%. When the wearer uses an Elation Skill, increases Elation DMG taken by all enemies by 6% for 2 turn(s).",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Ever-Glorious Magical Girl",
+        "description": "2-pc: Increases CRIT DMG by 16%. 4-pc: The Elation DMG dealt by the wearer and their memosprites ignores 10% of targets' DEF. For every 5 accumulated Punchline allies gain, the Elation DMG dealt additionally ignores 1% of targets' DEF, stacking up to 10 time(s).",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Tengoku@Livestream",
+        "description": "Increases the wearer's CRIT DMG by 16%. If 3 or more Skill Points are consumed in the same turn, additionally increases the wearer's CRIT DMG by 32%, lasting for 3 turns.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate",
+      "feet": "ATK%",
+      "sphere": "ATK%",
+      "rope": "ATK%"
+    },
+    "subStats": {
+      "priority": [
+        "Crit Rate",
+        "Crit DMG",
+        "ATK%"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Sparxie Elation Team",
+        "description": "Yao Guang is Sparxie's core Elation partner, while Sparkle helps her spend Skill Points freely and Huohuo keeps the team healthy and charged.",
+        "teamMembers": [
+          "Sparxie",
+          "Yao Guang",
+          "Sparkle",
+          "Huohuo"
+        ]
+      },
+      {
+        "name": "Sparxie Shield Team",
+        "description": "Same core as the main team, swapping Huohuo for Dan Heng • Permansor Terrae for shielding and extra buffs.",
+        "teamMembers": [
+          "Sparxie",
+          "Yao Guang",
+          "Sparkle",
+          "Permansor Terrae"
+        ]
+      }
+    ]
+  },
+  "Yao Guang": {
+    "charName": "Yao Guang",
+    "lightCones": [
+      {
+        "name": "When She Decided to See",
+        "rarity": 5,
+        "description": "Increases the wearer's SPD by 18%. When the wearer enters combat or uses Ultimate on an ally target, the wearer gains \"Great Fortune\" for 3 turn(s). While the wearer holds \"Great Fortune,\" all allies' CRIT Rate increases by 10%, CRIT DMG increases by 30%, and the wearer's Energy Regeneration Rate increases by 12%. At the start of each wave, the wearer regenerates a fixed amount of 15 Energy.",
+        "priority": 1
+      },
+      {
+        "name": "Mushy Shroomy's Adventures",
+        "rarity": 4,
+        "description": "Increases the wearer's Elation by 12%. When the wearer uses an Elation Skill, increases Elation DMG taken by all enemies by 6% for 2 turn(s).",
+        "priority": 2
+      },
+      {
+        "name": "Today's Good Luck",
+        "rarity": 4,
+        "description": "Increases the wearer's CRIT Rate by 12%. When the wearer uses an Elation Skill, increases Elation by 12%, stacking up to 2 times.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Diviner of Distant Reach",
+        "description": "2-pc: Increases SPD by 6%. 4-pc: Before entering combat, if the wearer's SPD is greater than or equal to 120/160, increases the wearer's CRIT Rate by 10%/18%. When the wearer uses Elation Skill for the first time in each battle, increases all allies' Elation by 10%. This effect cannot stack.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Lushaka, the Sunken Seas",
+        "description": "Increases the wearer's Energy Regeneration Rate by 5%. If the wearer is not the first character in the team lineup, then increases the ATK of the first character in the team lineup by 12%.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate",
+      "feet": "SPD",
+      "sphere": "HP%",
+      "rope": "Energy Regeneration Rate"
+    },
+    "subStats": {
+      "priority": [
+        "SPD",
+        "Crit Rate",
+        "Crit DMG"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Yao Guang with Sparxie",
+        "description": "Yao Guang supports Elation damage dealers; with Lushaka, put Sparxie in the first slot.",
+        "teamMembers": [
+          "Sparxie",
+          "Yao Guang",
+          "Sparkle",
+          "Huohuo"
+        ]
+      },
+      {
+        "name": "Yao Guang with Evanescia",
+        "description": "An all-Elation lineup around Evanescia with the Elation Trailblazer.",
+        "teamMembers": [
+          "Evanescia",
+          "Yao Guang",
+          "Trailblazer (Elation)",
+          "Huohuo"
+        ]
+      }
+    ]
+  },
+  "Pearl": {
+    "charName": "Pearl",
+    "lightCones": [
+      {
+        "name": "Colors for Tomorrow",
+        "rarity": 5,
+        "description": "Increases the wearer's DEF by 48%. When the wearer uses Elation Skill on all allies, increases DMG taken by all enemies by 22%, lasting for 3 turn(s). Regenerates a fixed 10 Energy for the wearer, and restores HP equal to 10% of the wearer's DEF for all allies.",
+        "priority": 1
+      },
+      {
+        "name": "Until the Flowers Bloom Again",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT DMG by 60% and Energy Regeneration Rate by 10.0%. When the wearer's Max Energy is greater than 120, for every 10 points of Max Energy that exceeds this amount, further increases Energy Regeneration Rate by 0.3%. Up to a maximum of 360 points of excess Max Energy can be taken into account. When the wearer uses Elation Skill, increases the DMG received by all enemies by 15.0% for 2 turn(s). Effects of the same type cannot stack.",
+        "priority": 2
+      },
+      {
+        "name": "Mushy Shroomy's Adventures",
+        "rarity": 4,
+        "description": "Increases the wearer's Elation by 12%. When the wearer uses an Elation Skill, increases Elation DMG taken by all enemies by 6% for 2 turn(s).",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Dreamlit Actor",
+        "description": "2-pc: Increases SPD by 6%. 4-pc: When the wearer uses their Skill or Ultimate on one other ally target, increases the ability target's Elation by 16%, lasting for 3 turn(s). If the wearer has 10 or more points of Certified Banger, additionally increases all ally targets' CRIT DMG by 12%, lasting for 3 turn(s).",
+        "priority": 1
+      },
+      {
+        "name": "Diviner of Distant Reach",
+        "description": "2-pc: Increases SPD by 6%. 4-pc: Before entering combat, if the wearer's SPD is greater than or equal to 120/160, increases the wearer's CRIT Rate by 10%/18%. When the wearer uses Elation Skill for the first time in each battle, increases all allies' Elation by 10%. This effect cannot stack.",
+        "priority": 2
+      },
+      {
+        "name": "Messenger Traversing Hackerspace",
+        "description": "2-pc: Increases SPD by 6%. 4-pc: When the wearer uses their Ultimate on an ally, SPD for all allies increases by 12% for 1 turn(s). This effect cannot be stacked.",
+        "priority": 3
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Sprightly Vonwacq",
+        "description": "Increases the wearer's Energy Regeneration Rate by 5%. When the wearer's SPD reaches 120 or higher, the wearer's action is Advanced Forward by 40% immediately upon entering battle.",
+        "priority": 1
+      },
+      {
+        "name": "Lushaka, the Sunken Seas",
+        "description": "Increases the wearer's Energy Regeneration Rate by 5%. If the wearer is not the first character in the team lineup, then increases the ATK of the first character in the team lineup by 12%.",
+        "priority": 2
+      },
+      {
+        "name": "Broken Keel",
+        "description": "Increases the wearer's Effect RES by 10%. When the wearer's Effect RES is at 30% or higher, all allies' CRIT DMG increases by 10%.",
+        "priority": 3
+      }
+    ],
+    "mainStats": {
+      "body": "Outgoing Healing Boost / DEF%",
+      "feet": "SPD",
+      "sphere": "DEF%",
+      "rope": "Energy Regeneration Rate"
+    },
+    "subStats": {
+      "priority": [
+        "SPD",
+        "DEF%",
+        "Effect RES"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Pearl Elation Team",
+        "description": "Pearl sustains an Elation team led by Silver Wolf LV.999 and Sparxie, with Yao Guang as the core support.",
+        "teamMembers": [
+          "Pearl",
+          "Silver Wolf LV.999",
+          "Sparxie",
+          "Yao Guang"
+        ]
+      },
+      {
+        "name": "Pearl with Aventurine • Waveflair",
+        "description": "Pearl alongside Aventurine • Waveflair and the Elation Trailblazer.",
+        "teamMembers": [
+          "Pearl",
+          "Aventurine • Waveflair",
+          "Yao Guang",
+          "Trailblazer (Elation)"
+        ]
+      }
+    ]
+  },
+  "Evanescia": {
+    "charName": "Evanescia",
+    "lightCones": [
+      {
+        "name": "Until the Flowers Bloom Again",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT DMG by 60% and Energy Regeneration Rate by 10.0%. When the wearer's Max Energy is greater than 120, for every 10 points of Max Energy that exceeds this amount, further increases Energy Regeneration Rate by 0.3%. Up to a maximum of 360 points of excess Max Energy can be taken into account. When the wearer uses Elation Skill, increases the DMG received by all enemies by 15.0% for 2 turn(s). Effects of the same type cannot stack.",
+        "priority": 1
+      },
+      {
+        "name": "Dazzled by a Flowery World",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT DMG by 48%. While the wearer is on the field, for every 1 Elation character in the team, increases the Skill Point upper limit by 1, up to a max increase of 3. For every 1 Skill Point the wearer consumes, enables the Elation DMG dealt by this unit to ignore 5.0% of enemy targets' DEF, stacking up to 4 times. If 4 or more Skill Points are consumed in the same turn, the wearer gains \"Stream Promo,\" which increases all allies' Elation by 20%. Light Cone effects of the same type cannot stack.",
+        "priority": 2
+      },
+      {
+        "name": "Today's Good Luck",
+        "rarity": 4,
+        "description": "Increases the wearer's CRIT Rate by 12%. When the wearer uses an Elation Skill, increases Elation by 12%, stacking up to 2 times.",
+        "priority": 3
+      },
+      {
+        "name": "Tomorrow, Together",
+        "rarity": 4,
+        "description": "Increases the wearer's CRIT DMG by 12%. After the wearer uses their Ultimate, increases all allies' Elation by 8%, lasting for 1 turn(s).",
+        "priority": 4
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Ever-Glorious Magical Girl",
+        "description": "2-pc: Increases CRIT DMG by 16%. 4-pc: The Elation DMG dealt by the wearer and their memosprites ignores 10% of targets' DEF. For every 5 accumulated Punchline allies gain, the Elation DMG dealt additionally ignores 1% of targets' DEF, stacking up to 10 time(s).",
+        "priority": 1
+      },
+      {
+        "name": "Wavestrider Captain",
+        "description": "2-pc: Increases CRIT DMG by 16%. 4-pc: When the wearer becomes the target of another ally target's ability, gains 1 stack of \"Help,\" stacking up to 2 time(s). If there are 2 stack(s) of \"Help\" when the wearer uses their Ultimate, consumes all \"Help\" to increase the wearer's ATK by 48% for 1 turn(s).",
+        "priority": 2
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Punklorde Stage Zero",
+        "description": "Increases the wearer's Elation by 8%. When Elation reaches 40%/80% for the first time in combat, increases the wearer's CRIT DMG by 20%/32%.",
+        "priority": 1
+      },
+      {
+        "name": "Sigonia, the Unclaimed Desolation",
+        "description": "Increases the wearer's CRIT Rate by 4%. When an enemy target gets defeated, the wearer's CRIT DMG increases by 4%, stacking up to 10 time(s).",
+        "priority": 2
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate",
+      "feet": "SPD",
+      "sphere": "ATK%",
+      "rope": "Energy Regeneration Rate"
+    },
+    "subStats": {
+      "priority": [
+        "Crit Rate",
+        "Crit DMG",
+        "SPD",
+        "ATK%"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Evanescia Elation Team",
+        "description": "Evanescia with Yao Guang and the Elation Trailblazer, sustained by Huohuo.",
+        "teamMembers": [
+          "Evanescia",
+          "Yao Guang",
+          "Trailblazer (Elation)",
+          "Huohuo"
+        ]
+      },
+      {
+        "name": "Evanescia Remembrance Team",
+        "description": "A non-Elation option with the Remembrance Trailblazer, Cyrene and Sparkle.",
+        "teamMembers": [
+          "Evanescia",
+          "Trailblazer (Remembrance)",
+          "Cyrene",
+          "Sparkle"
+        ]
+      },
+      {
+        "name": "Evanescia Double Elation",
+        "description": "Evanescia and Sparxie share Yao Guang's support.",
+        "teamMembers": [
+          "Evanescia",
+          "Yao Guang",
+          "Sparxie",
+          "Huohuo"
+        ]
+      }
+    ]
+  },
+  "Silver Wolf LV.999": {
+    "charName": "Silver Wolf LV.999",
+    "lightCones": [
+      {
+        "name": "Welcome to the Cosmic City",
+        "rarity": 5,
+        "description": "Increases the wearer's SPD by 18%. The Elation DMG dealt ignores 20% of the target's DEF. When the wearer uses Ultimate on themselves, gains 20 point(s) of \"Punchline.\" This effect can be triggered up to 1 time. And resets this trigger count after using Basic ATK 3 time(s).",
+        "priority": 1
+      },
+      {
+        "name": "Mushy Shroomy's Adventures",
+        "rarity": 4,
+        "description": "Increases the wearer's Elation by 12%. When the wearer uses an Elation Skill, increases Elation DMG taken by all enemies by 6% for 2 turn(s).",
+        "priority": 2
+      },
+      {
+        "name": "Today's Good Luck",
+        "rarity": 4,
+        "description": "Increases the wearer's CRIT Rate by 12%. When the wearer uses an Elation Skill, increases Elation by 12%, stacking up to 2 times.",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Ever-Glorious Magical Girl",
+        "description": "2-pc: Increases CRIT DMG by 16%. 4-pc: The Elation DMG dealt by the wearer and their memosprites ignores 10% of targets' DEF. For every 5 accumulated Punchline allies gain, the Elation DMG dealt additionally ignores 1% of targets' DEF, stacking up to 10 time(s).",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Punklorde Stage Zero",
+        "description": "Increases the wearer's Elation by 8%. When Elation reaches 40%/80% for the first time in combat, increases the wearer's CRIT DMG by 20%/32%.",
+        "priority": 1
+      },
+      {
+        "name": "Izumo Gensei and Takama Divine Realm",
+        "description": "Increases the wearer's ATK by 12%. When entering battle, if at least one teammate follows the same Path as the wearer, then the wearer's CRIT Rate increases by 12%.",
+        "priority": 2
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate",
+      "feet": "SPD / ATK%",
+      "sphere": "ATK%",
+      "rope": "ATK%"
+    },
+    "subStats": {
+      "priority": [
+        "Crit Rate",
+        "Crit DMG",
+        "SPD",
+        "ATK%"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Silver Wolf LV.999 Elation Team",
+        "description": "Sparxie is her key partner; Yao Guang supports both and Pearl keeps the team alive.",
+        "teamMembers": [
+          "Silver Wolf LV.999",
+          "Sparxie",
+          "Yao Guang",
+          "Pearl"
+        ]
+      }
+    ]
+  },
+  "Aventurine • Waveflair": {
+    "charName": "Aventurine • Waveflair",
+    "lightCones": [
+      {
+        "name": "Summer Rides the Surf",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT Rate by 18%. When the wearer uses Elation Skill, gains \"Updraft,\" which increases the wearer's SPD by 24%. If the Elation Skill used is different from the one used last time, additionally gains \"Uptrend,\" which increases the wearer's Elation by 40%. When every wave starts or after the wearer uses Elation Skill 3 time(s), recovers 1 Skill Point.",
+        "priority": 1
+      },
+      {
+        "name": "Welcome to the Cosmic City",
+        "rarity": 5,
+        "description": "Increases the wearer's SPD by 18%. The Elation DMG dealt ignores 20% of the target's DEF. When the wearer uses Ultimate on themselves, gains 20 point(s) of \"Punchline.\" This effect can be triggered up to 1 time. And resets this trigger count after using Basic ATK 3 time(s).",
+        "priority": 2
+      },
+      {
+        "name": "Today's Good Luck",
+        "rarity": 4,
+        "description": "Increases the wearer's CRIT Rate by 12%. When the wearer uses an Elation Skill, increases Elation by 12%, stacking up to 2 times.",
+        "priority": 3
+      },
+      {
+        "name": "A Little Getaway",
+        "rarity": 4,
+        "description": "Increases the wearer's Elation by 20%. During the use of Elation Skill by the wearer, ignores 8% of the target's DEF.",
+        "priority": 4
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Ever-Glorious Magical Girl",
+        "description": "2-pc: Increases CRIT DMG by 16%. 4-pc: The Elation DMG dealt by the wearer and their memosprites ignores 10% of targets' DEF. For every 5 accumulated Punchline allies gain, the Elation DMG dealt additionally ignores 1% of targets' DEF, stacking up to 10 time(s).",
+        "priority": 1
+      },
+      {
+        "name": "Genius of Brilliant Stars",
+        "description": "2-pc: Increases Quantum DMG by 10%. 4-pc: When the wearer deals DMG to the target enemy, ignores 10% DEF. If the target enemy has Quantum Weakness, the wearer additionally ignores 10% DEF.",
+        "priority": 2
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Punklorde Stage Zero",
+        "description": "Increases the wearer's Elation by 8%. When Elation reaches 40%/80% for the first time in combat, increases the wearer's CRIT DMG by 20%/32%.",
+        "priority": 1
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate",
+      "feet": "SPD",
+      "sphere": "ATK% / Quantum DMG Boost",
+      "rope": "Energy Regeneration Rate"
+    },
+    "subStats": {
+      "priority": [
+        "SPD",
+        "Crit Rate",
+        "Crit DMG",
+        "ATK%"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Waveflair Elation Hypercarry",
+        "description": "Aventurine • Waveflair as the main damage dealer with Yao Guang, Tribbie and Huohuo.",
+        "teamMembers": [
+          "Aventurine • Waveflair",
+          "Yao Guang",
+          "Tribbie",
+          "Huohuo"
+        ]
+      },
+      {
+        "name": "Waveflair with Elation Trailblazer",
+        "description": "A second Elation core with the Elation Trailblazer.",
+        "teamMembers": [
+          "Aventurine • Waveflair",
+          "Yao Guang",
+          "Trailblazer (Elation)",
+          "Huohuo"
+        ]
+      },
+      {
+        "name": "Waveflair Follow-Up Team",
+        "description": "Frequent attackers Ashveil and Mortenax Blade feed his follow-up attacks.",
+        "teamMembers": [
+          "Aventurine • Waveflair",
+          "Ashveil",
+          "Mortenax Blade",
+          "Huohuo"
+        ]
+      }
+    ]
+  },
+  "TrailblazerElation#F": {
+    "charName": "Trailblazer (Elation)",
+    "lightCones": [
+      {
+        "name": "Elation Brimming With Blessings",
+        "rarity": 5,
+        "description": "Increases the wearer's ATK by 20%. After the wearer uses Skill or Ultimate on one ally character, increases the target's Elation stat by 12% for 2 turn(s).",
+        "priority": 1
+      },
+      {
+        "name": "Mushy Shroomy's Adventures",
+        "rarity": 4,
+        "description": "Increases the wearer's Elation by 12%. When the wearer uses an Elation Skill, increases Elation DMG taken by all enemies by 6% for 2 turn(s).",
+        "priority": 2
+      },
+      {
+        "name": "Tomorrow, Together",
+        "rarity": 4,
+        "description": "Increases the wearer's CRIT DMG by 12%. After the wearer uses their Ultimate, increases all allies' Elation by 8%, lasting for 1 turn(s).",
+        "priority": 3
+      },
+      {
+        "name": "When She Decided to See",
+        "rarity": 5,
+        "description": "Increases the wearer's SPD by 18%. When the wearer enters combat or uses Ultimate on an ally target, the wearer gains \"Great Fortune\" for 3 turn(s). While the wearer holds \"Great Fortune,\" all allies' CRIT Rate increases by 10%, CRIT DMG increases by 30%, and the wearer's Energy Regeneration Rate increases by 12%. At the start of each wave, the wearer regenerates a fixed amount of 15 Energy.",
+        "priority": 4
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Diviner of Distant Reach",
+        "description": "2-pc: Increases SPD by 6%. 4-pc: Before entering combat, if the wearer's SPD is greater than or equal to 120/160, increases the wearer's CRIT Rate by 10%/18%. When the wearer uses Elation Skill for the first time in each battle, increases all allies' Elation by 10%. This effect cannot stack.",
+        "priority": 1
+      },
+      {
+        "name": "Eagle of Twilight Line",
+        "description": "2-pc: Increases Wind DMG by 10%. 4-pc: After the wearer uses their Ultimate, their action is Advanced Forward by 25%.",
+        "priority": 2
+      },
+      {
+        "name": "Ever-Glorious Magical Girl",
+        "description": "2-pc: Increases CRIT DMG by 16%. 4-pc: The Elation DMG dealt by the wearer and their memosprites ignores 10% of targets' DEF. For every 5 accumulated Punchline allies gain, the Elation DMG dealt additionally ignores 1% of targets' DEF, stacking up to 10 time(s).",
+        "priority": 3
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Lushaka, the Sunken Seas",
+        "description": "Increases the wearer's Energy Regeneration Rate by 5%. If the wearer is not the first character in the team lineup, then increases the ATK of the first character in the team lineup by 12%.",
+        "priority": 1
+      },
+      {
+        "name": "Sprightly Vonwacq",
+        "description": "Increases the wearer's Energy Regeneration Rate by 5%. When the wearer's SPD reaches 120 or higher, the wearer's action is Advanced Forward by 40% immediately upon entering battle.",
+        "priority": 2
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate / Crit DMG / ATK%",
+      "feet": "SPD",
+      "sphere": "ATK%",
+      "rope": "Energy Regeneration Rate"
+    },
+    "subStats": {
+      "priority": [
+        "Crit Rate",
+        "Crit DMG",
+        "SPD",
+        "ATK%"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Elation Trailblazer with Evanescia",
+        "description": "The Elation Trailblazer works best inside an Elation team.",
+        "teamMembers": [
+          "Evanescia",
+          "Yao Guang",
+          "Trailblazer (Elation)",
+          "Huohuo"
+        ]
+      },
+      {
+        "name": "Elation Trailblazer with Pearl",
+        "description": "Pearl sustains while Aventurine • Waveflair deals damage.",
+        "teamMembers": [
+          "Aventurine • Waveflair",
+          "Yao Guang",
+          "Trailblazer (Elation)",
+          "Pearl"
+        ]
+      }
+    ]
+  },
+  "Ashveil": {
+    "charName": "Ashveil",
+    "lightCones": [
+      {
+        "name": "The Finale of a Lie",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT Rate by 18%. At the start of battle or for every 4 instance(s) of Follow-Up ATK the wearer uses, the wearer gains \"Umbra Devourer,\" lasting for 3 turn(s). While the wearer holds \"Umbra Devourer,\" increases ATK by 40% and increases the DMG taken by all enemies by 20%. Effects of the same type cannot stack.",
+        "priority": 1
+      },
+      {
+        "name": "Worrisome, Blissful",
+        "rarity": 5,
+        "description": "Increase the wearer's CRIT Rate by 18% and increases DMG dealt by Follow-Up ATK by 30%. After the wearer uses a Follow-Up ATK, inflicts the target with the \"Tame\" state, stacking up to 2 time(s). When allies hit enemy targets under the \"Tame\" state, each \"Tame\" stack increases the CRIT DMG dealt by 12%.",
+        "priority": 2
+      },
+      {
+        "name": "Baptism of Pure Thought",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT DMG by 20%. For every debuff on the enemy target, the wearer's CRIT DMG dealt against this target additionally increases by 8%, stacking up to 3 times. When using Ultimate to attack the enemy target, the wearer receives the \"Disputation\" effect, which increases DMG dealt by 36% and enables their Follow-Up ATKs to ignore 24% of the target's DEF. This effect lasts for 2 turns.",
+        "priority": 3
+      },
+      {
+        "name": "Cruising in the Stellar Sea",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT Rate by 8%, and increases their CRIT Rate against enemies with HP percentage 50% or less by an extra 8%. When the wearer defeats an enemy, their ATK is increased by 20% for 2 turn(s).",
+        "priority": 4
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "The Ashblazing Grand Duke",
+        "description": "2-pc: Increases the DMG dealt by Follow-Up ATK by 20%. 4-pc: When the wearer uses a Follow-Up ATK, increases the wearer's ATK by 6% for every time the Follow-Up ATK deals DMG. This effect can stack up to 8 time(s) and lasts for 3 turn(s). This effect is removed the next time the wearer uses a Follow-Up ATK.",
+        "priority": 1
+      },
+      {
+        "name": "Pioneer Diver of Dead Waters",
+        "description": "2-pc: Increases DMG dealt to enemies with debuffs by 12%. 4-pc: Increases CRIT Rate by 4%. The wearer deals 8%/12% increased CRIT DMG to enemies with at least 2/3 debuffs. After the wearer inflicts a debuff on enemy targets, the aforementioned effects increase by 100%, lasting for 1 turn(s).",
+        "priority": 2
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Duran, Dynasty of Running Wolves",
+        "description": "When an ally character uses a Follow-Up ATK, the wearer gains 1 stack of \"Merit,\" stacking up to 5 time(s). Each stack of \"Merit\" increases the DMG dealt by the wearer's Follow-Up ATKs by 5%. When there are 5 stacks, additionally increases the wearer's CRIT DMG by 25%.",
+        "priority": 1
+      },
+      {
+        "name": "Izumo Gensei and Takama Divine Realm",
+        "description": "Increases the wearer's ATK by 12%. When entering battle, if at least one teammate follows the same Path as the wearer, then the wearer's CRIT Rate increases by 12%.",
+        "priority": 2
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate / Crit DMG",
+      "feet": "SPD",
+      "sphere": "Lightning DMG Boost / ATK%",
+      "rope": "Energy Regeneration Rate"
+    },
+    "subStats": {
+      "priority": [
+        "Crit Rate",
+        "Crit DMG",
+        "SPD",
+        "ATK%"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Ashveil Follow-Up Team",
+        "description": "Ashveil and Mortenax Blade attack often, which suits Aventurine • Waveflair's follow-ups.",
+        "teamMembers": [
+          "Ashveil",
+          "Mortenax Blade",
+          "Aventurine • Waveflair",
+          "Huohuo"
+        ]
+      },
+      {
+        "name": "Ashveil with Gilgamesh",
+        "description": "Ashveil supports Gilgamesh's hypercarry together with Mortenax Blade.",
+        "teamMembers": [
+          "Gilgamesh",
+          "Ashveil",
+          "Mortenax Blade",
+          "Huohuo"
+        ]
+      }
+    ]
+  },
+  "Mortenax Blade": {
+    "charName": "Mortenax Blade",
+    "lightCones": [
+      {
+        "name": "Reforged in Hellfire",
+        "rarity": 5,
+        "description": "Increases the wearer's Max HP by 30%. At the start of the wearer's turn, regenerates a fixed amount of 20 Energy. This effect can trigger 1 time each wave. After the wearer uses Skill to attack, inflicts the target with the \"Purgatory\" state, lasting for 2 turn(s). While in the \"Purgatory\" state, the target receives 30% increased CRIT DMG and 30% additionally increased CRIT DMG from the wearer.",
+        "priority": 1
+      },
+      {
+        "name": "Lies Dance on the Breeze",
+        "rarity": 5,
+        "description": "Increases the wearer's SPD by 18%. After the wearer uses an attack, there is a 120% base chance to inflict the \"Bamboozle\" state on every enemy target. While under the \"Bamboozle\" state, enemy targets have their DEF decreased by 16% for 2 turn(s). If the wearer's SPD is higher than or equal to 170, there is a 120% base chance to inflict the \"Theft\" state on every enemy target. While under the \"Theft\" state, enemy targets have their DEF decreased by 8% for 2 turn(s). When \"Bamboozle\" or \"Theft\" is repeatedly inflicted, only the most recently inflicted instance takes effect.",
+        "priority": 2
+      },
+      {
+        "name": "Resolution Shines As Pearls of Sweat",
+        "rarity": 4,
+        "description": "When the wearer hits an enemy and if the hit enemy is not already \"Ensnared,\" then there is a 60% base chance to \"Ensnare\" the hit enemy. \"Ensnared\" enemies' DEF decreases by 12% for 1 turn(s).",
+        "priority": 3
+      },
+      {
+        "name": "Holiday Thermae Escapade",
+        "rarity": 4,
+        "description": "Increases the wearer's DMG dealt by 16%. After the wearer attacks, there is a 100% base chance to inflict the attacked target with Vulnerability, increasing the DMG they receive by 10% for 2 turn(s). Effects of the same type cannot stack.",
+        "priority": 4
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Divine-Querying Master Smith",
+        "description": "2-pc: Increases Max HP by 12%. 4-pc: Increases the wearer's CRIT DMG dealt to enemy targets in the DEF reduction state by 28%. After the wearer inflicts the DEF reduction state on an enemy target, all allies gain \"Comburent\" for 2 turn(s). This effect cannot be stacked. The DMG dealt by ally targets with \"Comburent\" increases by 15%. This effect can be triggered again after the wearer uses an attack.",
+        "priority": 1
+      },
+      {
+        "name": "Pioneer Diver of Dead Waters",
+        "description": "2-pc: Increases DMG dealt to enemies with debuffs by 12%. 4-pc: Increases CRIT Rate by 4%. The wearer deals 8%/12% increased CRIT DMG to enemies with at least 2/3 debuffs. After the wearer inflicts a debuff on enemy targets, the aforementioned effects increase by 100%, lasting for 1 turn(s).",
+        "priority": 2
+      },
+      {
+        "name": "Longevous Disciple",
+        "description": "2-pc: Increases Max HP by 12%. 4-pc: When the wearer is hit or has their HP consumed by an ally or themselves, their CRIT Rate increases by 8% for 2 turn(s) and up to 2 stacks.",
+        "priority": 3
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Bone Collection's Serene Demesne",
+        "description": "Increases the wearer's Max HP by 12%. When the wearer's Max HP is 5000 or higher, increases the wearer's and their memosprite's CRIT DMG by 28%.",
+        "priority": 1
+      },
+      {
+        "name": "Inert Salsotto",
+        "description": "Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 50% or higher, the DMG dealt by the wearer's Ultimate and Follow-Up ATK increases by 15%.",
+        "priority": 2
+      },
+      {
+        "name": "Duran, Dynasty of Running Wolves",
+        "description": "When an ally character uses a Follow-Up ATK, the wearer gains 1 stack of \"Merit,\" stacking up to 5 time(s). Each stack of \"Merit\" increases the DMG dealt by the wearer's Follow-Up ATKs by 5%. When there are 5 stacks, additionally increases the wearer's CRIT DMG by 25%.",
+        "priority": 3
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate / Crit DMG",
+      "feet": "SPD / HP%",
+      "sphere": "HP%",
+      "rope": "HP% / Energy Regeneration Rate"
+    },
+    "subStats": {
+      "priority": [
+        "Crit Rate",
+        "Crit DMG",
+        "SPD",
+        "HP%"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Mortenax Blade with Acheron",
+        "description": "Nihility allies trigger his Heart trace; Tribbie adds damage and Gallagher sustains.",
+        "teamMembers": [
+          "Mortenax Blade",
+          "Acheron",
+          "Tribbie",
+          "Gallagher"
+        ]
+      },
+      {
+        "name": "Mortenax Blade Nihility Team",
+        "description": "Acheron and Jiaoqiu as double Nihility, with Hyacine healing.",
+        "teamMembers": [
+          "Mortenax Blade",
+          "Acheron",
+          "Jiaoqiu",
+          "Hyacine"
+        ]
+      },
+      {
+        "name": "Mortenax Blade with Feixiao",
+        "description": "A frequent-attack option with Feixiao and Tribbie.",
+        "teamMembers": [
+          "Mortenax Blade",
+          "Feixiao",
+          "Tribbie",
+          "Hyacine"
+        ]
+      }
+    ]
+  },
+  "Himeko • Nova": {
+    "charName": "Himeko • Nova",
+    "lightCones": [
+      {
+        "name": "A Star That Lights the Night",
+        "rarity": 5,
+        "description": "The wearer ignores 32% of the target's DEF when dealing DMG. When the wearer uses Assist Skill, they regenerate 6 Energy and gain \"Sail,\" lasting for 2 turns and stacking up to 3 time(s). Each stack of \"Sail\" increases Assist Skill DMG by 20%. When \"Sail\" reaches 3 stacks, each stack of \"Sail\" increases Ultimate DMG by 20%.",
+        "priority": 1
+      },
+      {
+        "name": "Into the Unreachable Veil",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT Rate by 12%. When the wearer uses their Ultimate, increases the wearer's Skill DMG and Ultimate DMG dealt by 60%, lasting for 3 turn(s). After the wearer uses their Ultimate, if this Ultimate consumed 140 or more Energy, recovers 1 Skill Point.",
+        "priority": 2
+      },
+      {
+        "name": "Night on the Milky Way",
+        "rarity": 5,
+        "description": "For every enemy on the field, increases the wearer's ATK by 9.0%, up to 5 stacks. When an enemy is inflicted with Weakness Break, the DMG dealt by the wearer increases by 30% for 1 turn.",
+        "priority": 3
+      },
+      {
+        "name": "Today Is Another Peaceful Day",
+        "rarity": 4,
+        "description": "After entering battle, increases the wearer's DMG based on their Max Energy. Each point of Energy increases DMG by 0.20%. A max of 160 Energy will be taken into account for this.",
+        "priority": 4
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "As Navigator Isee Sees It",
+        "description": "2-pc: Increases ATK by 12%. 4-pc: When the wearer enters combat or uses Skill, the DMG dealt by their Skill and Ultimate increases by 18%, stacking up to 3 time(s). At the start of the wearer's turn or after using Ultimate, removes 1 stack(s) of this effect.",
+        "priority": 1
+      },
+      {
+        "name": "Genius of Brilliant Stars",
+        "description": "2-pc: Increases Quantum DMG by 10%. 4-pc: When the wearer deals DMG to the target enemy, ignores 10% DEF. If the target enemy has Quantum Weakness, the wearer additionally ignores 10% DEF.",
+        "priority": 2
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Fallen Star Anchorage",
+        "description": "Increases the wearer's CRIT Rate by 8%. When entering combat, if the wearer and another teammate are both Trailblaze Companions characters, increases the wearer's CRIT DMG by 32%.",
+        "priority": 1
+      },
+      {
+        "name": "The Wondrous BananAmusement Park",
+        "description": "Increases the wearer's CRIT DMG by 16%. When a target summoned by the wearer is on the field, CRIT DMG additionally increases by 32%.",
+        "priority": 2
+      },
+      {
+        "name": "Rutilant Arena",
+        "description": "Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 70% or higher, DMG dealt by Basic ATK and Skill increases by 20%.",
+        "priority": 3
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate / Crit DMG",
+      "feet": "ATK%",
+      "sphere": "Fire DMG Boost / ATK%",
+      "rope": "ATK%"
+    },
+    "subStats": {
+      "priority": [
+        "Crit Rate",
+        "Crit DMG",
+        "SPD",
+        "ATK%"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Himeko • Nova Astral Express Team",
+        "description": "Fallen Star Anchorage rewards playing her with other Astral Express members like Welt and the Trailblazer.",
+        "teamMembers": [
+          "Himeko • Nova",
+          "Trailblazer (Remembrance)",
+          "Welt",
+          "Gallagher"
+        ]
+      },
+      {
+        "name": "Himeko • Nova with Hyacine",
+        "description": "Same Astral Express core with Hyacine as the healer.",
+        "teamMembers": [
+          "Himeko • Nova",
+          "Trailblazer (Remembrance)",
+          "Welt",
+          "Hyacine"
+        ]
+      },
+      {
+        "name": "Himeko • Nova Hypercarry",
+        "description": "Sunday and Sparkle buff her while Mortenax Blade adds damage.",
+        "teamMembers": [
+          "Himeko • Nova",
+          "Sunday",
+          "Sparkle",
+          "Mortenax Blade"
+        ]
+      }
+    ]
+  },
+  "Robin • Summeretto": {
+    "charName": "Robin • Summeretto",
+    "lightCones": [
+      {
+        "name": "Rise and Sing",
+        "rarity": 5,
+        "description": "Increases the wearer's Max HP by 30%. After the wearer uses their Ultimate, recovers 1 Skill Point for allies. When entering combat, advances the wearer's action by 30% and grants the wearer \"New Melody\" for 2 turn(s). While the wearer has \"New Melody,\" all allies' SPD increases by 20%.",
+        "priority": 1
+      },
+      {
+        "name": "To Evernight's Stars",
+        "rarity": 5,
+        "description": "Increases the wearer's Max HP by 30%. When the wearer's memosprite uses an ability, the wearer gains \"Noctis.\" While the wearer has \"Noctis,\" the DMG dealt by all ally memosprites ignores 20% of the targets' DEF. Increases the DMG dealt by the wearer and their memosprite by 30%. When the wearer's memosprite disappears, the wearer recovers 8 Energy. Effects of the same type cannot stack.",
+        "priority": 2
+      },
+      {
+        "name": "Memory's Curtain Never Falls",
+        "rarity": 5,
+        "description": "Increases the wearer's SPD by 6.0%. After the wearer uses Skill, increases the DMG dealt by all allies by 8%, lasting for 3 turn(s).",
+        "priority": 3
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "World-Remaking Deliverer",
+        "description": "2-pc: Increases CRIT Rate by 8%. 4-pc: After the wearer uses Basic ATK or Skill, if the wearer's memosprite is on the field, increases Max HP of the wearer and their memosprite by 24%, and increases all allies' DMG dealt by 15%, lasting until after the wearer's next use of Basic ATK or Skill.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Amphoreus, The Eternal Land",
+        "description": "Increases the wearer's CRIT Rate by 8%. While the wearer's memosprite is on the field, increases all allies' SPD by 8%. This effect cannot be stacked.",
+        "priority": 1
+      },
+      {
+        "name": "Sprightly Vonwacq",
+        "description": "Increases the wearer's Energy Regeneration Rate by 5%. When the wearer's SPD reaches 120 or higher, the wearer's action is Advanced Forward by 40% immediately upon entering battle.",
+        "priority": 2
+      },
+      {
+        "name": "Lushaka, the Sunken Seas",
+        "description": "Increases the wearer's Energy Regeneration Rate by 5%. If the wearer is not the first character in the team lineup, then increases the ATK of the first character in the team lineup by 12%.",
+        "priority": 3
+      }
+    ],
+    "mainStats": {
+      "body": "HP% / Crit DMG",
+      "feet": "SPD",
+      "sphere": "HP%",
+      "rope": "Energy Regeneration Rate"
+    },
+    "subStats": {
+      "priority": [
+        "SPD",
+        "HP%",
+        "Crit DMG"
+      ]
+    },
+    "teams": []
+  },
+  "Rin Tohsaka": {
+    "charName": "Rin Tohsaka",
+    "lightCones": [
+      {
+        "name": "Flickering Stars",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT Rate by 18%. When any ally character consumes a total of 4 or more Skill Points in a single turn, the wearer gains \"Radiant Crown,\" lasting for 3 turn(s). While the wearer holds \"Radiant Crown,\" all allies' DMG dealt ignores 20% of the target's DEF, and the Skill DMG dealt by the wearer increases by 72%. Effects of the same type cannot stack.",
+        "priority": 1
+      },
+      {
+        "name": "Into the Unreachable Veil",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT Rate by 12%. When the wearer uses their Ultimate, increases the wearer's Skill DMG and Ultimate DMG dealt by 60%, lasting for 3 turn(s). After the wearer uses their Ultimate, if this Ultimate consumed 140 or more Energy, recovers 1 Skill Point.",
+        "priority": 2
+      },
+      {
+        "name": "Today Is Another Peaceful Day",
+        "rarity": 4,
+        "description": "After entering battle, increases the wearer's DMG based on their Max Energy. Each point of Energy increases DMG by 0.20%. A max of 160 Energy will be taken into account for this.",
+        "priority": 3
+      },
+      {
+        "name": "Eternal Calculus",
+        "rarity": 5,
+        "description": "Increases the wearer's ATK by 8%. After using an attack, for each enemy target hit, additionally increases ATK by 4%. This effect can stack up to 5 times and last until the next attack. If there are 3 or more enemy targets hit, this unit's SPD increases by 8%, lasting for 1 turn(s).",
+        "priority": 4
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Genius of Brilliant Stars",
+        "description": "2-pc: Increases Quantum DMG by 10%. 4-pc: When the wearer deals DMG to the target enemy, ignores 10% DEF. If the target enemy has Quantum Weakness, the wearer additionally ignores 10% DEF.",
+        "priority": 1
+      },
+      {
+        "name": "Passerby of Wandering Cloud",
+        "description": "2-pc: Increases Outgoing Healing by 10%. 4-pc: At the start of the battle, immediately regenerates 1 Skill Point.",
+        "priority": 2
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Penacony, Land of the Dreams",
+        "description": "Increases wearer's Energy Regeneration Rate by 5%. Increases DMG by 10% for all other allies that are of the same Type as the wearer.",
+        "priority": 1
+      },
+      {
+        "name": "Rutilant Arena",
+        "description": "Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 70% or higher, DMG dealt by Basic ATK and Skill increases by 20%.",
+        "priority": 2
+      },
+      {
+        "name": "Lushaka, the Sunken Seas",
+        "description": "Increases the wearer's Energy Regeneration Rate by 5%. If the wearer is not the first character in the team lineup, then increases the ATK of the first character in the team lineup by 12%.",
+        "priority": 3
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate",
+      "feet": "SPD",
+      "sphere": "Quantum DMG Boost",
+      "rope": "ATK%"
+    },
+    "subStats": {
+      "priority": [
+        "SPD",
+        "Crit Rate",
+        "Crit DMG",
+        "ATK%"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Rin Tohsaka with Archer",
+        "description": "Rin has particularly strong synergy with Archer.",
+        "teamMembers": [
+          "Rin Tohsaka",
+          "Archer"
+        ]
+      }
+    ]
+  },
+  "Gilgamesh": {
+    "charName": "Gilgamesh",
+    "lightCones": [
+      {
+        "name": "I Am As You Behold",
+        "rarity": 5,
+        "description": "Increases the wearer's ATK by 18% and Energy Regeneration Rate by 10.0%. When the wearer uses Ultimate, for every 1 Energy consumed, increases the Ultimate DMG dealt this time by 0.20%, up to a max increase of 72%. When the wearer enters combat or uses Ultimate, the wearer gains \"King's Entertainment,\" lasting for 3 turn(s). While the wearer holds \"King's Entertainment,\" increases all allies' CRIT DMG by 24%. Effects of the same type cannot stack.",
+        "priority": 1
+      },
+      {
+        "name": "A Thankless Coronation",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT DMG by 36%. When using Ultimate, increases the wearer's ATK by 40%, and if the wearer's Max Energy is greater than or equal to 300, regenerates a fixed amount of Energy equal to 10% of the wearer's Max Energy and once again increases the wearer's ATK by 40%, lasting for 2 turns.",
+        "priority": 2
+      },
+      {
+        "name": "On the Fall of an Aeon",
+        "rarity": 5,
+        "description": "When the wearer attacks, increases their ATK by 8% in this battle. This effect can stack up to 4 time(s). After the wearer breaks an enemy's Weakness, increases DMG dealt by 12%, lasting for 2 turn(s).",
+        "priority": 3
+      },
+      {
+        "name": "A Trail of Bygone Blood",
+        "rarity": 4,
+        "description": "Increases the wearer's CRIT Rate by 12%. The Skill DMG and Ultimate DMG dealt by the wearer increase by 24%.",
+        "priority": 4
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Scholar Lost in Erudition",
+        "description": "2-pc: Increases CRIT Rate by 8%. 4-pc: Increases DMG dealt by Skill and Ultimate by 20%. After using Ultimate, additionally increases the DMG dealt by the next Skill by 25%.",
+        "priority": 1
+      },
+      {
+        "name": "The Ashblazing Grand Duke",
+        "description": "2-pc: Increases the DMG dealt by Follow-Up ATK by 20%. 4-pc: When the wearer uses a Follow-Up ATK, increases the wearer's ATK by 6% for every time the Follow-Up ATK deals DMG. This effect can stack up to 8 time(s) and lasts for 3 turn(s). This effect is removed the next time the wearer uses a Follow-Up ATK.",
+        "priority": 2
+      },
+      {
+        "name": "Genius of Brilliant Stars",
+        "description": "2-pc: Increases Quantum DMG by 10%. 4-pc: When the wearer deals DMG to the target enemy, ignores 10% DEF. If the target enemy has Quantum Weakness, the wearer additionally ignores 10% DEF.",
+        "priority": 3
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Cosmic Life Sciences Institute",
+        "description": "When entering combat, if the wearer's Max Energy is greater than or equal to 200, for every 1 excess point, increases the wearer's DMG dealt by 0.2%, up to a max increase of 32%.",
+        "priority": 1
+      },
+      {
+        "name": "Inert Salsotto",
+        "description": "Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 50% or higher, the DMG dealt by the wearer's Ultimate and Follow-Up ATK increases by 15%.",
+        "priority": 2
+      },
+      {
+        "name": "Duran, Dynasty of Running Wolves",
+        "description": "When an ally character uses a Follow-Up ATK, the wearer gains 1 stack of \"Merit,\" stacking up to 5 time(s). Each stack of \"Merit\" increases the DMG dealt by the wearer's Follow-Up ATKs by 5%. When there are 5 stacks, additionally increases the wearer's CRIT DMG by 25%.",
+        "priority": 3
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate",
+      "feet": "ATK%",
+      "sphere": "Lightning DMG Boost",
+      "rope": "ATK%"
+    },
+    "subStats": {
+      "priority": [
+        "Crit Rate",
+        "Crit DMG",
+        "ATK%"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Gilgamesh with Saber",
+        "description": "Saber and Mortenax Blade add damage while Huohuo keeps Gilgamesh's Ultimate cycling.",
+        "teamMembers": [
+          "Gilgamesh",
+          "Saber",
+          "Mortenax Blade",
+          "Huohuo"
+        ]
+      },
+      {
+        "name": "Gilgamesh Hypercarry",
+        "description": "Ashveil and Mortenax Blade support Gilgamesh as the main damage dealer.",
+        "teamMembers": [
+          "Gilgamesh",
+          "Ashveil",
+          "Mortenax Blade",
+          "Huohuo"
+        ]
+      }
+    ]
+  },
+  "March 7th": {
+    "charName": "March 7th",
+    "lightCones": [
+      {
+        "name": "Moment of Victory",
+        "rarity": 5,
+        "description": "Increases the wearer's DEF by 24% and Effect Hit Rate by 24%. Increases the chance for the wearer to be attacked by enemies. When the wearer is attacked, increase their DEF by an extra 24% until the end of the wearer's turn.",
+        "priority": 1
+      },
+      {
+        "name": "Day One of My New Life",
+        "rarity": 4,
+        "description": "Increases the wearer's DEF by 16%. After entering battle, increases All-Type RES of all allies by 8%. Abilities of the same type cannot stack.",
+        "priority": 2
+      },
+      {
+        "name": "This Is Me!",
+        "rarity": 4,
+        "description": "Increases the wearer's DEF by 16%. Increases the DMG of the wearer when they use their Ultimate by 60% of the wearer's DEF. This effect only applies 1 time per enemy target during each use of the wearer's Ultimate.",
+        "priority": 3
+      },
+      {
+        "name": "Trend of the Universal Market",
+        "rarity": 4,
+        "description": "Increases the wearer's DEF by 16%. When the wearer is attacked, there is a 100% base chance to Burn the enemy. For each turn, the wearer deals DoT that is equal to 40% of the wearer's DEF for 2 turn(s).",
+        "priority": 4
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Knight of Purity Palace",
+        "description": "2-pc: Increases DEF by 15%. 4-pc: Increases the max DMG that can be absorbed by the Shield created by the wearer by 20%.",
+        "priority": 1
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Belobog of the Architects",
+        "description": "Increases the wearer's DEF by 15%. When the wearer's Effect Hit Rate is 50% or higher, the wearer gains an extra 15% DEF.",
+        "priority": 1
+      },
+      {
+        "name": "Broken Keel",
+        "description": "Increases the wearer's Effect RES by 10%. When the wearer's Effect RES is at 30% or higher, all allies' CRIT DMG increases by 10%.",
+        "priority": 2
+      }
+    ],
+    "mainStats": {
+      "body": "DEF%",
+      "feet": "SPD",
+      "sphere": "DEF%",
+      "rope": "Energy Regeneration Rate"
+    },
+    "subStats": {
+      "priority": [
+        "SPD",
+        "DEF%",
+        "Effect Hit Rate",
+        "Effect RES"
+      ]
+    },
+    "teams": []
+  },
+  "TrailblazerElation#M": {
+    "charName": "Trailblazer (Elation)",
+    "lightCones": [
+      {
+        "name": "Elation Brimming With Blessings",
+        "rarity": 5,
+        "description": "Increases the wearer's ATK by 20%. After the wearer uses Skill or Ultimate on one ally character, increases the target's Elation stat by 12% for 2 turn(s).",
+        "priority": 1
+      },
+      {
+        "name": "Mushy Shroomy's Adventures",
+        "rarity": 4,
+        "description": "Increases the wearer's Elation by 12%. When the wearer uses an Elation Skill, increases Elation DMG taken by all enemies by 6% for 2 turn(s).",
+        "priority": 2
+      },
+      {
+        "name": "Tomorrow, Together",
+        "rarity": 4,
+        "description": "Increases the wearer's CRIT DMG by 12%. After the wearer uses their Ultimate, increases all allies' Elation by 8%, lasting for 1 turn(s).",
+        "priority": 3
+      },
+      {
+        "name": "When She Decided to See",
+        "rarity": 5,
+        "description": "Increases the wearer's SPD by 18%. When the wearer enters combat or uses Ultimate on an ally target, the wearer gains \"Great Fortune\" for 3 turn(s). While the wearer holds \"Great Fortune,\" all allies' CRIT Rate increases by 10%, CRIT DMG increases by 30%, and the wearer's Energy Regeneration Rate increases by 12%. At the start of each wave, the wearer regenerates a fixed amount of 15 Energy.",
+        "priority": 4
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Diviner of Distant Reach",
+        "description": "2-pc: Increases SPD by 6%. 4-pc: Before entering combat, if the wearer's SPD is greater than or equal to 120/160, increases the wearer's CRIT Rate by 10%/18%. When the wearer uses Elation Skill for the first time in each battle, increases all allies' Elation by 10%. This effect cannot stack.",
+        "priority": 1
+      },
+      {
+        "name": "Eagle of Twilight Line",
+        "description": "2-pc: Increases Wind DMG by 10%. 4-pc: After the wearer uses their Ultimate, their action is Advanced Forward by 25%.",
+        "priority": 2
+      },
+      {
+        "name": "Ever-Glorious Magical Girl",
+        "description": "2-pc: Increases CRIT DMG by 16%. 4-pc: The Elation DMG dealt by the wearer and their memosprites ignores 10% of targets' DEF. For every 5 accumulated Punchline allies gain, the Elation DMG dealt additionally ignores 1% of targets' DEF, stacking up to 10 time(s).",
+        "priority": 3
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "Lushaka, the Sunken Seas",
+        "description": "Increases the wearer's Energy Regeneration Rate by 5%. If the wearer is not the first character in the team lineup, then increases the ATK of the first character in the team lineup by 12%.",
+        "priority": 1
+      },
+      {
+        "name": "Sprightly Vonwacq",
+        "description": "Increases the wearer's Energy Regeneration Rate by 5%. When the wearer's SPD reaches 120 or higher, the wearer's action is Advanced Forward by 40% immediately upon entering battle.",
+        "priority": 2
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate / Crit DMG / ATK%",
+      "feet": "SPD",
+      "sphere": "ATK%",
+      "rope": "Energy Regeneration Rate"
+    },
+    "subStats": {
+      "priority": [
+        "Crit Rate",
+        "Crit DMG",
+        "SPD",
+        "ATK%"
+      ]
+    },
+    "teams": [
+      {
+        "name": "Elation Trailblazer with Evanescia",
+        "description": "The Elation Trailblazer works best inside an Elation team.",
+        "teamMembers": [
+          "Evanescia",
+          "Yao Guang",
+          "Trailblazer (Elation)",
+          "Huohuo"
+        ]
+      },
+      {
+        "name": "Elation Trailblazer with Pearl",
+        "description": "Pearl sustains while Aventurine • Waveflair deals damage.",
+        "teamMembers": [
+          "Aventurine • Waveflair",
+          "Yao Guang",
+          "Trailblazer (Elation)",
+          "Pearl"
+        ]
       }
     ]
   }

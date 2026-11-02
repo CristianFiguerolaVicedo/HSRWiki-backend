@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:5173")
+/** Relic sets and planar ornaments both live here (they are the same kind of data). */
 @RestController
 @RequestMapping("/api/relics")
 @RequiredArgsConstructor
@@ -27,9 +27,6 @@ public class RelicController {
     @GetMapping("/{name}")
     public ResponseEntity<RelicDto> getRelicSetByName(@PathVariable String name) {
         RelicSet relicSet = gameDataLoader.getRelicSetByName(name);
-        if (relicSet == null) {
-            return ResponseEntity.notFound().build();
-        }
-        return ResponseEntity.ok(mapper.toDto(relicSet));
+        return relicSet == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(mapper.toDto(relicSet));
     }
 }

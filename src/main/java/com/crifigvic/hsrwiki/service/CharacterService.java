@@ -23,6 +23,7 @@ public class CharacterService {
                 character.getEidolons(),
                 character.getSkills(),
                 character.getTraces(),
+                character.getEnhanced(),
                 character.getBuild()
         );
     }

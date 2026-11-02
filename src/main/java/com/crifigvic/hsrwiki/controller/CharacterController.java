@@ -9,11 +9,11 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/characters")
@@ -25,12 +25,16 @@ public class CharacterController {
 
     @GetMapping
     public List<CharacterDto> getAll() {
-        return loader.getAllCharacters().stream().map(mapper::toDto).toList();
+        return loader.getAllCharacters().stream()
+                .sorted(Comparator.comparing(Character::getName))
+                .map(mapper::toDto)
+                .toList();
     }
 
     @GetMapping("/{id}")
-    public CharacterDto getById(@PathVariable int id) {
-        return mapper.toDto(loader.getById(id));
+    public ResponseEntity<CharacterDto> getById(@PathVariable int id) {
+        Character character = loader.getById(id);
+        return character == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(mapper.toDto(character));
     }
 
     @GetMapping("/builds")

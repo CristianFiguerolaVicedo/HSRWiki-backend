@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:5173")
 @RestController
 @RequiredArgsConstructor
 @RequestMapping("/api/lightcones")
@@ -25,16 +24,16 @@ public class LightconeController {
     }
 
     @GetMapping("/{id}")
-    public LightconeDto getLightConeById(@PathVariable int id) {
-        return mapper.toDto(gameDataLoader.getLightconeById(id));
+    public ResponseEntity<LightconeDto> getLightConeById(@PathVariable int id) {
+        return toResponse(gameDataLoader.getLightconeById(id));
     }
 
     @GetMapping("/name/{name}")
     public ResponseEntity<LightconeDto> getLightconeByName(@PathVariable String name) {
-        Lightcone lightCone = gameDataLoader.getLightconeByName(name);
-        if (lightCone == null) {
-            return ResponseEntity.notFound().build();
-        }
-        return ResponseEntity.ok(mapper.toDto(lightCone));
+        return toResponse(gameDataLoader.getLightconeByName(name));
+    }
+
+    private ResponseEntity<LightconeDto> toResponse(Lightcone lightcone) {
+        return lightcone == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(mapper.toDto(lightcone));
     }
 }

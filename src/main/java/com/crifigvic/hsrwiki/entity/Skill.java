@@ -5,6 +5,8 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
@@ -15,4 +17,5 @@ public class Skill {
     private ActiveSkill skill;
     private UltimateSkill ult;
     private TalentSkill talent;
+    private List<ExtraSkill> extra;
 }

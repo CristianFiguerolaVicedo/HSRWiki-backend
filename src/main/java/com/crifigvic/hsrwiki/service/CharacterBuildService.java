@@ -3,52 +3,45 @@ package com.crifigvic.hsrwiki.service;
 import com.crifigvic.hsrwiki.entity.CharBuild;
 import jakarta.annotation.PostConstruct;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.DefaultResourceLoader;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
 import tools.jackson.core.type.TypeReference;
 import tools.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
-import java.nio.file.Paths;
+import java.io.InputStream;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
+/** Hand-written recommended builds, keyed by character name (src/main/resources/data/character_builds.json). */
 @Service
 @Slf4j
 public class CharacterBuildService {
 
     private final ObjectMapper mapper = new ObjectMapper();
-    private Map<String, CharBuild> characterBuilds = new HashMap<>();
+    private final Map<String, CharBuild> characterBuilds = new HashMap<>();
+
+    @Value("${hsrwiki.builds-file:classpath:data/character_builds.json}")
+    private String buildsFile;
 
     @PostConstruct
-    public void loadBuildData() {
-        String[] possiblePaths = {
-                "src/main/java/com/crifigvic/hsrwiki/util/character_builds.json",
-                "hsr-data/output/character_builds.json",
-                "character_builds.json",
-                "src/main/resources/character_builds.json"
-        };
-
-        boolean loaded = false;
-        for (String pathStr : possiblePaths) {
-            java.nio.file.Path path = Paths.get(pathStr);
-
-            if (path.toFile().exists()) {
-                Map<String, CharBuild> builds = mapper.readValue(
-                        path.toFile(),
-                        new TypeReference<Map<String, CharBuild>>() {}
-                );
-                characterBuilds.putAll(builds);
-                loaded = true;
-                break;
-            }
+    public void loadBuildData() throws IOException {
+        Resource resource = new DefaultResourceLoader().getResource(buildsFile);
+        if (!resource.exists()) {
+            log.warn("No character builds found at {}", buildsFile);
+            return;
         }
+        try (InputStream in = resource.getInputStream()) {
+            characterBuilds.putAll(mapper.readValue(in, new TypeReference<Map<String, CharBuild>>() {}));
+        }
+        log.info("Loaded {} character builds", characterBuilds.size());
     }
 
     public CharBuild getBuildForCharacter(String characterName) {
-        CharBuild build = characterBuilds.get(characterName);
-
-        return build;
+        return characterBuilds.get(characterName);
     }
 
     public Set<String> getCharactersWithBuilds() {

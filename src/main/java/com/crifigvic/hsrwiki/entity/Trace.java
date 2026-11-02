@@ -5,6 +5,7 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
 import java.util.Map;
 
 @AllArgsConstructor
@@ -16,4 +17,6 @@ public class Trace {
     private TechniqueTrace technique;
     private Map<String, AbilityTrace> abilities;
     private Map<String, StatTrace> stats;
+    /** Memosprite/Elation trace nodes added by newer kits. */
+    private List<AbilityTrace> extra;
 }
