@@ -17,7 +17,11 @@ public class ItemService {
                 item.getSub_type(),
                 item.getRarity(),
                 item.getIcon(),
-                item.getCome_from()
+                item.getCome_from(),
+                item.getCategory(),
+                item.getDesc(),
+                item.getLore(),
+                item.getUsedBy()
         );
     }
 }

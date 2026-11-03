@@ -19,4 +19,9 @@ public class Item {
     private Integer rarity;
     private String icon;
     private List<String> come_from;
+    /** Readable category, e.g. "Trace Material" (sub_type is the game's internal name). */
+    private String category;
+    private String desc;
+    private String lore;
+    private ItemUsage usedBy;
 }

@@ -398,8 +398,40 @@ public class GameDataLoader {
                     .sub_type(getText(node, "sub_type"))
                     .icon(getText(node, "icon"))
                     .come_from(parseStringArray(node.get("come_from")))
+                    .category(getText(node, "category"))
+                    .desc(getText(node, "desc"))
+                    .lore(getText(node, "lore"))
+                    .usedBy(parseItemUsage(node.get("used_by")))
                     .build());
         }
+    }
+
+    /** Turns the names in "used_by" into links; runs after characters and light cones are loaded. */
+    private ItemUsage parseItemUsage(JsonNode usedByNode) {
+        if (usedByNode == null) return null;
+
+        Map<String, Character> charactersByName = new HashMap<>();
+        characters.values().forEach(c -> charactersByName.put(c.getName(), c));
+
+        List<ItemUsage.Ref> chars = new ArrayList<>();
+        for (String name : parseStringArray(usedByNode.get("characters"))) {
+            Character c = charactersByName.get(name);
+            if (c != null) {
+                chars.add(ItemUsage.Ref.builder().id(c.getId()).name(name).icon(c.getMiniIcon()).build());
+            }
+        }
+        List<ItemUsage.Ref> cones = new ArrayList<>();
+        for (String name : parseStringArray(usedByNode.get("light_cones"))) {
+            Lightcone lc = getLightconeByName(name);
+            if (lc != null) {
+                cones.add(ItemUsage.Ref.builder().id(lc.getId()).name(name).icon(lc.getMiniIcon()).build());
+            }
+        }
+        return ItemUsage.builder()
+                .characters(chars)
+                .lightCones(cones)
+                .everyone(usedByNode.path("everyone").asBoolean(false))
+                .build();
     }
 
     // ---------------------------------------------------------------- helpers

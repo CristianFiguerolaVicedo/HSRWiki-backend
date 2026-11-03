@@ -9,6 +9,10 @@ public record ItemDto(
         String sub_type,
         Integer rarity,
         String icon,
-        List<String>come_from
+        List<String> come_from,
+        String category,
+        String desc,
+        String lore,
+        com.crifigvic.hsrwiki.entity.ItemUsage usedBy
 ) {
 }
