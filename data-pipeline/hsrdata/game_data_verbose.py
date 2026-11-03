@@ -499,7 +499,7 @@ def _parse_property(property: dict) -> str:
         case "IceAddedRatio":
             return f"Ice DMG increases by {value * 100}%"
         case "StatusResistanceBase":
-            return f"Effect RES resistance increases by {value * 100}%"
+            return f"Effect RES increases by {value * 100}%"
         case "HPAddedRatio":
             return f"HP increases by {value * 100}%"
         case "AttackAddedRatio":
@@ -513,7 +513,13 @@ def _parse_property(property: dict) -> str:
         case "CriticalDamageBase":
             return f"CRIT DMG increases by {value * 100}%"
         case _:
-            return f"Unknown property: {property['type']}"
+            # Stats added in newer versions (e.g. Elation): use the game's own name for them
+            prop = _PROPERTIES.get(property["type"])
+            if prop is None:
+                return f"Unknown property: {property['type']}"
+            if prop.get("percent"):
+                return f"{prop['name']} increases by {round(value * 100, 1):g}%"
+            return f"{prop['name']} increases by {value:g}"
 
 
 def _get_skill_type_name(skill_type: str) -> str:
