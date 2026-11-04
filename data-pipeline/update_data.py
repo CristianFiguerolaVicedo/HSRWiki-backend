@@ -7,6 +7,7 @@ Usage (from the repository root):
 Item descriptions come from data-pipeline/item_descriptions.json and character lore from
 data-pipeline/character_lore.json; refresh them with update_item_descriptions.py and
 update_character_lore.py when a newer game data dump is available.
+After this script, update_planner_data.py rebuilds the material planner costs.
 
 It downloads only the English index files of Mar-7th/StarRailRes (no images, a few MB),
 runs the extractor and writes src/main/resources/data/game_data.json.

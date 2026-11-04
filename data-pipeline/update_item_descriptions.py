@@ -27,9 +27,12 @@ def git(*args, cwd=None):
     subprocess.run(["git", *args], cwd=cwd, check=True)
 
 
-# Every file the text scripts (this one and update_character_lore.py) read, so they share one cache
+# Every file the dump-based scripts (this one, update_character_lore.py, update_planner_data.py) read, so they share one cache
 FILES = [f"/ExcelOutput/{c}.json" for c in CONFIGS] + [
     "/ExcelOutput/AvatarConfig.json", "/ExcelOutput/AvatarAtlas.json", "/ExcelOutput/StoryAtlas.json",
+    # EXP tables for update_planner_data.py
+    "/ExcelOutput/ExpType.json", "/ExcelOutput/EquipmentExpType.json", "/ExcelOutput/AvatarExpItemConfig.json",
+    "/ExcelOutput/EquipmentExpItemConfig.json", "/ExcelOutput/EquipmentConfig.json",
     "/TextMap/TextMapEN.json",
 ]
 
