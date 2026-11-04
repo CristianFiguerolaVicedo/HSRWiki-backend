@@ -18,6 +18,7 @@ public record CharacterDto(
         Skill skills,
         Trace traces,
         EnhancedKit enhanced,
-        CharBuild build
+        CharBuild build,
+        CharacterLore lore
 ) {
 }

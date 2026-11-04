@@ -101,6 +101,7 @@ public class GameDataLoader {
                         .traces(parseTraces(node.get("traces")))
                         .enhanced(enhanced)
                         .build(characterBuildService.getBuildForCharacter(name))
+                        .lore(parseLore(node.get("lore")))
                         .build();
 
                 characters.put(character.getId(), character);
@@ -435,6 +436,32 @@ public class GameDataLoader {
     }
 
     // ---------------------------------------------------------------- helpers
+
+    /** Character Archive texts; null when the character has none yet (newer than the data dump). */
+    private CharacterLore parseLore(JsonNode node) {
+        if (node == null || !node.isObject()) return null;
+        List<String> stories = new ArrayList<>();
+        JsonNode storiesNode = node.get("stories");
+        if (storiesNode != null && storiesNode.isArray()) {
+            for (JsonNode story : storiesNode) {
+                String text = story.asString("");
+                if (!text.isBlank()) stories.add(text);
+            }
+        }
+        Map<String, String> voiceActors = new LinkedHashMap<>();
+        JsonNode voiceNode = node.get("voice_actors");
+        if (voiceNode != null && voiceNode.isObject()) {
+            for (String language : voiceNode.propertyNames()) {
+                String actor = voiceNode.get(language).asString("");
+                if (!actor.isBlank()) voiceActors.put(language, actor);
+            }
+        }
+        return CharacterLore.builder()
+                .description(getText(node, "description"))
+                .stories(stories)
+                .voiceActors(voiceActors)
+                .build();
+    }
 
     private String getText(JsonNode node, String field) {
         JsonNode value = node == null ? null : node.get(field);

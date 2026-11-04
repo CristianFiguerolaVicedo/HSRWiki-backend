@@ -24,7 +24,8 @@ public class CharacterService {
                 character.getSkills(),
                 character.getTraces(),
                 character.getEnhanced(),
-                character.getBuild()
+                character.getBuild(),
+                character.getLore()
         );
     }
 }

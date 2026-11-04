@@ -4,8 +4,9 @@ Usage (from the repository root):
 
     python data-pipeline/update_data.py
 
-Item descriptions come from data-pipeline/item_descriptions.json; refresh that file with
-update_item_descriptions.py when a newer game data dump is available.
+Item descriptions come from data-pipeline/item_descriptions.json and character lore from
+data-pipeline/character_lore.json; refresh them with update_item_descriptions.py and
+update_character_lore.py when a newer game data dump is available.
 
 It downloads only the English index files of Mar-7th/StarRailRes (no images, a few MB),
 runs the extractor and writes src/main/resources/data/game_data.json.
@@ -24,6 +25,7 @@ SHOWCASE_LOOKUP = os.path.join(ROOT, "src", "main", "resources", "data", "showca
 REPO = "https://github.com/Mar-7th/StarRailRes.git"
 
 DESCRIPTIONS = os.path.join(ROOT, "data-pipeline", "item_descriptions.json")
+LORE = os.path.join(ROOT, "data-pipeline", "character_lore.json")
 
 # Item types/sub types left out of the wiki: lore collectibles, one-off event and minigame
 # tokens, pets and display-only entries. They made the list huge and say nothing useful.
@@ -194,6 +196,19 @@ def get_showcase_lookup(res_path):
     }
 
 
+def add_lore(characters):
+    """Attach each character's archive texts (description, stories, voice actors) by game id."""
+    if not os.path.exists(LORE):
+        print("character_lore.json not found: run update_character_lore.py to add character lore")
+        return
+    with open(LORE, encoding="utf-8") as f:
+        lore = json.load(f)
+    for char in characters.values():
+        entry = lore.get(str(char.get("id")))
+        if entry:
+            char["lore"] = entry
+
+
 def main():
     if "--skip-fetch" not in sys.argv:
         fetch_star_rail_res()
@@ -203,6 +218,7 @@ def main():
 
     data = get_game_data_verbose(include_icons=True)
     data["items"] = get_items(os.environ["STAR_RAIL_RES_PATH"], data["characters"], data["light_cones"])
+    add_lore(data["characters"])
 
     os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:

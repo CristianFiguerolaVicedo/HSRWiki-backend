@@ -1,7 +1,7 @@
 """Refreshes data-pipeline/item_descriptions.json (item descriptions and lore text).
 
 StarRailRes doesn't include item descriptions, so they come from a public dump of the game's
-data tables (Frischar/TurnBasedGameData). Only the needed files are downloaded (~55 MB, mostly
+data tables (DimbreathBot/TurnBasedGameData, kept up to date with each patch). Only the needed files are downloaded (~55 MB, mostly
 the English text map), and the result is a small file that update_data.py merges in.
 
 Usage (from the repository root):
@@ -19,7 +19,7 @@ import subprocess
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE = os.path.join(ROOT, "data-pipeline", ".cache", "TurnBasedGameData")
 OUTPUT = os.path.join(ROOT, "data-pipeline", "item_descriptions.json")
-REPO = "https://github.com/Frischar/TurnBasedGameData.git"
+REPO = "https://github.com/DimbreathBot/TurnBasedGameData.git"
 CONFIGS = ["ItemConfig", "ItemConfigBook", "ItemConfigDisk", "ItemConfigEquipment"]
 
 
@@ -27,14 +27,34 @@ def git(*args, cwd=None):
     subprocess.run(["git", *args], cwd=cwd, check=True)
 
 
+# Every file the text scripts (this one and update_character_lore.py) read, so they share one cache
+FILES = [f"/ExcelOutput/{c}.json" for c in CONFIGS] + [
+    "/ExcelOutput/AvatarConfig.json", "/ExcelOutput/AvatarAtlas.json", "/ExcelOutput/StoryAtlas.json",
+    "/TextMap/TextMapEN.json",
+]
+
+
+def cached_remote():
+    try:
+        out = subprocess.run(["git", "remote", "get-url", "origin"], cwd=CACHE, capture_output=True, text=True)
+        return out.stdout.strip()
+    except OSError:
+        return None
+
+
 def fetch():
-    paths = [f"/ExcelOutput/{c}.json" for c in CONFIGS] + ["/TextMap/TextMapEN.json"]
+    paths = FILES
+    if os.path.isdir(os.path.join(CACHE, ".git")) and cached_remote() != REPO:
+        # The cache came from an older mirror: start over with the current one
+        import shutil
+        shutil.rmtree(CACHE)
     if not os.path.isdir(os.path.join(CACHE, ".git")):
         os.makedirs(os.path.dirname(CACHE), exist_ok=True)
         git("clone", "--depth", "1", "--filter=blob:none", "--no-checkout", REPO, CACHE)
         git("sparse-checkout", "set", "--no-cone", *paths, cwd=CACHE)
         git("checkout", cwd=CACHE)
     else:
+        git("sparse-checkout", "set", "--no-cone", *paths, cwd=CACHE)
         git("pull", "--depth", "1", cwd=CACHE)
 
 

@@ -30,4 +30,5 @@ public class Character {
     private Trace traces;
     private EnhancedKit enhanced;
     private CharBuild build;
+    private CharacterLore lore;
 }
