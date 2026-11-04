@@ -20,6 +20,7 @@ import sys
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE = os.path.join(ROOT, "data-pipeline", ".cache", "StarRailRes")
 OUTPUT = os.path.join(ROOT, "src", "main", "resources", "data", "game_data.json")
+SHOWCASE_LOOKUP = os.path.join(ROOT, "src", "main", "resources", "data", "showcase_lookup.json")
 REPO = "https://github.com/Mar-7th/StarRailRes.git"
 
 DESCRIPTIONS = os.path.join(ROOT, "data-pipeline", "item_descriptions.json")
@@ -160,6 +161,39 @@ def get_items(res_path, characters, light_cones):
         }
     return items
 
+def get_showcase_lookup(res_path):
+    """IDs used by Enka.Network's showcase API -> names and stat formulas (see ShowcaseService)."""
+    en = os.path.join(res_path, "index_new", "en")
+    load = lambda name: json.load(open(os.path.join(en, name), encoding="utf-8"))
+    base = "https://raw.githubusercontent.com/Mar-7th/StarRailRes/master/"
+    slots = {"HEAD": "Head", "HAND": "Hands", "BODY": "Body", "FOOT": "Feet", "NECK": "Planar Sphere", "OBJECT": "Link Rope"}
+
+    set_names = {sid: s["name"] for sid, s in load("relic_sets.json").items()}
+    relics = {
+        rid: {
+            "set": set_names.get(r["set_id"]),
+            "slot": slots.get(r["type"], r["type"]),
+            "rarity": r["rarity"],
+            "main_group": r["main_affix_id"],
+            "sub_group": r["sub_affix_id"],
+            "icon": base + r["icon"] if r.get("icon") else None,
+        }
+        for rid, r in load("relics.json").items()
+    }
+    affixes = lambda name: {
+        gid: {aid: {"property": a["property"], "base": a["base"], "step": a["step"]} for aid, a in g["affixes"].items()}
+        for gid, g in load(name).items()
+    }
+    properties = {k: {"name": v["name"], "percent": bool(v.get("percent"))} for k, v in load("properties.json").items()}
+    return {
+        "light_cones": {lid: lc["name"] for lid, lc in load("light_cones.json").items()},
+        "relics": relics,
+        "main_affixes": affixes("relic_main_affixes.json"),
+        "sub_affixes": affixes("relic_sub_affixes.json"),
+        "properties": properties,
+    }
+
+
 def main():
     if "--skip-fetch" not in sys.argv:
         fetch_star_rail_res()
@@ -173,6 +207,8 @@ def main():
     os.makedirs(os.path.dirname(OUTPUT), exist_ok=True)
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, separators=(",", ":"))
+    with open(SHOWCASE_LOOKUP, "w", encoding="utf-8") as f:
+        json.dump(get_showcase_lookup(os.environ["STAR_RAIL_RES_PATH"]), f, ensure_ascii=False, separators=(",", ":"))
 
     print(
         f"Game version {data['version']}: {len(data['characters'])} characters, "
