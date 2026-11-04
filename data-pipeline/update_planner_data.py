@@ -4,6 +4,8 @@
   - light_cones: ascension costs per phase and EXP table (by light cone name, like the rest of the wiki)
   - exp: EXP needed per level (characters and each light cone rarity) and the EXP items
   - items: name, icon and rarity of every material used above
+  - stats: what the stat calculator needs (base stats per ascension phase, trace and light cone
+    bonuses, relic set bonuses that always apply, 5-star +15 relic main stats, stat names)
 
 Costs come from StarRailRes (same cache as update_data.py); the EXP tables come from the game
 data dump used for the item and lore texts (update_item_descriptions.fetch).
@@ -41,6 +43,81 @@ def load(*parts):
 
 def mats(entries):
     return [[m["id"], m["num"]] for m in entries or [] if m.get("num")]
+
+
+def props(entries):
+    """[{type, value}, ...] -> {type: summed value}"""
+    out = {}
+    for p in entries or []:
+        out[p["type"]] = round(out.get(p["type"], 0) + p["value"], 6)
+    return out
+
+
+def get_stats(game, promotions, trees, lc_info, lc_by_name):
+    lc_promotions = load(RES, "light_cone_promotions.json")
+    lc_ranks = load(RES, "light_cone_ranks.json")
+    relic_sets = load(RES, "relic_sets.json")
+    relics = load(RES, "relics.json")
+    main_affixes = load(RES, "relic_main_affixes.json")
+    lookup = load(ROOT, "src", "main", "resources", "data", "showcase_lookup.json")
+
+    def phases(values, keys):
+        return [{k: [round(v[k]["base"], 4), round(v[k]["step"], 4)] for k in keys if k in v} for v in values]
+
+    characters = {}
+    for char in game["characters"].values():
+        cid = str(char["id"])
+        if cid not in promotions:
+            continue
+        trace_bonus = {}
+        for node_id, node in trees.items():
+            if node_id.startswith(cid) and len(node_id) == len(cid) + 3 and node["max_level"] == 1:
+                for k, v in props(node["levels"][0]["properties"] if node["levels"] else []).items():
+                    trace_bonus[k] = round(trace_bonus.get(k, 0) + v, 6)
+        element = char.get("element", "")
+        characters[cid] = {
+            "path": (char.get("path") or "").upper(),
+            # The DMG Boost stat that matters for this character ("Lightning" -> ThunderAddedRatio)
+            "dmg_boost": ("Thunder" if element == "Lightning" else element) + "AddedRatio",
+            "base": phases(promotions[cid]["values"], ["hp", "atk", "def", "spd", "crit_rate", "crit_dmg", "taunt"]),
+            "traces": trace_bonus,
+        }
+
+    light_cones = {}
+    for name in game["light_cones"]:
+        gid = lc_by_name.get(name)
+        if not gid or gid not in lc_promotions:
+            continue
+        light_cones[name] = {
+            "path": (game["light_cones"][name].get("path") or "").upper(),  # same names as the characters' Paths
+            "base": phases(lc_promotions[gid]["values"], ["hp", "atk", "def"]),
+            "ranks": [props(r) for r in lc_ranks.get(gid, {}).get("properties", [])],
+        }
+
+    # Only the always-on part of each set bonus (conditional effects are left to the description)
+    sets = {}
+    planar_ids = {r["set_id"] for r in relics.values() if r["type"] in ("NECK", "OBJECT")}
+    for set_id, rs in relic_sets.items():
+        bonus = rs.get("properties") or []
+        sets[rs["name"]] = {
+            "planar": set_id in planar_ids,
+            "two": props(bonus[0]) if len(bonus) > 0 else {},
+            "four": props(bonus[1]) if len(bonus) > 1 else {},
+            "desc": rs.get("desc", []),
+        }
+
+    # Main stat at +15 on a 5-star piece, per slot (the slot decides which stats can roll)
+    slot_names = {"HEAD": "Head", "HAND": "Hands", "BODY": "Body", "FOOT": "Feet", "NECK": "Planar Sphere", "OBJECT": "Link Rope"}
+    main_stats = {}
+    for relic in relics.values():
+        slot = slot_names.get(relic["type"])
+        if relic["rarity"] != 5 or not slot or slot in main_stats:
+            continue
+        group = main_affixes[relic["main_affix_id"]]["affixes"]
+        main_stats[slot] = {a["property"]: round(a["base"] + a["step"] * 15, 6) for a in group.values()}
+
+    return {"characters": characters, "light_cones": light_cones, "relic_sets": sets,
+            "main_stats": main_stats, "properties": lookup["properties"]}
 
 
 def main():
@@ -118,7 +195,8 @@ def main():
         items[item_id] = {"name": info.get("name", f"Item {item_id}"), "rarity": info.get("rarity", 1),
                           "icon": ICON_BASE + info["icon"] if info.get("icon") else None}
 
-    out = {"version": game.get("version"), "characters": characters, "light_cones": light_cones, "exp": exp, "items": items}
+    out = {"version": game.get("version"), "characters": characters, "light_cones": light_cones, "exp": exp,
+           "items": items, "stats": get_stats(game, promotions, trees, lc_info, lc_by_name)}
     with open(OUTPUT, "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, separators=(",", ":"))
     print(f"Planner data: {len(characters)} characters, {len(light_cones)} light cones, {len(items)} materials "

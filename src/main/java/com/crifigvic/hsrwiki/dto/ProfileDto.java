@@ -28,6 +28,8 @@ public record ProfileDto(
             String icon,
             String miniIcon,
             int level,
+            /* ascensions done, 0-6 (level 20 with promotion 1 = 20/30) */
+            int promotion,
             int eidolon,
             boolean enhanced,
             ShowcaseLightCone lightCone,
@@ -44,6 +46,7 @@ public record ProfileDto(
             Integer rarity,
             String icon,
             int level,
+            int promotion,
             int superimposition,
             boolean recommended
     ) {

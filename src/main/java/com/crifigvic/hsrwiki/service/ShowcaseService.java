@@ -196,6 +196,7 @@ public class ShowcaseService {
                 character.getIcon(),
                 character.getMiniIcon(),
                 avatar.path("level").asInt(1),
+                avatar.path("promotion").asInt(0),
                 avatar.path("rank").asInt(0),
                 avatar.path("enhancedId").asInt(0) != 0,
                 lightCone,
@@ -217,6 +218,7 @@ public class ShowcaseService {
                 lc == null ? null : lc.getRarity(),
                 lc == null ? null : lc.getMiniIcon(),
                 equipment.path("level").asInt(1),
+                equipment.path("promotion").asInt(0),
                 equipment.path("rank").asInt(1),
                 recommended
         );
