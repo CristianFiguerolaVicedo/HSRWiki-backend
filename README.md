@@ -1,93 +1,178 @@
-# Honkai: Star Rail Wiki
+<div align="center">
 
-This project is meant to be a database for players of Honkai: Star Rail to see characters, lightcones, builds, relics and much more.
+# HSRWiki — Backend
 
-The game data is generated from [Mar-7th/StarRailRes](https://github.com/Mar-7th/StarRailRes) with an extractor based on [kel-z/HSR-Data](https://github.com/kel-z/HSR-Data) (that repository stopped updating at version 2.7). The data currently included is from **version 4.6**.
+**REST API for HSRWiki, an unofficial Honkai: Star Rail wiki with build guides and player tools.**
 
-The project is made into 2 parts divided into 2 repositories, the backend and the frontend, the frontend is in the following link: [Frontend-Repository](https://github.com/CristianFiguerolaVicedo/HSRWiki-frontend).
+![Game data](https://img.shields.io/badge/game%20data-v4.6-B8820F)
+![Java](https://img.shields.io/badge/Java-21-1F2A44?logo=openjdk&logoColor=white)
+![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0-6DB33F?logo=springboot&logoColor=white)
+![Python](https://img.shields.io/badge/data%20pipeline-Python%203-2F6FAE?logo=python&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-ready-2496ED?logo=docker&logoColor=white)
 
-## Setting up the project
+[Frontend repository](https://github.com/CristianFiguerolaVicedo/HSRWiki-frontend) ·
+[API reference](#api-reference) ·
+[Updating the game data](#updating-the-game-data) ·
+[Deployment](#deployment)
 
-In order to use the project you have to first clone both repositories. To do that, open the terminal and navigate to the folder where you want to clone both repositories and execute `git clone https://github.com/CristianFiguerolaVicedo/HSRWiki-frontend.git` for the frontend repository and `git clone https://github.com/CristianFiguerolaVicedo/HSRWiki-backend.git` for the backend repository.
+<img src="https://raw.githubusercontent.com/CristianFiguerolaVicedo/HSRWiki-frontend/main/docs/screenshots/character.jpg" alt="HSRWiki character page" width="860">
 
-After doing this, open both parts on your favourite code editor (Recommended: IntelliJIdea for the backend and Visual Studio Code for the frontend). On the backend part, open the project and run it (or run `./mvnw spring-boot:run`); it serves the API on `http://localhost:8080/api`. The game data is already included, so nothing else is needed. For the frontend, open the project and execute in the terminal `npm install` to install all the necessary dependencies of the project. After that, execute `npm run dev` and do `Ctrl + click` to on the link that will appear to open the project on the browser.
+</div>
 
-## Objective of the project
+---
 
-### Tecnichal objectives
+## Overview
 
-The main purpose of this project on the technical ambit was to practice how to retrieve information from GitHub repositories, format it, extract it, work with it and return it how I needed it.
+This service serves every piece of game data the HSRWiki frontend shows: characters with their skills, Eidolons, traces, lore and recommended builds, light cones, relic sets, items, and the data behind the material planner and the stat calculator. It also looks up a player's public in-game showcase by UID through [Enka.Network](https://enka.network), so players can compare their own builds with the wiki's guides **without logging in or sharing any credentials**.
 
-As well as select the information and how the information is retrieved from the repository.
+All game data is generated ahead of time by a small Python pipeline from public data sources and shipped as JSON with the application, so the API needs no database and starts in seconds.
 
-### Web objectives
+## Features
 
-The main objective of this application is to be clear, appealing to watch and user-friendly. The main focus is to display the information in an easy and clear way for the user to see it without getting confused.
+- **Complete game data, up to version 4.6:** 98 characters (including enhanced kits, Memosprite and Elation skills), 170 light cones, 34 relic sets and 28 planar ornament sets, and 844 items with descriptions and what uses them.
+- **Character lore:** the in-game Character Archive (details, stories and voice actors) for every character.
+- **Build guides:** hand-written recommended light cones, relic sets, main and sub stats, and team compositions.
+- **Player showcase:** `GET /api/profile/{uid}` reads a public showcase from Enka.Network, computes the exact relic stats and checks each character against the recommended build. Each response is cached for the time Enka.Network asks (at least 60 seconds).
+- **Planner and calculator data:** ascension, trace and EXP costs, base stats per ascension phase, always-on bonuses from traces, light cones and sets, and relic main stat values.
 
-The colors are not to bright to be appealing to the sight and the info is disposed in a way that is easily identified.
+## Tech stack
 
-## Backend parts
+| Layer | Technology |
+|---|---|
+| API | Java 21, Spring Boot 4 (Spring MVC), Jackson 3, Lombok |
+| Data pipeline | Python 3 (standard library only), git |
+| Packaging | Maven, Docker (multi-stage image) |
 
-### Game data (data-pipeline)
-
-The data the API serves lives in `src/main/resources/data/`:
-
-- `game_data.json`: characters, light cones, relic sets and items, generated automatically.
-- `character_builds.json`: the recommended builds, written by hand.
-
-To update the game data after a new Honkai: Star Rail version (once StarRailRes has been updated), run from the repository root:
+## Architecture
 
 ```
-python data-pipeline/update_data.py
+  StarRailRes (game data, en)  ─┐
+  TurnBasedGameData (text maps) ├─►  data-pipeline/*.py  ─►  src/main/resources/data/*.json
+  character_builds.json (manual)┘                                       │
+                                                                        ▼
+                         Enka.Network  ◄──  Spring Boot API  ──►  /api/*  ──►  HSRWiki frontend
 ```
 
-It downloads only the English index files of StarRailRes (a few MB, no images), runs the extractor in `data-pipeline/hsrdata/` and rewrites `game_data.json`. The extractor understands the newer kits: Remembrance and Elation paths, Memosprite and Elation skills, and the enhanced kits added from version 3.4.
+```
+src/main/java/com/crifigvic/hsrwiki/
+├── config/       CORS configuration
+├── controller/   REST endpoints
+├── dto/          Response models
+├── entity/       Domain model (characters, skills, light cones, relics, items...)
+├── model/        Raw game data container
+├── service/      Data loading (GameDataLoader), builds, showcase lookups
+└── util/         Path and element enums
 
-The API also exposes `GET /api/version`, which returns the game version of the loaded data.
+src/main/resources/data/
+├── game_data.json          Characters, light cones, relic sets and items (generated)
+├── character_builds.json   Recommended builds (hand-written)
+├── planner_data.json       Planner and stat calculator data (generated)
+└── showcase_lookup.json    Id tables to translate Enka responses (generated)
 
-Configuration (`application.properties`):
+data-pipeline/              Python scripts that generate the files above
+```
 
-- `hsrwiki.data-file` / `hsrwiki.builds-file`: where to read the data from (classpath by default; use `file:/path/...` for an external file).
-- `hsrwiki.cors.allowed-origins`: frontend origins allowed to call the API.
+## Getting started
 
-### Custom files
+### Requirements
 
-In the main folder we can see many packages: Controller, dto, entities, models, services and utils.
+- **Java 21** (the Maven wrapper downloads Maven for you)
+- **Python 3.10+** and **git**, only if you want to regenerate the game data
 
-#### Controllers
+### Run locally
 
-In this folder you can find the files with the operations like getting all the characters, getting lightcones by name, etc.
+```bash
+git clone https://github.com/CristianFiguerolaVicedo/HSRWiki-backend.git
+cd HSRWiki-backend
 
-#### Dto
+# Linux / macOS
+./mvnw spring-boot:run
 
-The dto's are the entities that are returned to the frontend
+# Windows (PowerShell)
+.\mvnw.cmd spring-boot:run
+```
 
-#### Entities
+The API starts on `http://localhost:8080/api`. Check that it's running with:
 
-The structure of every part of the web. Each file contains the properties of every unit of the web, the properties of the characters, the relics, the lightcones, etc.
+```bash
+curl http://localhost:8080/api/version
+```
 
-#### Service
+Then start the [frontend](https://github.com/CristianFiguerolaVicedo/HSRWiki-frontend), which expects the API at that address by default.
 
-Here we can find 2 things:
+### Run with Docker
 
-- First, the helper methods to convert to dto every entity
+```bash
+docker build -t hsrwiki-backend .
+docker run -p 8080:8080 hsrwiki-backend
+```
 
-- Second, the GameDataLoader class.
+## Configuration
 
-The GameDataLoader file is the one in charge of retrieving the information from the json files generated before and parse it for the controllers to send it to the frontend.
+Every property in `application.properties` can be overridden with an environment variable (Spring's relaxed binding: upper case, dots become underscores, dashes are removed).
 
-Also has some helper methods to parse the information, like the skills of the characters or the methods that return all the characters, for example.
+| Property | Environment variable | Default | Description |
+|---|---|---|---|
+| `server.port` | `PORT` | `8080` | Port the API listens on |
+| `hsrwiki.cors.allowed-origins` | `HSRWIKI_CORS_ALLOWEDORIGINS` | `http://localhost:5173,http://localhost:4173` | Frontend origins allowed to call the API, comma separated |
+| `hsrwiki.data-file` | `HSRWIKI_DATAFILE` | `classpath:data/game_data.json` | Game data file (`file:/path/...` for an external one) |
+| `hsrwiki.builds-file` | `HSRWIKI_BUILDSFILE` | `classpath:data/character_builds.json` | Recommended builds file |
+| `hsrwiki.planner-file` | `HSRWIKI_PLANNERFILE` | `classpath:data/planner_data.json` | Planner and stat calculator data |
+| `hsrwiki.showcase-lookup-file` | `HSRWIKI_SHOWCASELOOKUPFILE` | `classpath:data/showcase_lookup.json` | Id tables for showcase lookups |
+| `hsrwiki.enka.base-url` | `HSRWIKI_ENKA_BASEURL` | `https://enka.network/api/hsr/uid` | Enka.Network endpoint |
+| `hsrwiki.enka.user-agent` | `HSRWIKI_ENKA_USERAGENT` | `HSRWiki/1.0 (+repository URL)` | User-Agent sent to Enka.Network, as its API requires |
 
-#### Util
+## API reference
 
-Lastly, the util folder contains the enums for the paths and elements used. The builds file, `character_builds.json`, is in `src/main/resources/data/`.
+All endpoints are `GET` and return JSON.
 
-This last file is the one containing the builds for every character in the game. It is not important to know it, but it was handtyped to ensure that the builds were as accurate as possible to the best ones.
+| Endpoint | Description |
+|---|---|
+| `/api/version` | Game version of the loaded data |
+| `/api/characters` | All characters with skills, Eidolons, traces, lore and build |
+| `/api/characters/{id}` | One character by game id (e.g. `1005`) |
+| `/api/characters/builds` | Recommended builds for every character |
+| `/api/lightcones` | All light cones |
+| `/api/lightcones/{id}` · `/api/lightcones/name/{name}` | One light cone by id or by name |
+| `/api/relics` · `/api/relics/{name}` | Relic and planar sets, or one set by name |
+| `/api/items` · `/api/items/{id}` · `/api/items/name/{name}` | Items, with descriptions and what uses them |
+| `/api/planner` | Costs and stat tables for the material planner and the stat calculator |
+| `/api/profile/{uid}` | A player's public showcase (9 or 10 digit UID), checked against the builds |
 
-## Deployment (Render, free plan)
+`/api/profile/{uid}` answers errors as `{"error": "..."}` with a matching status: `400` invalid UID, `404` unknown player, `429` too many lookups, `503` game maintenance, `502` Enka.Network unreachable.
 
-1. Render → **New → Web Service** → this repository. Runtime **Docker**, region **Frankfurt**, instance **Free**, health check path `/api/version`.
-2. Environment variable `HSRWIKI_CORS_ALLOWEDORIGINS` = the frontend's address (e.g. `https://hsrwiki.vercel.app,http://localhost:5173`).
-3. Every push to `main` redeploys. On the free plan the service sleeps after 15 minutes without visits and takes about a minute to wake up.
+## Updating the game data
 
-The `Dockerfile` builds the jar with Maven and limits the JVM to fit in 512 MB. Render passes the port in `PORT` (`server.port=${PORT:8080}`).
+When a new Honkai: Star Rail version comes out and the data sources have been updated, run the scripts from the repository root, in this order:
+
+```bash
+python data-pipeline/update_item_descriptions.py   # item descriptions (also downloads the text dump)
+python data-pipeline/update_character_lore.py      # Character Archive texts
+python data-pipeline/update_data.py                # game_data.json and showcase_lookup.json
+python data-pipeline/update_planner_data.py        # planner_data.json
+```
+
+Each script downloads only the files it needs (a sparse, blob-less git clone kept in `data-pipeline/.cache/`, which is ignored by git) and accepts `--skip-fetch` to reuse what's already downloaded. Recommended builds live in `src/main/resources/data/character_builds.json` and are edited by hand.
+
+## Deployment
+
+The repository includes a `Dockerfile` that builds the jar with Maven and keeps the JVM within 512 MB, so it runs on free container hosts.
+
+**Render (free plan)**
+
+1. **New → Web Service**, connect this repository.
+2. Runtime **Docker**, region **Frankfurt**, instance **Free**, health check path `/api/version`.
+3. Add the environment variable `HSRWIKI_CORS_ALLOWEDORIGINS` with the frontend's address, without a trailing slash (e.g. `https://hsrwiki.vercel.app,http://localhost:5173`).
+
+Every push to `main` redeploys automatically. On the free plan the service sleeps after 15 minutes without traffic and takes about a minute to wake up.
+
+## Credits
+
+- [Mar-7th/StarRailRes](https://github.com/Mar-7th/StarRailRes): game data and images.
+- [DimbreathBot/TurnBasedGameData](https://github.com/DimbreathBot/TurnBasedGameData): game text maps for item descriptions and character lore.
+- [kel-z/HSR-Data](https://github.com/kel-z/HSR-Data): original data extractor, extended in `data-pipeline/hsrdata/`.
+- [Enka.Network](https://enka.network): public player showcases.
+
+## Disclaimer
+
+HSRWiki is a fan-made project and is not affiliated with or endorsed by HoYoverse. Honkai: Star Rail and all related names, characters and images are trademarks and copyright of HoYoverse.
