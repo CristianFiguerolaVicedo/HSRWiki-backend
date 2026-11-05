@@ -5734,15 +5734,15 @@
         "priority": 1
       },
       {
-        "name": "Worrisome, Blissful",
-        "rarity": 5,
-        "description": "Increase the wearer's CRIT Rate by 18% and increases DMG dealt by Follow-Up ATK by 30%. After the wearer uses a Follow-Up ATK, inflicts the target with the \"Tame\" state, stacking up to 2 time(s). When allies hit enemy targets under the \"Tame\" state, each \"Tame\" stack increases the CRIT DMG dealt by 12%.",
-        "priority": 2
-      },
-      {
         "name": "Baptism of Pure Thought",
         "rarity": 5,
         "description": "Increases the wearer's CRIT DMG by 20%. For every debuff on the enemy target, the wearer's CRIT DMG dealt against this target additionally increases by 8%, stacking up to 3 times. When using Ultimate to attack the enemy target, the wearer receives the \"Disputation\" effect, which increases DMG dealt by 36% and enables their Follow-Up ATKs to ignore 24% of the target's DEF. This effect lasts for 2 turns.",
+        "priority": 2
+      },
+      {
+        "name": "Worrisome, Blissful",
+        "rarity": 5,
+        "description": "Increase the wearer's CRIT Rate by 18% and increases DMG dealt by Follow-Up ATK by 30%. After the wearer uses a Follow-Up ATK, inflicts the target with the \"Tame\" state, stacking up to 2 time(s). When allies hit enemy targets under the \"Tame\" state, each \"Tame\" stack increases the CRIT DMG dealt by 12%.",
         "priority": 3
       },
       {
@@ -5778,9 +5778,9 @@
     ],
     "mainStats": {
       "body": "Crit Rate / Crit DMG",
-      "feet": "SPD",
+      "feet": "ATK%",
       "sphere": "Lightning DMG Boost / ATK%",
-      "rope": "Energy Regeneration Rate"
+      "rope": "ATK%"
     },
     "subStats": {
       "priority": [
