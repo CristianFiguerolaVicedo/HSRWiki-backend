@@ -80,6 +80,7 @@ src/main/resources/data/
 ├── game_data.json          Characters, light cones, relic sets and items (generated)
 ├── character_builds.json   Recommended builds (hand-written)
 ├── planner_data.json       Planner and stat calculator data (generated)
+├── changelog.json          Weekly changes shown on the Updates page (data-pipeline/changelog.py)
 └── showcase_lookup.json    Id tables to translate Enka responses (generated)
 
 data-pipeline/              Python scripts that generate the files above
@@ -149,6 +150,7 @@ All endpoints are `GET` and return JSON. They are relative to `http://localhost:
 | `/api/lightcones/{id}` · `/api/lightcones/name/{name}` | One light cone by id or by name |
 | `/api/relics` · `/api/relics/{name}` | Relic and planar sets, or one set by name |
 | `/api/items` · `/api/items/{id}` · `/api/items/name/{name}` | Items, with descriptions and what uses them |
+| `/api/changelog` | What changed each week, for the website's Updates page |
 | `/api/planner` | Costs and stat tables for the material planner and the stat calculator |
 | `/api/profile/{uid}` | A player's public showcase (9 or 10 digit UID), checked against the builds |
 
@@ -158,7 +160,7 @@ All endpoints are `GET` and return JSON. They are relative to `http://localhost:
 
 ### Automatically
 
-The [`Update game data`](.github/workflows/update-game-data.yml) workflow runs **every Wednesday** (patch day) at 18:00 UTC. It regenerates all the data and, if anything changed, commits it to `main` as `Actualizacion de datos a la version X.Y.Z`, which makes Render redeploy the API. It can also be started by hand from the **Actions** tab (**Run workflow**). If the checks fail (for example, fewer characters than before), nothing is published and GitHub reports the failed run.
+The [`Update game data`](.github/workflows/update-game-data.yml) workflow runs **every Wednesday** (patch day) at 18:00 UTC. It regenerates all the data and, if anything changed, commits it to `main` as `Actualizacion de datos a la version X.Y.Z`, which makes Render redeploy the API. What's new (version, characters, light cones, relic sets) is also added to `changelog.json`, shown on the website's **Updates** page. It can also be started by hand from the **Actions** tab (**Run workflow**). If the checks fail (for example, fewer characters than before), nothing is published and GitHub reports the failed run.
 
 ### By hand
 

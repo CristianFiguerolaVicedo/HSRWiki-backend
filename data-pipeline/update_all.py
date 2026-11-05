@@ -12,13 +12,17 @@ Order (each step needs the previous one):
 Afterwards it compares the new data with the previous one and exits with an error if something
 looks broken (fewer characters than before, missing version...), so an automatic run never
 publishes damaged data. On success it prints the game version, which the GitHub workflow uses
-for the commit message.
+for the commit message, and notes what's new (version, characters, light cones, relic sets) in
+the changelog shown on the website's Updates page.
 """
 
 import json
 import os
 import subprocess
 import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import changelog  # noqa: E402
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(HERE)
@@ -34,6 +38,21 @@ def load(name):
 def run(script, *args):
     print(f"\n--- {script} {' '.join(args)}", flush=True)
     subprocess.run([sys.executable, os.path.join(HERE, script), *args], cwd=ROOT, check=True)
+
+
+def note_changes(before, after):
+    """Adds what's new in the game data to today's changelog entry (nothing if nothing changed)."""
+    items = []
+    if before.get("version") != after.get("version"):
+        items.append({"text": f"Game data updated to version {after['version']}"})
+    kinds = [("characters", "character", "New character"), ("light_cones", "lightcone", "New light cone"),
+             ("relic_sets", "relic", "New relic set")]
+    for key, kind, text in kinds:
+        for name in sorted(set(after.get(key, {})) - set(before.get(key, {}))):
+            items.append({"text": text, "ref": {"kind": kind, "name": name}})
+    if items:
+        changelog.add("data", items, version=after["version"])
+        print(f"Changelog: {len(items)} new lines")
 
 
 def main():
@@ -68,6 +87,7 @@ def main():
 
     version = after["version"]
     print(f"\nOK: game data version {version}")
+    note_changes(before, after)
     out = os.environ.get("GITHUB_OUTPUT")
     if out:
         with open(out, "a", encoding="utf-8") as f:

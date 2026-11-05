@@ -1,0 +1,42 @@
+{
+ "entries": [
+  {
+   "date": "2026-11-05",
+   "version": "4.6.0",
+   "sections": [
+    {
+     "type": "data",
+     "items": [
+      {
+       "text": "Item descriptions and character lore updated to version 4.6 (26 more items with descriptions)."
+      }
+     ]
+    },
+    {
+     "type": "site",
+     "items": [
+      {
+       "text": "Character pages now have a Lore tab with the in-game Character Archive: details, stories and voice actors."
+      },
+      {
+       "text": "Every skill has a level selector, with the real in-game caps and the extra levels from Eidolons."
+      },
+      {
+       "text": "Favorites and collection: mark characters and light cones, with Eidolons and Superimpositions, and filter the lists by them."
+      },
+      {
+       "text": "My Account: look up your in-game showcase by UID and compare your builds with the guides. No login needed."
+      },
+      {
+       "text": "New tools: Planner (materials and Credits to level up), Stat Calculator, Compare (up to three characters) and Team Builder."
+      },
+      {
+       "text": "The game data now updates by itself every Wednesday, and this page lists what changes each week."
+      }
+     ]
+    }
+   ],
+   "title": "A bigger journal"
+  }
+ ]
+}
