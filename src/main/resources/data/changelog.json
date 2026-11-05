@@ -13,6 +13,36 @@
      ]
     },
     {
+     "type": "builds",
+     "items": [
+      {
+       "text": "Light cones: Baptism of Pure Thought moves up to second choice, ahead of Worrisome, Blissful",
+       "ref": {
+        "kind": "character",
+        "name": "Ashveil"
+       }
+      },
+      {
+       "text": "Main stats: Feet SPD → ATK%, Link Rope Energy Regeneration Rate → ATK%",
+       "ref": {
+        "kind": "character",
+        "name": "Ashveil"
+       }
+      },
+      {
+       "text": "First weekly review: 15 builds checked against Game8 and Prydwen (Acheron to Bronya); the other 14 already matched"
+      }
+     ]
+    },
+    {
+     "type": "tierlist",
+     "items": [
+      {
+       "text": "Checked against Game8's November 2026 overall tier list: no rank changes"
+      }
+     ]
+    },
+    {
      "type": "site",
      "items": [
       {
