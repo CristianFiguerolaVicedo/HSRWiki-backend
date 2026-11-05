@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.io.IOException;
 import java.io.InputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.concurrent.TimeUnit;
 
 /**
  * What changed each week (data/changelog.json, written by data-pipeline/changelog.py from the weekly
@@ -41,7 +40,7 @@ public class ChangelogController {
     public ResponseEntity<String> getChangelog() {
         return ResponseEntity.ok()
                 .contentType(MediaType.APPLICATION_JSON)
-                .cacheControl(CacheControl.maxAge(10, TimeUnit.MINUTES))
+                .cacheControl(CacheControl.noCache())
                 .body(changelogJson);
     }
 }
