@@ -83,3 +83,11 @@ Also has some helper methods to parse the information, like the skills of the ch
 Lastly, the util folder contains the enums for the paths and elements used. The builds file, `character_builds.json`, is in `src/main/resources/data/`.
 
 This last file is the one containing the builds for every character in the game. It is not important to know it, but it was handtyped to ensure that the builds were as accurate as possible to the best ones.
+
+## Deployment (Render, free plan)
+
+1. Render → **New → Web Service** → this repository. Runtime **Docker**, region **Frankfurt**, instance **Free**, health check path `/api/version`.
+2. Environment variable `HSRWIKI_CORS_ALLOWEDORIGINS` = the frontend's address (e.g. `https://hsrwiki.vercel.app,http://localhost:5173`).
+3. Every push to `main` redeploys. On the free plan the service sleeps after 15 minutes without visits and takes about a minute to wake up.
+
+The `Dockerfile` builds the jar with Maven and limits the JVM to fit in 512 MB. Render passes the port in `PORT` (`server.port=${PORT:8080}`).
