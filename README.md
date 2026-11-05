@@ -156,16 +156,25 @@ All endpoints are `GET` and return JSON. They are relative to `http://localhost:
 
 ## Updating the game data
 
-When a new Honkai: Star Rail version comes out and the data sources have been updated, run the scripts from the repository root, in this order:
+### Automatically
+
+The [`Update game data`](.github/workflows/update-game-data.yml) workflow runs **every Wednesday** (patch day) at 18:00 UTC. It regenerates all the data and, if anything changed, commits it to `main` as `Actualizacion de datos a la version X.Y.Z`, which makes Render redeploy the API. It can also be started by hand from the **Actions** tab (**Run workflow**). If the checks fail (for example, fewer characters than before), nothing is published and GitHub reports the failed run.
+
+### By hand
 
 ```bash
-python data-pipeline/update_item_descriptions.py   # item descriptions (also downloads the text dump)
-python data-pipeline/update_character_lore.py      # Character Archive texts
-python data-pipeline/update_data.py                # game_data.json and showcase_lookup.json
-python data-pipeline/update_planner_data.py        # planner_data.json
+python data-pipeline/update_all.py
 ```
 
-Each script downloads only the files it needs (a sparse, blob-less git clone kept in `data-pipeline/.cache/`, which is ignored by git) and accepts `--skip-fetch` to reuse what's already downloaded. Recommended builds live in `src/main/resources/data/character_builds.json` and are edited by hand.
+`update_all.py` runs the individual scripts in the order they depend on each other, then checks the result:
+
+1. `update_data.py`: characters, light cones, relics and items from StarRailRes
+2. `update_item_descriptions.py`: item texts from the game data dump
+3. `update_character_lore.py`: Character Archive texts (needs the character list from step 1)
+4. `update_data.py --skip-fetch`: merges those texts into `game_data.json`
+5. `update_planner_data.py`: planner and stat calculator data
+
+The scripts download only the files they need (a sparse, blob-less git clone kept in `data-pipeline/.cache/`, which is ignored by git). Recommended builds live in `src/main/resources/data/character_builds.json` and are written by hand, so new characters show up with all their data and lore but without a build until one is added.
 
 ## Deployment
 

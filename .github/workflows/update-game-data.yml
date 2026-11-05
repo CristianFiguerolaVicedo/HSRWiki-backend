@@ -1,0 +1,52 @@
+# Every Wednesday (patch day), regenerate the game data and publish it if anything changed.
+# Render redeploys on every push to main, so the website picks up the new version by itself.
+name: Update game data
+
+on:
+  schedule:
+    # 18:00 UTC = 19:00 in Madrid in winter, 20:00 in summer (GitHub only takes UTC)
+    - cron: "0 18 * * 3"
+  workflow_dispatch: # "Run workflow" button in the Actions tab
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-game-data
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      # The scripts keep a sparse copy of the data sources here; reusing it saves the download
+      - uses: actions/cache@v4
+        with:
+          path: data-pipeline/.cache
+          key: hsr-data-cache-${{ github.run_id }}
+          restore-keys: hsr-data-cache-
+
+      - name: Generate data
+        id: data
+        run: python data-pipeline/update_all.py
+
+      - name: Publish if something changed
+        env:
+          VERSION: ${{ steps.data.outputs.version }}
+        run: |
+          if git diff --quiet; then
+            echo "No changes: the data is already up to date (version $VERSION)."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A src/main/resources/data data-pipeline/item_descriptions.json data-pipeline/character_lore.json
+          git commit -m "Actualizacion de datos a la version $VERSION"
+          git push
