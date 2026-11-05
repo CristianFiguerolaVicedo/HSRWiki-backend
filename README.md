@@ -10,6 +10,10 @@
 ![Python](https://img.shields.io/badge/data%20pipeline-Python%203-2F6FAE?logo=python&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-ready-2496ED?logo=docker&logoColor=white)
 
+### [🚂 Open the live site →](https://hsr-wiki-frontend.vercel.app)
+
+[Live site](https://hsr-wiki-frontend.vercel.app) ·
+[Live API](https://hsrwiki-backend.onrender.com/api/version) ·
 [Frontend repository](https://github.com/CristianFiguerolaVicedo/HSRWiki-frontend) ·
 [API reference](#api-reference) ·
 [Updating the game data](#updating-the-game-data) ·
@@ -20,6 +24,15 @@
 </div>
 
 ---
+
+## Live deployment
+
+| | Address |
+|---|---|
+| Website | [hsr-wiki-frontend.vercel.app](https://hsr-wiki-frontend.vercel.app) |
+| API | [hsrwiki-backend.onrender.com/api](https://hsrwiki-backend.onrender.com/api/version) |
+
+> The API runs on Render's free plan: after 15 minutes without visits it goes to sleep, so the first request can take about a minute while it wakes up. After that it responds normally.
 
 ## Overview
 
@@ -124,7 +137,7 @@ Every property in `application.properties` can be overridden with an environment
 
 ## API reference
 
-All endpoints are `GET` and return JSON.
+All endpoints are `GET` and return JSON. They are relative to `http://localhost:8080` locally, or to `https://hsrwiki-backend.onrender.com` for the live API (for example [`/api/version`](https://hsrwiki-backend.onrender.com/api/version)).
 
 | Endpoint | Description |
 |---|---|
