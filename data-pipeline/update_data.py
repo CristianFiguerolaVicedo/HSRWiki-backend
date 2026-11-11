@@ -81,7 +81,9 @@ def fetch_star_rail_res():
         git("sparse-checkout", "set", "--no-cone", "/index_new/en/", "/info.json", cwd=CACHE)
         git("checkout", cwd=CACHE)
     else:
-        git("pull", "--depth", "1", cwd=CACHE)
+        # fetch + reset instead of pull: the upstream repo is sometimes force-pushed
+        git("fetch", "--depth", "1", "origin", cwd=CACHE)
+        git("reset", "--hard", "FETCH_HEAD", cwd=CACHE)
 
 
 def _uses(res_path, characters, light_cones):
