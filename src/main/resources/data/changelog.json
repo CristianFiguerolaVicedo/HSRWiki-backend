@@ -1,6 +1,20 @@
 {
  "entries": [
   {
+   "date": "2026-11-11",
+   "version": "4.6.0",
+   "sections": [
+    {
+     "type": "builds",
+     "items": [
+      {
+       "text": "Weekly review: 15 builds checked against Game8 and Prydwen (Castorice to Gallagher); no changes needed"
+      }
+     ]
+    }
+   ]
+  },
+  {
    "date": "2026-11-05",
    "version": "4.6.0",
    "sections": [
