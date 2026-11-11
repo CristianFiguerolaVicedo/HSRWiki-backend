@@ -6546,5 +6546,79 @@
         "teamMembers": ["Herta", "Trailblazer (Elation)", "Asta", "Dan Heng • Permansor Terrae"]
       }
     ]
+  },
+  "Aeon ★ Aha": {
+    "charName": "Aeon ★ Aha",
+    "lightCones": [
+      {
+        "name": "Upon the First Echo of \"Aha\"",
+        "rarity": 5,
+        "description": "Increases the wearer's base SPD by 12/14/16/18/20. When using Skill on one other ally, gains 10/12/14/16/18 Punchline. This effect can trigger at most once after a gap of every 1 turn(s). Then, enables all allies to ignore 16%/18%/20%/22%/24% of the enemy target's DEF when they deal DMG during this battle. This effect cannot be stacked.",
+        "priority": 1
+      },
+      {
+        "name": "Mushy Shroomy's Adventures",
+        "rarity": 4,
+        "description": "Increases the wearer's Elation by 12%/14%/16%/18%/20%. When the wearer uses an Elation Skill, increases Elation DMG taken by all enemies by 6%/7%/8%/9%/10% for 2 turn(s).",
+        "priority": 2
+      },
+      {
+        "name": "Elation Brimming With Blessings",
+        "rarity": 5,
+        "description": "Increases the wearer's ATK by 20%/25%/30%/35%/40%. After the wearer uses Skill or Ultimate on one ally character, increases the target's Elation stat by 12%/15%/18%/21%/24% for 2 turn(s).",
+        "priority": 3
+      },
+      {
+        "name": "Tomorrow, Together",
+        "rarity": 4,
+        "description": "Increases the wearer's CRIT DMG by 12%/15%/18%/21%/24%. After the wearer uses their Ultimate, increases all allies' Elation by 8%/9%/10%/11%/12%, lasting for 1 turn(s).",
+        "priority": 4
+      }
+    ],
+    "relicSets": [
+      {
+        "name": "Dreamlit Actor",
+        "description": "2-pc: Increases SPD by 6%. 4-pc: When the wearer uses their Skill or Ultimate on one other ally target, increases the ability target's Elation by 16%, lasting for 3 turn(s). If the wearer has 10 or more points of Certified Banger, additionally increases all ally targets' CRIT DMG by 12%, lasting for 3 turn(s).",
+        "priority": 1
+      },
+      {
+        "name": "Diviner of Distant Reach",
+        "description": "2-pc: Increases SPD by 6%. 4-pc: Before entering combat, if the wearer's SPD is greater than or equal to 120/160, increases the wearer's CRIT Rate by 10%/18%. When the wearer uses Elation Skill for the first time in each battle, increases all allies' Elation by 10%. This effect cannot stack.",
+        "priority": 2
+      }
+    ],
+    "planarSets": [
+      {
+        "name": "God's Moment of Joy",
+        "description": "Increases the wearer's SPD by 6%. When the wearer's Elation stat reaches 40% or higher, advances the wearer's action by 40% immediately upon entering combat.",
+        "priority": 1
+      },
+      {
+        "name": "Sprightly Vonwacq",
+        "description": "Increases the wearer's Energy Regeneration Rate by 5%. When the wearer's SPD reaches 120 or higher, the wearer's action is Advanced Forward by 40% immediately upon entering battle.",
+        "priority": 2
+      }
+    ],
+    "mainStats": {
+      "body": "Crit Rate",
+      "feet": "SPD",
+      "sphere": "HP% / DEF%",
+      "rope": "HP% / DEF%"
+    },
+    "subStats": {
+      "priority": ["SPD", "Crit Rate", "Crit DMG", "HP%"]
+    },
+    "teams": [
+      {
+        "name": "Aha Elation Team",
+        "description": "Aha feeds Punchline and Elation to Silver Wolf LV.999, who carries the damage. Yao Guang stacks more Elation buffs on top and Pearl keeps the team alive. Sparxie, Evanescia or the Elation Trailblazer can take Silver Wolf LV.999's place.",
+        "teamMembers": ["Aeon ★ Aha", "Silver Wolf LV.999 / Sparxie / Evanescia", "Yao Guang", "Pearl"]
+      },
+      {
+        "name": "Aha Waveflair Team",
+        "description": "A double-carry setup: Aha speeds up and buffs Aventurine • Waveflair and Ashveil, and the team-wide DEF ignore from Aha's signature cone helps both of them. Hyacine handles the healing.",
+        "teamMembers": ["Aeon ★ Aha", "Aventurine • Waveflair", "Ashveil", "Hyacine"]
+      }
+    ]
   }
 }

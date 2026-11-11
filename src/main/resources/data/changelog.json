@@ -52,6 +52,39 @@
      "items": [
       {
        "text": "Weekly review: 15 builds checked against Game8 and Prydwen (Castorice to Gallagher); no changes needed"
+      },
+      {
+       "text": "New build",
+       "ref": {
+        "kind": "character",
+        "name": "Aeon ★ Aha"
+       }
+      }
+     ]
+    },
+    {
+     "type": "tierlist",
+     "items": [
+      {
+       "text": "Added to T0.5",
+       "ref": {
+        "kind": "character",
+        "name": "Aeon ★ Aha"
+       }
+      },
+      {
+       "text": "T0.5 → T0",
+       "ref": {
+        "kind": "character",
+        "name": "Acheron"
+       }
+      },
+      {
+       "text": "T1.5 → T1",
+       "ref": {
+        "kind": "character",
+        "name": "Dan Heng • Imbibitor Lunae"
+       }
       }
      ]
     }
