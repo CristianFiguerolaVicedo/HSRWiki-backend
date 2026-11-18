@@ -1,6 +1,24 @@
 {
  "entries": [
   {
+   "date": "2026-11-18",
+   "version": "4.7.0",
+   "sections": [
+    {
+     "type": "site",
+     "items": [
+      {
+       "text": "New sister site: build teams with the characters you own, with live checks, a recommender, an SPD calculator and share links. Import your characters by UID and, optionally, sign in with Discord or Google to keep them on every device. Each character page has a \"Plan a team\" button.",
+       "ref": {
+        "kind": "planner",
+        "name": "HSR Team Planner"
+       }
+      }
+     ]
+    }
+   ]
+  },
+  {
    "date": "2026-11-11",
    "version": "4.7.0",
    "sections": [

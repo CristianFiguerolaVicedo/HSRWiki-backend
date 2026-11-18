@@ -12,7 +12,8 @@ Each entry has sections by type, and each item is a line of text with an optiona
     ]}
 
 Section types: data (game data), builds, tierlist, world (planets and factions), site (website changes).
-ref kinds: character, lightcone, relic (names exactly as in game_data.json), planet, faction.
+ref kinds: character, lightcone, relic (names exactly as in game_data.json), planet, faction,
+planner (links to the sister site HSR Team Planner; the name is the link text).
 
 Command line (used by the weekly builds task):
 
@@ -29,7 +30,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 FILE = os.path.join(ROOT, "src", "main", "resources", "data", "changelog.json")
 GAME_DATA = os.path.join(ROOT, "src", "main", "resources", "data", "game_data.json")
 TYPES = ["data", "builds", "tierlist", "world", "site"]
-KINDS = ["character", "lightcone", "relic", "planet", "faction"]
+KINDS = ["character", "lightcone", "relic", "planet", "faction", "planner"]
 
 
 def load():
