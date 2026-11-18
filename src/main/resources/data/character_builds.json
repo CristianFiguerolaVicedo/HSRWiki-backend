@@ -1528,8 +1528,8 @@
     ],
     "relicSets": [
       {
-        "name": "Self-Enshrouded Recluse",
-        "description": "2-pc: Increases Shield Effect by 10%. 4-pc: Increases Shield Effect provided by the wearer by 12%. When an ally target has a Shield provided by the wearer, their CRIT DMG increases by 15%.",
+        "name": "Knight of Purity Palace",
+        "description": "2-pc: Increases DEF by 15%. 4-pc: Increases the max DMG that can be absorbed by the Shield created by the wearer by 20%.",
         "priority": 1
       }
     ],

@@ -5,6 +5,21 @@
    "version": "4.7.0",
    "sections": [
     {
+     "type": "builds",
+     "items": [
+      {
+       "text": "Relic set: Self-Enshrouded Recluse → Knight of Purity Palace",
+       "ref": {
+        "kind": "character",
+        "name": "Gepard"
+       }
+      },
+      {
+       "text": "Weekly review: 15 builds checked against Game8 and Prydwen (Gepard to Lingsha); 1 change, the other 14 kept as they were"
+      }
+     ]
+    },
+    {
      "type": "site",
      "items": [
       {
