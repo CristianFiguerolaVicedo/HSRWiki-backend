@@ -160,7 +160,7 @@ All endpoints are `GET` and return JSON. They are relative to `http://localhost:
 
 ### Automatically
 
-The [`Update game data`](.github/workflows/update-game-data.yml) workflow runs **every Wednesday** (patch day) at 18:00 UTC. It regenerates all the data and, if anything changed, commits it to `main` as `Actualizacion de datos a la version X.Y.Z`, which makes Render redeploy the API. What's new (version, characters, light cones, relic sets) is also added to `changelog.json`, shown on the website's **Updates** page. It can also be started by hand from the **Actions** tab (**Run workflow**). If the checks fail (for example, fewer characters than before), nothing is published and GitHub reports the failed run.
+The [`Update game data`](.github/workflows/update-game-data.yml) workflow runs **every Wednesday** (patch day) at 18:00 UTC. It regenerates all the data and, if anything changed, commits it to `main` as `Actualizacion de datos a la version X.Y.Z`, which makes Render redeploy the API. What's new (version, characters, light cones, relic sets) is also added to `changelog.json`, shown on the website's **Updates** page. Each changelog item is a line of text with an optional link (`ref`) to a character, light cone, relic set, planet or faction by name, or to the sister site [HSR Team Planner](https://github.com/CristianFiguerolaVicedo/HSR-Team-Planner) (`planner`); `data-pipeline/changelog.py add` adds one by hand. It can also be started by hand from the **Actions** tab (**Run workflow**). If the checks fail (for example, fewer characters than before), nothing is published and GitHub reports the failed run.
 
 ### By hand
 
