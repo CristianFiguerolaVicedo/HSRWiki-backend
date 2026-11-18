@@ -15,7 +15,21 @@
        }
       },
       {
-       "text": "Weekly review: 15 builds checked against Game8 and Prydwen (Gepard to Lingsha); 1 change, the other 14 kept as they were"
+       "text": "Weekly review: 15 builds checked against Game8 and Prydwen (Gepard to Lingsha); 2 builds updated, the other 13 kept as they were"
+      },
+      {
+       "text": "Light cones: Journey, Forever Peaceful → Texture of Memories; added Day One of My New Life",
+       "ref": {
+        "kind": "character",
+        "name": "Gepard"
+       }
+      },
+      {
+       "text": "Light cones: now A Star That Lights the Night, Life Should Be Cast to Flames, Before Dawn and A Dream Scented in Wheat (following Game8)",
+       "ref": {
+        "kind": "character",
+        "name": "Jing Yuan"
+       }
       }
      ]
     },

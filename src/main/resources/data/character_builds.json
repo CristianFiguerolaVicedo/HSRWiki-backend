@@ -1514,9 +1514,9 @@
         "priority": 1
       },
       {
-        "name": "Journey, Forever Peaceful",
-        "rarity": 4,
-        "description": "Increases the wearer's provided Shield Effect by 12%. When an ally target has a Shield, the DMG dealt increases by 12%.",
+        "name": "Texture of Memories",
+        "rarity": 5,
+        "description": "Increases the wearer's Effect RES by 8%/10%/12%/14%/16%. If the wearer is attacked and has no Shield, they gain a Shield equal to 16%/20%/24%/28%/32% of their Max HP for 2 turn(s). This effect can only be triggered once every 3 turn(s). If the wearer has a Shield when attacked, the DMG they receive decreases by 12%/15%/18%/21%/24%.",
         "priority": 2
       },
       {
@@ -1524,6 +1524,12 @@
         "rarity": 4,
         "description": "The wearer is more likely to be attacked, but DMG taken is reduced by 16%/18%/20%/22%/24",
         "priority": 3
+      },
+      {
+        "name": "Day One of My New Life",
+        "rarity": 4,
+        "description": "Increases the wearer's DEF by 16%. After entering battle, increases All-Type RES of all allies by 8%. Abilities of the same type cannot stack.",
+        "priority": 4
       }
     ],
     "relicSets": [
@@ -2065,22 +2071,28 @@
     "charName": "Jing Yuan",
     "lightCones": [
       {
-        "name": "Before Dawn",
+        "name": "A Star That Lights the Night",
         "rarity": 5,
-        "description": "Increases the wearer's CRIT DMG by 36%/42%/48%/54%/60%. Increases the wearer's Skill and Ultimate DMG by 18%/21%/24%/27%/30%. After the wearer uses their Skill or Ultimate, they gain Somnus Corpus. Upon triggering a follow-up attack, Somnus Corpus will be consumed and the follow-up attack DMG increases by 48%/56%/64%/72%/80%.",
+        "description": "The wearer ignores 32%/36%/40%/44%/48% of the target's DEF when dealing DMG. When the wearer uses Assist Skill, they regenerate 6 Energy and gain \"Sail,\" lasting for 2 turns and stacking up to 3 time(s). Each stack of \"Sail\" increases Assist Skill DMG by 20%/25%/30%/35%/40%. When \"Sail\" reaches 3 stacks, each stack of \"Sail\" increases Ultimate DMG by 20%/25%/30%/35%/40%.",
         "priority": 1
       },
       {
-        "name": "Night on the Milky Way",
+        "name": "Life Should Be Cast to Flames",
         "rarity": 5,
-        "description": "For every enemy on the field, increases the wearer's ATK by 9%/10.5%/12%/13.5%/15%, up to 5 stacks. When an enemy is inflicted with Weakness Break, the DMG dealt by the wearer increases by 30%/35%/40%/45%/50% for 1 turn.",
+        "description": "When the wearer's turn starts, regenerates 10 Energy. If the enemy target has a Weakness implanted by the wearer, increases the wearer's DMG dealt to it by 60%. When an enemy target gets attacked by the wearer, the wearer decreases the target's DEF by 12%, lasting for 2 turns. The same types of effects cannot stack.",
         "priority": 2
       },
       {
-        "name": "Today Is Another Peaceful Day",
-        "rarity": 4,
-        "description": "After entering battle, increases the wearer's DMG based on their Max Energy. DMG increases by 0.2%/0.25%/0.3%/0.35%/0.4% per point of Energy, up to 160 Energy.",
+        "name": "Before Dawn",
+        "rarity": 5,
+        "description": "Increases the wearer's CRIT DMG by 36%/42%/48%/54%/60%. Increases the wearer's Skill and Ultimate DMG by 18%/21%/24%/27%/30%. After the wearer uses their Skill or Ultimate, they gain Somnus Corpus. Upon triggering a follow-up attack, Somnus Corpus will be consumed and the follow-up attack DMG increases by 48%/56%/64%/72%/80%.",
         "priority": 3
+      },
+      {
+        "name": "A Dream Scented in Wheat",
+        "rarity": 4,
+        "description": "Increases the wearer's CRIT Rate by 12%/14%/16%/18%/20%. The Ultimate DMG and Follow-Up ATK DMG dealt by the wearer increase by 24%/28%/32%/36%/40%.",
+        "priority": 4
       }
     ],
     "relicSets": [
