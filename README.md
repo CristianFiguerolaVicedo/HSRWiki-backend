@@ -32,7 +32,7 @@
 | Website | [hsr-wiki-frontend.vercel.app](https://hsr-wiki-frontend.vercel.app) |
 | API | [hsrwiki-backend.onrender.com/api](https://hsrwiki-backend.onrender.com/api/version) |
 
-> The API runs on Render's free plan: after 15 minutes without visits it goes to sleep, so the first request can take about a minute while it wakes up. After that it responds normally.
+> The website doesn't wait for this API: it reads a static copy of the game data published with the frontend, refreshed automatically whenever this repository changes. The API runs on Render's free plan and sleeps after 15 minutes without visits; it's still used for live player showcases (My Account) and by the HSR Team Planner's weekly sync.
 
 ## Overview
 
@@ -180,7 +180,7 @@ The scripts download only the files they need (a sparse, blob-less git clone kep
 
 ## Deployment
 
-The repository includes a `Dockerfile` that builds the jar with Maven and keeps the JVM within 512 MB, so it runs on free container hosts.
+The repository includes a `Dockerfile` that builds the jar with Maven and keeps the JVM within 512 MB, so it runs on free container hosts. To start quickly after the free plan puts it to sleep, the image unpacks the jar, uses only the fast JIT compiler and ships a CDS archive (classes already parsed, made with a training run while the image is built): about 3 seconds to start instead of 10 on a comparable machine.
 
 **Render (free plan)**
 
@@ -188,7 +188,7 @@ The repository includes a `Dockerfile` that builds the jar with Maven and keeps 
 2. Runtime **Docker**, region **Frankfurt**, instance **Free**, health check path `/api/version`.
 3. Add the environment variable `HSRWIKI_CORS_ALLOWEDORIGINS` with the frontend's address, without a trailing slash (e.g. `https://hsrwiki.vercel.app,http://localhost:5173`).
 
-Every push to `main` redeploys automatically. On the free plan the service sleeps after 15 minutes without traffic and takes about a minute to wake up.
+Every push to `main` redeploys automatically. On the free plan the service sleeps after 15 minutes without traffic and needs a little while to wake up.
 
 ## Credits
 
