@@ -4,7 +4,7 @@
 
 **REST API for HSRWiki, an unofficial Honkai: Star Rail wiki with build guides and player tools.**
 
-![Game data](https://img.shields.io/badge/game%20data-v4.6-B8820F)
+![Game data](https://img.shields.io/badge/game%20data-v4.7-B8820F)
 ![Java](https://img.shields.io/badge/Java-21-1F2A44?logo=openjdk&logoColor=white)
 ![Spring Boot](https://img.shields.io/badge/Spring%20Boot-4.0-6DB33F?logo=springboot&logoColor=white)
 ![Python](https://img.shields.io/badge/data%20pipeline-Python%203-2F6FAE?logo=python&logoColor=white)
@@ -42,11 +42,12 @@ All game data is generated ahead of time by a small Python pipeline from public 
 
 ## Features
 
-- **Complete game data, up to version 4.6:** 98 characters (including enhanced kits, Memosprite and Elation skills), 170 light cones, 34 relic sets and 28 planar ornament sets, and 844 items with descriptions and what uses them.
+- **Complete game data, up to version 4.7:** 99 characters (including enhanced kits, Memosprite and Elation skills), 172 light cones, 34 relic sets and 30 planar ornament sets, and 865 items with descriptions and what uses them.
 - **Character lore:** the in-game Character Archive (details, stories and voice actors) for every character.
 - **Build guides:** hand-written recommended light cones, relic sets, main and sub stats, and team compositions.
 - **Player showcase:** `GET /api/profile/{uid}` reads a public showcase from Enka.Network, computes the exact relic stats and checks each character against the recommended build. Each response is cached for the time Enka.Network asks (at least 60 seconds).
 - **Planner and calculator data:** ascension, trace and EXP costs, base stats per ascension phase, always-on bonuses from traces, light cones and sets, and relic main stat values.
+- **Endgame modes:** the current and upcoming phases of Memory of Chaos, Pure Fiction, Apocalyptic Shadow and Anomaly Arbitration, with dates, phase effects, buffs to choose from and the enemies of every stage (name, level, weaknesses), plus recommended teams written from public guides.
 
 ## Tech stack
 
@@ -80,6 +81,8 @@ src/main/resources/data/
 ├── game_data.json          Characters, light cones, relic sets and items (generated)
 ├── character_builds.json   Recommended builds (hand-written)
 ├── planner_data.json       Planner and stat calculator data (generated)
+├── endgame_data.json       Endgame phases, effects, buffs and enemies (generated)
+├── endgame_teams.json      Recommended endgame teams per phase (hand-written, with sources)
 ├── changelog.json          Weekly changes shown on the Updates page (data-pipeline/changelog.py)
 └── showcase_lookup.json    Id tables to translate Enka responses (generated)
 
@@ -132,6 +135,8 @@ Every property in `application.properties` can be overridden with an environment
 | `hsrwiki.data-file` | `HSRWIKI_DATAFILE` | `classpath:data/game_data.json` | Game data file (`file:/path/...` for an external one) |
 | `hsrwiki.builds-file` | `HSRWIKI_BUILDSFILE` | `classpath:data/character_builds.json` | Recommended builds file |
 | `hsrwiki.planner-file` | `HSRWIKI_PLANNERFILE` | `classpath:data/planner_data.json` | Planner and stat calculator data |
+| `hsrwiki.endgame-file` | `HSRWIKI_ENDGAMEFILE` | `classpath:data/endgame_data.json` | Endgame phases |
+| `hsrwiki.endgame-teams-file` | `HSRWIKI_ENDGAMETEAMSFILE` | `classpath:data/endgame_teams.json` | Recommended endgame teams |
 | `hsrwiki.showcase-lookup-file` | `HSRWIKI_SHOWCASELOOKUPFILE` | `classpath:data/showcase_lookup.json` | Id tables for showcase lookups |
 | `hsrwiki.enka.base-url` | `HSRWIKI_ENKA_BASEURL` | `https://enka.network/api/hsr/uid` | Enka.Network endpoint |
 | `hsrwiki.enka.user-agent` | `HSRWIKI_ENKA_USERAGENT` | `HSRWiki/1.0 (+repository URL)` | User-Agent sent to Enka.Network, as its API requires |
@@ -151,6 +156,7 @@ All endpoints are `GET` and return JSON. They are relative to `http://localhost:
 | `/api/relics` · `/api/relics/{name}` | Relic and planar sets, or one set by name |
 | `/api/items` · `/api/items/{id}` · `/api/items/name/{name}` | Items, with descriptions and what uses them |
 | `/api/changelog` | What changed each week, for the website's Updates page |
+| `/api/endgame` | Endgame phases (`data`) and recommended teams (`teams`) for the Endgame page |
 | `/api/planner` | Costs and stat tables for the material planner and the stat calculator |
 | `/api/profile/{uid}` | A player's public showcase (9 or 10 digit UID), checked against the builds |
 
@@ -175,8 +181,9 @@ python data-pipeline/update_all.py
 3. `update_character_lore.py`: Character Archive texts (needs the character list from step 1)
 4. `update_data.py --skip-fetch`: merges those texts into `game_data.json`
 5. `update_planner_data.py`: planner and stat calculator data
+6. `update_endgame.py`: endgame phases from the game data dump (new phases are also noted in the changelog)
 
-The scripts download only the files they need (a sparse, blob-less git clone kept in `data-pipeline/.cache/`, which is ignored by git). Recommended builds live in `src/main/resources/data/character_builds.json` and are written by hand, so new characters show up with all their data and lore but without a build until one is added.
+The scripts download only the files they need (a sparse, blob-less git clone kept in `data-pipeline/.cache/`, which is ignored by git). Recommended builds live in `src/main/resources/data/character_builds.json` and are written by hand, so new characters show up with all their data and lore but without a build until one is added. The same goes for the recommended endgame teams in `endgame_teams.json` (each phase with the guide it comes from); `data-pipeline/check_builds.py` checks the names in both files.
 
 ## Deployment
 

@@ -6,6 +6,9 @@ Every light cone, relic set and planar set named in a build must exist in the ga
 same spelling, otherwise the frontend can't show its image or link. Team members must be a
 character name, an alternative written as "A / B", "Trailblazer (Path)" or a generic slot
 (anything starting with "Any", plus a few role words). Exits with an error if something is wrong.
+
+It also checks endgame_teams.json (recommended endgame teams) with the same rules, and that each
+of its phases exists in endgame_data.json while that phase is still listed there.
 """
 
 import json
@@ -66,6 +69,34 @@ def main():
             for m in team.get("teamMembers") or []:
                 if not member_ok(m):
                     errors.append(f"{where} team '{team.get('name')}' has unknown member '{m}'")
+
+    teams_file = os.path.join(DATA, "endgame_teams.json")
+    if os.path.exists(teams_file):
+        endgame = load("endgame_teams.json").get("phases", {})
+        try:
+            known = {f"{m['id']}:{p['id']}" for m in load("endgame_data.json")["modes"] for p in m["phases"]}
+        except (OSError, KeyError):
+            known = None
+        for key, phase in endgame.items():
+            where = f"endgame {key}:"
+            if not re.match(r"^(memory|story|boss|peak):\d+$", key):
+                errors.append(f"{where} key must look like 'memory:1036'")
+            if not (phase.get("source") or {}).get("url"):
+                errors.append(f"{where} no source url")
+            for pick in phase.get("picks") or []:
+                for c in pick.get("characters") or []:
+                    if not member_ok(c):
+                        errors.append(f"{where} unknown character '{c}'")
+            for team in phase.get("teams") or []:
+                if len(team.get("members") or []) != 4:
+                    errors.append(f"{where} team '{team.get('name')}' doesn't have 4 members")
+                for m in team.get("members") or []:
+                    if not member_ok(m):
+                        errors.append(f"{where} team '{team.get('name')}' has unknown member '{m}'")
+        if known is not None:
+            old = sorted(k for k in endgame if k not in known)
+            if old:
+                print("Endgame phases no longer in endgame_data.json (can be removed): " + ", ".join(old))
 
     without = sorted(c for c in chars if c not in builds)
     print(f"{len(builds)} builds checked, {len(errors)} problems")

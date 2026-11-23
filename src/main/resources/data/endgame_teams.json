@@ -1,0 +1,395 @@
+{
+  "_about": "Recommended teams and characters for the endgame phases, written by hand from public guides (the game data has none). Key: '<mode>:<phase id>' as in endgame_data.json (memory, story, boss, peak). 'for' names the part of the phase: 'First half', 'Second half', 'Starward Mode' or an Anomaly Arbitration stage name; leave it out for the whole phase. Character names as in game_data.json; teamMembers accept the same forms as character_builds.json (e.g. 'Trailblazer (Elation)'). The website also suggests teams from the character guides automatically, by the weaknesses of each half.",
+  "phases": {
+    "memory:1036": {
+      "source": {
+        "name": "GameMarket",
+        "url": "https://gamemarket.gg/news/honkai-star-rail/how-to-clear-hsr-memory-of-chaos-survival-of-the-fittest-stage-12"
+      },
+      "picks": [
+        {
+          "for": "First half",
+          "characters": [
+            "Firefly",
+            "Feixiao",
+            "Anaxa"
+          ],
+          "note": "Fire and Wind hit every enemy here. Pair one of these damage dealers with a support and a sustain."
+        },
+        {
+          "for": "Second half",
+          "characters": [
+            "Archer",
+            "Castorice",
+            "Seele",
+            "Dan Heng • Imbibitor Lunae",
+            "Dr. Ratio"
+          ],
+          "note": "Quantum and Imaginary break the Pegasus, the Gryphon and Yabuli; any of these carries works as the main damage dealer."
+        }
+      ],
+      "teams": []
+    },
+    "story:2027": {
+      "source": {
+        "name": "Game8",
+        "url": "https://game8.co/games/Honkai-Star-Rail/archives/438899"
+      },
+      "picks": [
+        {
+          "for": "First half",
+          "characters": [
+            "Seele",
+            "The Herta",
+            "Aglaea",
+            "Anaxa",
+            "Archer",
+            "Cerydra",
+            "Dan Heng • Permansor Terrae",
+            "Rin Tohsaka"
+          ],
+          "note": "Lightning and Ice are what this half is weak to."
+        },
+        {
+          "for": "Second half",
+          "characters": [
+            "Fu Xuan",
+            "Silver Wolf",
+            "Acheron",
+            "Jiaoqiu",
+            "Cipher",
+            "Ashveil",
+            "Evanescia",
+            "Mortenax Blade"
+          ],
+          "note": "Imaginary and Fire hit the most enemies, and Elation characters help against King Pom-Pom."
+        },
+        {
+          "for": "Starward Mode",
+          "characters": [
+            "Firefly",
+            "Lingsha",
+            "Fugue",
+            "The Herta",
+            "Anaxa",
+            "Phainon",
+            "Cerydra",
+            "The Dahlia"
+          ],
+          "note": "Defeat Argenti's summons first: they shield him and boost his damage. Ice and Physical area damage works best."
+        }
+      ],
+      "teams": [
+        {
+          "name": "Castorice",
+          "members": [
+            "Castorice",
+            "Evernight",
+            "Robin • Summeretto",
+            "Hyacine"
+          ]
+        },
+        {
+          "name": "Aventurine • Waveflair",
+          "members": [
+            "Aventurine • Waveflair",
+            "Ashveil",
+            "Mortenax Blade",
+            "Hyacine"
+          ]
+        },
+        {
+          "name": "Ashveil",
+          "members": [
+            "Ashveil",
+            "Mortenax Blade",
+            "Robin • Summeretto",
+            "Huohuo"
+          ]
+        },
+        {
+          "name": "Silver Wolf LV.999",
+          "members": [
+            "Silver Wolf LV.999",
+            "Sparxie",
+            "Yao Guang",
+            "Pearl"
+          ]
+        },
+        {
+          "name": "Sparxie",
+          "members": [
+            "Sparxie",
+            "Sparkle",
+            "Yao Guang",
+            "Pearl"
+          ]
+        },
+        {
+          "name": "Mydei",
+          "members": [
+            "Mydei",
+            "Cyrene",
+            "Cerydra",
+            "Luocha"
+          ]
+        },
+        {
+          "name": "Himeko • Nova",
+          "members": [
+            "Himeko • Nova",
+            "Robin • Summeretto",
+            "Welt",
+            "Dan Heng • Permansor Terrae"
+          ]
+        },
+        {
+          "name": "Hysilens (DoT)",
+          "members": [
+            "Hysilens",
+            "Kafka",
+            "Black Swan",
+            "Dan Heng • Permansor Terrae"
+          ]
+        },
+        {
+          "name": "Evanescia",
+          "members": [
+            "Evanescia",
+            "Trailblazer (Elation)",
+            "Yao Guang",
+            "Pearl"
+          ]
+        },
+        {
+          "name": "Silver Wolf LV.999 (free-to-play)",
+          "members": [
+            "Silver Wolf LV.999",
+            "Trailblazer (Elation)",
+            "Asta",
+            "Huohuo"
+          ]
+        }
+      ]
+    },
+    "boss:3022": {
+      "source": {
+        "name": "Mythossian",
+        "url": "https://mythossian.com/games/honkai-star-rail/guides/honkai-star-rail-apocalyptic-shadow"
+      },
+      "picks": [
+        {
+          "characters": [
+            "Sparxie",
+            "Silver Wolf LV.999",
+            "Yao Guang",
+            "Trailblazer (Elation)",
+            "Aeon ★ Aha"
+          ],
+          "note": "This phase rewards Elation teams: several of the buffs boost Elation damage or Elation characters."
+        }
+      ],
+      "teams": []
+    },
+    "peak:11": {
+      "source": {
+        "name": "HSR Tier List",
+        "url": "https://hsrtierlist.net/anomaly-arbitration/4-7"
+      },
+      "picks": [
+        {
+          "for": "Knight (I)",
+          "characters": [],
+          "note": "Quantum and Imaginary work best. Every ally loses 500 HP at the start of their turn, so bring steady healing."
+        },
+        {
+          "for": "Knight (II)",
+          "characters": [],
+          "note": "Fire and Lightning work best. Enemies start with 20 stacks that cut the damage they take; each hit removes one, so many small hits help."
+        },
+        {
+          "for": "Knight (III)",
+          "characters": [],
+          "note": "Fire and Ice work best. Toughness can't be reduced and healing is cut by 70%: Break teams and healers are weak here."
+        },
+        {
+          "for": "King in Check",
+          "characters": [],
+          "note": "Fire, Wind and Imaginary work best. Everyone starts at half HP, so a sustain that heals or shields right away matters."
+        }
+      ],
+      "teams": [
+        {
+          "for": "Knight (I)",
+          "name": "Elation (Silver Wolf LV.999)",
+          "members": [
+            "Silver Wolf LV.999",
+            "Sparxie",
+            "Pearl",
+            "Aeon ★ Aha"
+          ]
+        },
+        {
+          "for": "Knight (I)",
+          "name": "Elation (Evanescia)",
+          "members": [
+            "Evanescia",
+            "Yao Guang",
+            "Pearl",
+            "Aeon ★ Aha"
+          ]
+        },
+        {
+          "for": "Knight (I)",
+          "name": "Castorice",
+          "members": [
+            "Castorice",
+            "Hyacine",
+            "Evernight",
+            "Robin • Summeretto"
+          ]
+        },
+        {
+          "for": "Knight (I)",
+          "name": "Himeko • Nova",
+          "members": [
+            "Himeko • Nova",
+            "Robin • Summeretto",
+            "Trailblazer (Remembrance)",
+            "Dan Heng • Permansor Terrae"
+          ]
+        },
+        {
+          "for": "Knight (II)",
+          "name": "Elation (Silver Wolf LV.999)",
+          "members": [
+            "Silver Wolf LV.999",
+            "Sparxie",
+            "Pearl",
+            "Aeon ★ Aha"
+          ]
+        },
+        {
+          "for": "Knight (II)",
+          "name": "Archer",
+          "members": [
+            "Archer",
+            "Sparkle",
+            "Rin Tohsaka",
+            "Huohuo"
+          ]
+        },
+        {
+          "for": "Knight (II)",
+          "name": "Firefly",
+          "members": [
+            "Firefly",
+            "The Dahlia",
+            "Fugue",
+            "Trailblazer (Harmony)"
+          ]
+        },
+        {
+          "for": "Knight (II)",
+          "name": "Phainon",
+          "members": [
+            "Phainon",
+            "Cyrene",
+            "Robin • Summeretto",
+            "Cerydra"
+          ]
+        },
+        {
+          "for": "Knight (III)",
+          "name": "Elation (Evanescia)",
+          "members": [
+            "Evanescia",
+            "Yao Guang",
+            "Pearl",
+            "Aeon ★ Aha"
+          ]
+        },
+        {
+          "for": "Knight (III)",
+          "name": "Saber",
+          "members": [
+            "Saber",
+            "Gilgamesh",
+            "Robin • Summeretto",
+            "Huohuo"
+          ]
+        },
+        {
+          "for": "Knight (III)",
+          "name": "Evernight",
+          "members": [
+            "Evernight",
+            "Cyrene",
+            "Hyacine",
+            "Robin • Summeretto"
+          ]
+        },
+        {
+          "for": "Knight (III)",
+          "name": "Acheron",
+          "members": [
+            "Acheron",
+            "Tribbie",
+            "Mortenax Blade",
+            "Gallagher"
+          ]
+        },
+        {
+          "for": "King in Check",
+          "name": "Elation (Silver Wolf LV.999), buff Supreme Joy",
+          "members": [
+            "Silver Wolf LV.999",
+            "Sparxie",
+            "Aeon ★ Aha",
+            "Pearl"
+          ]
+        },
+        {
+          "for": "King in Check",
+          "name": "Aventurine • Waveflair, buff Supreme Joy",
+          "members": [
+            "Aventurine • Waveflair",
+            "Ashveil",
+            "Aeon ★ Aha",
+            "Dan Heng • Permansor Terrae"
+          ]
+        },
+        {
+          "for": "King in Check",
+          "name": "Himeko • Nova, buff Hammer and Anvil",
+          "members": [
+            "Himeko • Nova",
+            "Robin • Summeretto",
+            "Welt",
+            "Dan Heng • Permansor Terrae"
+          ]
+        },
+        {
+          "for": "King in Check",
+          "name": "Dan Heng • Imbibitor Lunae, buff Hammer and Anvil",
+          "members": [
+            "Dan Heng • Imbibitor Lunae",
+            "Robin • Summeretto",
+            "Sparkle",
+            "Huohuo"
+          ]
+        },
+        {
+          "for": "King in Check",
+          "name": "Acheron, buff Hammer and Anvil",
+          "members": [
+            "Acheron",
+            "Mortenax Blade",
+            "Robin • Summeretto",
+            "Hyacine"
+          ]
+        }
+      ]
+    }
+  }
+}

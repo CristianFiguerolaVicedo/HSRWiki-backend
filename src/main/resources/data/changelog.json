@@ -1,6 +1,26 @@
 {
  "entries": [
   {
+   "date": "2026-11-23",
+   "version": "4.7.0",
+   "sections": [
+    {
+     "type": "site",
+     "items": [
+      {
+       "text": "New Endgame page: the current and upcoming phases of Memory of Chaos, Pure Fiction, Apocalyptic Shadow and Anomaly Arbitration, with their dates, effects, buffs to choose from and every stage's enemies and weaknesses"
+      },
+      {
+       "text": "Recommended teams for each half: from public guides when there is one, and automatically from our character guides by the enemies' weaknesses (you can show only teams you own)"
+      },
+      {
+       "text": "The site now opens instantly: the game data is served as static files, and the servers start up about twice as fast"
+      }
+     ]
+    }
+   ]
+  },
+  {
    "date": "2026-11-18",
    "version": "4.7.0",
    "sections": [

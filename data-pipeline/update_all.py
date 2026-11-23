@@ -8,6 +8,7 @@ Order (each step needs the previous one):
   3. update_character_lore.py    Character Archive texts (needs the character list from step 1)
   4. update_data.py --skip-fetch merges the texts of steps 2 and 3 into game_data.json
   5. update_planner_data.py      planner and stat calculator data
+  6. update_endgame.py           endgame modes: phases, buffs and enemies (needs the version from step 4)
 
 Afterwards it compares the new data with the previous one and exits with an error if something
 looks broken (fewer characters than before, missing version...), so an automatic run never
@@ -55,6 +56,24 @@ def note_changes(before, after):
         print(f"Changelog: {len(items)} new lines")
 
 
+def phase_names():
+    """{(mode, phase id): text} of the endgame phases currently in endgame_data.json."""
+    try:
+        data = load("endgame_data.json")
+    except (OSError, ValueError):
+        return {}
+    return {(m["id"], p["id"]): f"{m['name']}: {p['name']}" + (f" (from {p['begin']})" if p.get("begin") else "")
+            for m in data.get("modes", []) for p in m.get("phases", [])}
+
+
+def note_endgame(before):
+    """Adds the endgame phases that weren't listed before to the changelog."""
+    new = [text for key, text in phase_names().items() if key not in before]
+    if new:
+        changelog.add("data", [{"text": f"New endgame phase: {t}"} for t in sorted(new)])
+        print(f"Changelog: {len(new)} new endgame phases")
+
+
 def main():
     before = load("game_data.json")
 
@@ -63,10 +82,12 @@ def main():
     run("update_character_lore.py", "--skip-fetch")
     run("update_data.py", "--skip-fetch")
     run("update_planner_data.py", "--skip-fetch")
+    endgame_before = phase_names()
+    run("update_endgame.py", "--skip-fetch")
 
     # Every generated file must still be valid JSON
     after = load("game_data.json")
-    for name in ("planner_data.json", "showcase_lookup.json"):
+    for name in ("planner_data.json", "showcase_lookup.json", "endgame_data.json"):
         load(name)
 
     problems = []
@@ -88,6 +109,7 @@ def main():
     version = after["version"]
     print(f"\nOK: game data version {version}")
     note_changes(before, after)
+    note_endgame(endgame_before)
     out = os.environ.get("GITHUB_OUTPUT")
     if out:
         with open(out, "a", encoding="utf-8") as f:
