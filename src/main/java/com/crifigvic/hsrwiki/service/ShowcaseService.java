@@ -1,5 +1,6 @@
 package com.crifigvic.hsrwiki.service;
 
+import com.crifigvic.hsrwiki.config.RateLimiter;
 import com.crifigvic.hsrwiki.dto.ProfileDto;
 import com.crifigvic.hsrwiki.dto.ProfileDto.*;
 import com.crifigvic.hsrwiki.entity.CharBuild;
@@ -59,6 +60,15 @@ public class ShowcaseService {
     private final HttpClient http = HttpClient.newBuilder().connectTimeout(Duration.ofSeconds(8)).build();
     private final Map<String, CachedProfile> cache = new ConcurrentHashMap<>();
 
+    /** Profiles kept in memory at most (512 MB servers: a few hundred KB in total). */
+    static final int MAX_CACHED = 500;
+
+    /**
+     * Calls to Enka.Network per minute for the whole server, whoever asks: a flood of different UIDs
+     * can't get this server blocked by Enka (cached profiles don't count).
+     */
+    private final RateLimiter enkaCalls = new RateLimiter(60, Duration.ofMinutes(1), 1);
+
     @Value("${hsrwiki.enka.base-url:https://enka.network/api/hsr/uid}")
     private String enkaBaseUrl;
 
@@ -96,11 +106,26 @@ public class ShowcaseService {
             return cached.profile();
         }
 
+        if (!enkaCalls.tryAcquire("enka")) {
+            throw new ShowcaseException(429, "Too many lookups right now. Wait a minute and try again.");
+        }
         JsonNode root = fetch(uid);
         ProfileDto profile = toProfile(uid, root);
         long ttlMillis = Math.max(60, profile.ttl()) * 1000L;
-        cache.put(uid, new CachedProfile(profile, System.currentTimeMillis() + ttlMillis));
+        remember(uid, new CachedProfile(profile, System.currentTimeMillis() + ttlMillis));
         return profile;
+    }
+
+    /** Adds to the cache without letting it grow past MAX_CACHED: expired entries go first, then everything. */
+    private void remember(String uid, CachedProfile entry) {
+        if (cache.size() >= MAX_CACHED) {
+            long now = System.currentTimeMillis();
+            cache.values().removeIf(c -> c.expiresAt() <= now);
+            if (cache.size() >= MAX_CACHED) {
+                cache.clear();
+            }
+        }
+        cache.put(uid, entry);
     }
 
     private JsonNode fetch(String uid) {
