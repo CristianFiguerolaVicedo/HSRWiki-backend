@@ -1,6 +1,55 @@
 {
  "entries": [
   {
+   "date": "2026-11-25",
+   "version": "4.7.0",
+   "sections": [
+    {
+     "type": "builds",
+     "items": [
+      {
+       "text": "Planar set: Giant Tree of Rapt Brooding → Fleet of the Ageless",
+       "ref": {
+        "kind": "character",
+        "name": "Natasha"
+       }
+      },
+      {
+       "text": "Planar set: Tengoku@Livestream → Rutilant Arena",
+       "ref": {
+        "kind": "character",
+        "name": "Qingque"
+       }
+      },
+      {
+       "text": "Relic set: Knight of Purity Palace → Self-Enshrouded Recluse",
+       "ref": {
+        "kind": "character",
+        "name": "March 7th"
+       }
+      },
+      {
+       "text": "Body: DEF% → Effect Hit Rate / DEF%",
+       "ref": {
+        "kind": "character",
+        "name": "March 7th"
+       }
+      },
+      {
+       "text": "Substats: flat DEF → DEF%",
+       "ref": {
+        "kind": "character",
+        "name": "Ruan Mei"
+       }
+      },
+      {
+       "text": "Weekly review: 15 builds checked against Game8 and Prydwen (Luka to Saber); the other 11 already matched"
+      }
+     ]
+    }
+   ]
+  },
+  {
    "date": "2026-11-23",
    "version": "4.7.0",
    "sections": [

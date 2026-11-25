@@ -2782,8 +2782,8 @@
     ],
     "planarSets": [
       {
-        "name": "Giant Tree of Rapt Brooding",
-        "description": "Increases the wearer's SPD by 6%. When the wearer's Speed is 135/180 or higher, increases the wearer and their memosprite's Outgoing Healing by 12%/20%.",
+        "name": "Fleet of the Ageless",
+        "description": "Increases the wearer's Max HP by 12%. When the wearer's SPD reaches 120 or higher, all allies' ATK increases by 8%.",
         "priority": 1
       }
     ],
@@ -2898,8 +2898,8 @@
     ],
     "planarSets": [
       {
-        "name": "Tengoku@Livestream",
-        "description": "Increases the wearer's CRIT DMG by 16%. If 3 or more Skill Points are consumed in the same turn, additionally increases CRIT DMG by 32% for 3 turns.",
+        "name": "Rutilant Arena",
+        "description": "Increases the wearer's CRIT Rate by 8%. When the wearer's current CRIT Rate reaches 70% or higher, DMG dealt by Basic ATK and Skill increases by 20%.",
         "priority": 1
       }
     ],
@@ -3104,7 +3104,7 @@
       "rope": "Energy Regen"
     },
     "subStats": {
-      "priority": ["Break Effect", "SPD", "HP%", "DEF"]
+      "priority": ["Break Effect", "SPD", "HP%", "DEF%"]
     },
     "teams": [
       {
@@ -6431,8 +6431,8 @@
     ],
     "relicSets": [
       {
-        "name": "Knight of Purity Palace",
-        "description": "2-pc: Increases DEF by 15%. 4-pc: Increases the max DMG that can be absorbed by the Shield created by the wearer by 20%.",
+        "name": "Self-Enshrouded Recluse",
+        "description": "2-pc: Increases Shield Effect by 10%. 4-pc: Increases Shield Effect provided by the wearer by 12%. When an ally target has a Shield provided by the wearer, their CRIT DMG increases by 15%.",
         "priority": 1
       }
     ],
@@ -6449,7 +6449,7 @@
       }
     ],
     "mainStats": {
-      "body": "DEF%",
+      "body": "Effect Hit Rate / DEF%",
       "feet": "SPD",
       "sphere": "DEF%",
       "rope": "Energy Regeneration Rate"
