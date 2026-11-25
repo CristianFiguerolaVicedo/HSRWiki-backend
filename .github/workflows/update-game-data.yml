@@ -27,7 +27,7 @@ jobs:
           python-version: "3.12"
 
       # The scripts keep a sparse copy of the data sources here; reusing it saves the download
-      - uses: actions/cache@v4
+      - uses: actions/cache@v6
         with:
           path: data-pipeline/.cache
           key: hsr-data-cache-${{ github.run_id }}
